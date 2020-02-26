@@ -128,6 +128,25 @@ function studiokraft_widgets_init()
 
 add_action( 'widgets_init', 'studiokraft_widgets_init' );
 
+function get_posts_per_page_20( $query )
+{
+    if ( !is_admin() && $query->is_main_query() && is_category( get_theme_mod( 'studiokraft_category_gallery' ) ) ) {
+        $query->set( 'posts_per_page', 20 );
+    }
+}
+
+add_action( 'pre_get_posts', 'get_posts_per_page_20' );
+
+add_filter( 'navigation_markup_template', 'my_navigation_template', 10, 2 );
+function my_navigation_template( $template, $class )
+{
+    return '
+	<nav class="navigation %1$s" role="navigation">
+		<div class="nav-links">%3$s</div>
+	</nav>
+	';
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -169,7 +188,6 @@ function studiokraft_scripts()
         wp_enqueue_script( 'comment-reply' );
     }
 }
-
 add_action( 'wp_enqueue_scripts', 'studiokraft_scripts' );
 
 /**

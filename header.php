@@ -11,12 +11,11 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="RU">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Forum|Roboto&display=swap" rel="stylesheet"> -->
 </head>
 
 <body <?php body_class(); ?>>

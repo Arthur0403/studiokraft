@@ -11,12 +11,12 @@
 	// Site title and description.
 	wp.customize('blogname', function (value) {
 		value.bind(function (to) {
-			$('.navbar-brand').text(to);
+			$('.blogname').text(to);
 		});
 	});
 	wp.customize('blogdescription', function (value) {
 		value.bind(function (to) {
-			$('.navbar-brand span').text(to);
+			$('.blogdescription').text(to);
 		});
 	});
 
@@ -43,6 +43,44 @@
 	wp.customize('studiokraft_background_color', function (value) {
 		value.bind(function (newval) {
 			$('.content-main-w3').css('background', newval);
+		});
+	});
+
+	// Address
+
+	wp.customize('studiokraft_address', function (value) {
+		value.bind(function (newval) {
+			$('.studiokraft-address').text(newval);
+		});
+	});
+
+	wp.customize('studiokraft_show_address', function (value) {
+		value.bind(function (newval) {
+			true === newval ? $('.container_top .address').addClass('show') : $('.address').removeClass('show');
+		});
+	});
+
+	wp.customize('studiokraft_phone', function (value) {
+		value.bind(function (newval) {
+			$('.studiokraft-phone').text(newval);
+		});
+	});
+
+	wp.customize('studiokraft_show_phone', function (value) {
+		value.bind(function (newval) {
+			true === newval ? $('.container_top .phone').addClass('show') : $('.phone').removeClass('show');
+		});
+	});
+
+	wp.customize('studiokraft_mail', function (value) {
+		value.bind(function (newval) {
+			$('.studiokraft-mail').text(newval);
+		});
+	});
+
+	wp.customize('studiokraft_show_mail', function (value) {
+		value.bind(function (newval) {
+			true === newval ? $('.container_top .mail').addClass('show') : $('.mail').removeClass('show');
 		});
 	});
 })(jQuery);
