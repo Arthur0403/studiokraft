@@ -1,6 +1,6 @@
 <?php
 /**
- * The front-page template file
+ * The gallery template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,11 +18,13 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
 <div class="container-fluid gallery-lightbox my-5">
     <div class="row m-0">
 
-        <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
+        <?php get_template_part( 'template-parts/content', 'gallery-4' ); ?>
 
-        <div class="button-center">
-            <a class="hover-2 btn text-uppercase stepanov" href="/category/gallery/page/2/">Вся галерея</a>
-        </div>
+    <?php the_posts_pagination( array(
+            'end_size' => 1,
+            'mid_size' => 1,
+            'type'     => 'list',
+        ) ); ?>
     </div>
 </div>
 <?php

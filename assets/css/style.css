@@ -6,21 +6,21 @@
 --*/
 @font-face {
 	font-family : Blogger Sans;
-	src         : url(http://ellaboranto.ru/wp-content/themes/studiokraft/assets/fonts/BloggerSans.ttf);
+	src         : url(http://studiokraft.loc/wp-content/themes/studiokraft/assets/fonts/BloggerSans.ttf);
 	font-style  : normal;
 	font-weight : 400;
 }
 
 @font-face {
 	font-family : Blogger Sans;
-	src         : url(http://ellaboranto.ru/wp-content/themes/studiokraft/assets/fonts/BloggerSansMedium.ttf);
+	src         : url(http://studiokraft.loc/wp-content/themes/studiokraft/assets/fonts/BloggerSansMedium.ttf);
 	font-style  : normal;
 	font-weight : 500;
 }
 
 @font-face {
 	font-family : Blogger Sans;
-	src         : url(http://ellaboranto.ru/wp-content/themes/studiokraft/assets/fonts/BloggerSansBold.ttf);
+	src         : url(http://studiokraft.loc/wp-content/themes/studiokraft/assets/fonts/BloggerSansBold.ttf);
 	font-style  : normal;
 	font-weight : 600;
 }

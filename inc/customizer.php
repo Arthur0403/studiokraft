@@ -142,9 +142,13 @@ function studiokraft_customize_register( $wp_customize )
         )
     );
 
+//    $wp_customize->add_section( 'studiokraft_site_data', array(
+//        'title'    => __( 'Информация о компании', 'studiokraft' ),
+//        'priority' => '20',
+//    ));
     $wp_customize->add_section( 'studiokraft_settings_gallery', array(
         'title'    => __( 'Настройки галереи', 'studiokraft' ),
-        'priority' => 85,
+        'priority' => '85',
     ));
     $wp_customize->add_setting( 'studiokraft_category_gallery', array(
         'default'   => 'gallery',
