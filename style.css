@@ -990,7 +990,7 @@ object {
 --------------------------------------------------------------*/
 
 .content-main-w3 {
-	padding-top : 0;
+	padding : 1em 0;
 }
 
 .container_top {
@@ -1067,8 +1067,12 @@ a.navbar-brand:hover .blogname {
 	color : #fbb034;
 }
 
-.navbar-light .navbar-nav .menu-item {
-	padding : 0 20px;
+/*.navbar-light .navbar-nav .menu-item {*/
+/*	padding : 0 20px;*/
+/*}*/
+
+.slider-button {
+	height : 100%;
 }
 
 .social-icons {
@@ -1140,9 +1144,107 @@ span.page-numbers {
 	cursor : unset;
 }
 
+footer {
+	border-top  : 1px ridge #ffffff;
+	padding-top : 20px;
+}
+
+footer span,
+footer p,
+footer a {
+	color : #ffffff;
+}
+
+.footer-title {
+	margin-bottom : 5px;
+	font-size     : 18px;
+	font-weight   : bold;
+	text-align    : center;
+}
+
+.footer-item {
+	margin-top    : 19px;
+	margin-bottom : 15px;
+}
+
+.footer-links p,
+.footer-info p {
+	min-width     : 270px;
+	margin-bottom : 6px;
+	font-size     : 1rem;
+	text-align    : center;
+}
+
+.social-icons {
+	padding      : 15px 25px;
+	margin-left  : auto;
+	margin-right : auto;
+	display      : flex;
+}
+
+.social-icons li {
+	margin : 10px 5px 0 0 !important;
+}
+
+.social-icons li:nth-child(4) {
+	margin-right : unset;
+}
+
+@media (min-width : 768px) {
+}
+
+@media (max-width : 991px) {
+	.navbar-collapse .logo-wthree {
+		display : none;
+	}
+}
+
 @media (min-width : 992px) {
+	.navbar-nav {
+		align-items : center;
+	}
+
 	.navbar-expand-lg .navbar-nav .menu-item > a {
-		padding-right : 0.5rem;
-		padding-left  : 0.5rem;
+		padding-right : 13px;
+		padding-left  : 13px;
+	}
+
+	.logo-wthree {
+		margin-right : 17px;
+		margin-left  : 17px;
+		order : 1;
+	}
+
+	.logo-wthree__top {
+		display : none;
+	}
+
+	.menu-item:nth-child(n+4) {
+		order : 2;
+	}
+
+	.footer-container {
+		display         : flex;
+		justify-content : center;
+	}
+
+	.footer-info {
+		order : -1;
+	}
+
+	.footer-info p {
+		text-align : right;
+	}
+
+	.social-icons {
+		margin       : 0 25px 15px;
+		flex-wrap    : wrap;
+		width        : 230px;
+		border-left  : 4px double #ffffff;
+		border-right : 4px double #ffffff;
+	}
+
+	.footer-links p {
+		text-align : left;
 	}
 }

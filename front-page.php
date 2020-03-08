@@ -18,6 +18,7 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
 <div class="container-fluid gallery-lightbox my-5">
     <div class="row m-0">
 
+<!--        --><?php //echo do_shortcode( '[smartslider3 slider=2]' ); ?>
         <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
 
         <div class="button-center">
