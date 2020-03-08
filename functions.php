@@ -50,6 +50,42 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         ) );
 
         /*
+         * Add in the header and logo menu
+         */
+//        add_filter('wp_nav_menu_items','logo_menu_item', 10, 2);
+//        function logo_menu_item( $items, $args )
+//        {
+//            ob_start();
+//            get_search_form();
+//            $logo_item = ob_get_contents();
+//            ob_end_clean();
+//            if ( $args->theme_location == 'header-menu' ) {
+//                $items .= '<li class="logo-wthree text-center">' . $searchform . '</li>';
+//            }
+//            return $items;
+//        }
+        add_filter( 'wp_nav_menu_items', 'logo_menu_item', 10, 2 );
+        function logo_menu_item( $items, $args )
+        {
+            if ( $args->theme_location == 'header-menu' ) {
+                $logo_menu_link = esc_url( home_url( '/' ) );
+                if ( has_custom_logo() ) {
+                    $logo_menu_logoname = get_custom_logo();
+                } else {
+                    $logo_name = get_bloginfo( 'name' );
+                    $logo_menu_logoname = '<span class="blogname">' . $logo_name . '</span>';
+                }
+                $studiokraft_description = get_bloginfo( 'description', 'display' );
+                if ( $studiokraft_description || is_customize_preview() ) { $logo_menu_description = $studiokraft_description; };
+                $items .= '<li class="logo-wthree text-center">
+                                <a class="navbar-brand" href="' . $logo_menu_link . '">' . $logo_menu_logoname . '
+                                    <span class="blogdescription">' . $logo_menu_description . '</span>
+                                </a>
+                            </li>';
+            }
+            return $items;
+        }
+        /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
          */
