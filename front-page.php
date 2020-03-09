@@ -16,8 +16,23 @@ get_header();
 
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="7" design="design-2" lazyload="ondemand"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" design="design-2" lazyload="ondemand"]' ); ?>
     </div>
+    <section class="about-us">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-6 aos-init aos-animate about-right" data-aos="flip-left">
+                    <h3 class="tittle text-uppercase"><?php the_field('about-us-title'); ?></h3>
+                    <div class="black-border"></div>
+                    <p class="my-4"><?php the_field('about-us'); ?></p>
+                    <button type="button" class="btn btn-warning custom-btn">Забронировать</button>
+                </div>
+                <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">
+                    <img class="img-fluid" src="<?php the_field('image-about-us') ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="features mb-5">
         <h3 style="text-align: center">ОСОБЕННОСТИ</h3>
         <div class="container">
