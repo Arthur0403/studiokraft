@@ -119,7 +119,7 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         ) );
 
         add_image_size( 'gallery-thumb', 520, 460, TRUE );
-        add_image_size( 'gallery-thumb-vertical', 520, 977, TRUE );
+        add_image_size( 'gallery-thumb-vertical', 520, 946, TRUE );
 
         add_theme_support( 'editor-styles' );
         add_theme_support( 'dark-editor-style' );
@@ -211,7 +211,8 @@ function studiokraft_scripts()
     wp_enqueue_script( 'studiokraft-script-lightbox-plus-jquery', get_template_directory_uri() . '/assets/js/lightbox-plus-jquery.min.js', array( 'jquery' ), NULL, TRUE );
     wp_enqueue_script( 'studiokraft-script-move-top', get_template_directory_uri() . '/assets/js/move-top.js', array(), NULL, TRUE );
     wp_enqueue_script( 'studiokraft-script-easing', get_template_directory_uri() . '/assets/js/easing.js', array(), NULL, TRUE );
-    wp_add_inline_script( 'studiokraft-script-easing', "jQuery(document).ready(function ($) { $('.scroll').click(function (event) { event.preventDefault(); $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900); }); });", 'after' );
+    wp_add_inline_script( 'studiokraft-script-easing', "jQuery(document).ready(function($) { $(\".scroll\").click(function(event) { event.preventDefault(); $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900); }); });", 'after' );
+    wp_add_inline_script( 'studiokraft-script-easing', " $(document).ready(function() { $().UItoTop({ easingType: 'easeOutQuart' }); });", 'after' );
     wp_enqueue_script( 'studiokraft-script-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array(), NULL, TRUE );
 
     wp_enqueue_script( 'studiokraft-script-main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', TRUE );
@@ -254,3 +255,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function debug( $data )
+{
+    echo '<pre>';
+    echo print_r( $data, 1 );
+    echo '</pre>';
+}
