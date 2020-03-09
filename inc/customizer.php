@@ -17,7 +17,7 @@ function studiokraft_customize_register( $wp_customize )
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
     $wp_customize->add_setting( 'studiokraft_background_color', array(
-        'default'           => '#007cc0',
+        'default'           => '#1572bb',
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ) );

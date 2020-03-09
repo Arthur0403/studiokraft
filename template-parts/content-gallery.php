@@ -5,7 +5,7 @@
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
     <?php if ( $i === 1 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 1 || $i === 7 || $i === 11 || $i === 16 ) : ?>
-            <div class="gallery_grid1 hover08" data-aos="fade-up">
+            <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">
                     <a href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
                         <figure><?php echo get_the_post_thumbnail($post->ID, 'gallery-thumb'); ?></figure>
@@ -52,7 +52,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
     <?php if ( $i === 4 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 4 || $i === 9 || $i === 13 || $i === 19 ) : ?>
-            <div class="gallery_grid1 hover08" data-aos="fade-up">
+            <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">
                     <a href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
                         <figure><?php echo get_the_post_thumbnail($post->ID, 'gallery-thumb'); ?></figure>
@@ -82,7 +82,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
     <?php if ( $i === 6 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 6 || $i === 10 || $i === 15 || $i === 15 ) : ?>
-            <div class="gallery_grid1 hover08" data-aos="fade-up">
+            <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">
                     <a href="<?php echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
                         <?php if ( $i === 15 ) : ?>

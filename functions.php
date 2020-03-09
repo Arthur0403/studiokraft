@@ -119,7 +119,7 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         ) );
 
         add_image_size( 'gallery-thumb', 520, 460, TRUE );
-        add_image_size( 'gallery-thumb-vertical', 520, 977, TRUE );
+        add_image_size( 'gallery-thumb-vertical', 520, 946, TRUE );
 
         add_theme_support( 'editor-styles' );
         add_theme_support( 'dark-editor-style' );

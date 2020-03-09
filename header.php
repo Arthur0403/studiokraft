@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<section class="content-main-w3" id="home">
+<section class="content-main-w3 inner-page" id="home">
 
     <div class="header_top_w3ls">
         <div class="container container_top">
