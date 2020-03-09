@@ -62,11 +62,5 @@
             ) ); ?>
 
         </nav>
-<!--        <div class="logo-wthree text-center">-->
-<!--            <a class="navbar-brand" href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
-<!--                --><?php //if ( has_custom_logo() ) : ?><!----><?php //the_custom_logo(); ?><!----><?php //else : ?><!--<span class="blogname">--><?php //echo bloginfo( 'name' ); ?><!--</span>--><?php //endif; ?>
-<!--                <span class="blogdescription">--><?php //$studiokraft_description = get_bloginfo( 'description', 'display' );
-//                    if ( $studiokraft_description || is_customize_preview() ) : ?><!----><?php //echo $studiokraft_description; ?><!----><?php //endif; ?><!--</span>-->
-<!--            </a>-->
-<!--        </div>-->
     </div>
+</section>
