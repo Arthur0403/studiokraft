@@ -41,7 +41,7 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
         </div>
     </div>
     <section class="features mb-5">
-        <h3 style="text-align: center">SERVICES</h3>
+        <h3 style="text-align: center">ОСОБЕННОСТИ</h3>
         <div class="container">
             <div class="row">
                 <?php
@@ -56,16 +56,19 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
         <h3 class="halls-title mb-3"><?php the_field('halls-title'); ?></h3>
         <div class="container">
             <?php
-                $halls = get_field('halls-card');
-                for($i = 1; $i <= 3; $i++){ ?>
-                    <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
-                        <div class="col col-lg-8 p-4 inner-halls">
-                            <h3 class="text-uppercase"><?= $halls['hall-item-title-' . $i]; ?></h3>
-                            <p class="my-4"><?= $halls['hall-item-description-' . $i]; ?></p>
-                            <a href="<?= $halls['hall-item-link-' . $i]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
+                $halls = get_field('halls_card');
+                foreach($halls as $innerHall): ?>
+                        <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
+                            <div class="col col-lg-8 p-4 inner-halls">
+                                <h3 class="text-uppercase"><?= $innerHall['hall_title']; ?></h3>
+                                <p class="my-4"><?= $innerHall['hall_description']; ?></p>
+                                <a href="<?= $innerHall['hall_link']; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
+                            </div>
+                            <div class="col hall-img">
+                                <img src="<?= $innerHall['hall_img']; ?>" alt="">
+                            </div>
                         </div>
-                    </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
     </section>
     <div class="row m-0">
@@ -81,8 +84,8 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
 <!--<pre>-->
 <?php
 //
-//$features = get_field('halls-card');
-//var_dump($features);
+////$halls = get_field('halls_card');
+////var_dump($halls);
 //
 //?>
 <!--</pre>-->
