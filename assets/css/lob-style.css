@@ -1,0 +1,161 @@
+.header_top_w3ls,
+footer {
+    background: #1572BB;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body a {
+    font-family: 'Roboto';
+}
+
+p, span {
+    font-family: 'Forum' ;
+    color: #272727;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+a:visited {
+    color: white;
+}
+
+.navbar-brand > span{
+    font-size: .5rem !important;
+}
+
+
+.header_top_w3ls {
+    padding: 20px;
+}
+
+.navbar-brand .blogname {
+    font-family: 'Roboto';
+    font-size: 2.5rem !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    font-weight: 600;
+}
+
+.navbar-brand:hover {
+    color: white !important;
+}
+
+.studiokraft-address,
+.studiokraft-phone,
+.studiokraft-mail{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 0.9rem
+}
+
+.navbar-brand .blogdescription {
+    font-size: .7rem !important;
+    line-height: 2rem;
+}
+
+.banner-bottom-w3layouts {
+    background-color: white;
+}
+
+.page-about-banner {
+    padding: 100px 40px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin:0;
+    background: url('../wp-content/uploads/2020/02/sesja.jpg');
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;
+}
+
+.page-about-banner > h2 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    font-weight: 600;
+    margin: 0 !important;
+    padding: 0;
+    color: #ffffff;
+}
+
+.banner-bottom-w3layouts {
+    padding-top: 0 !important;
+}
+
+.img-subscribe {
+    margin-top:1rem;
+}
+
+.img-custom{
+    height: 132px;
+}
+
+.slider{
+    height: 471px;
+    background: url('http://ellaboranto.ru/wp-content/uploads/2020/03/h6zd4sr09g59ybyb5prdt_1nz2dxxpwjo6meuzpkzx8kib8repaecna-mydwiehaijnixmleash783ywvx5nhm7y1kzcibzbozxfwv-iilfildy5deybrsx7db043n4.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tittle,
+.halls-title{
+    font-size: 3rem !important;
+    font-weight: 900;
+    color: #1572BB;
+
+}
+
+.black-border {
+    width:137px;
+    height: 10px;
+    background: #272727;
+}
+
+.custom-btn {
+    padding: 15px 24px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 0.6;
+    border-radius: 0px;
+    color: #1572BB;
+}
+
+.custom-btn:visited {
+    color: #1572BB;
+}
+
+.about-right{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-btn-white {
+    color: #1572BB;
+    border: 1px solid #1572BB;
+}
+
+.halls-title {
+    text-align: center;
+}
+
+.halls-block {
+    background: url('http://ellaboranto.ru/wp-content/uploads/2020/03/img_9343-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: 469px 100%;
+    background-position: left center;
+    height: 556px;
+    justify-content:flex-end;
+}
+
+
+.halls-block:nth-child(2n) {
+    background-position: right center;
+    height: 556px;
+    justify-content:flex-start;
+}
+
+.inner-halls {
+    background-color: white;
+}

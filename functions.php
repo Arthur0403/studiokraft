@@ -196,6 +196,7 @@ function studiokraft_scripts()
     wp_enqueue_style( 'studiokraft-style-fontawesome-all', get_template_directory_uri() . '/assets/css/fontawesome-all.css' );
     wp_enqueue_style( 'studiokraft-style-dosis', 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700' );
     wp_enqueue_style( 'studiokraft-style-fonts', 'https://fonts.googleapis.com/css?family=Forum|Roboto&display=swap' );
+    wp_enqueue_style( 'studiokraft-style-lob', get_template_directory_uri() . '/assets/css/lob-style.css' );
 
     wp_enqueue_style( 'studiokraft-style', get_stylesheet_uri() );
 

@@ -44,48 +44,28 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
         <h3 style="text-align: center">SERVICES</h3>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
-                <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium</div>
+                <?php
+                $features = get_field('features');
+                foreach ($features as $item): ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up"><?= $item ?></div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
     <section class="halls mb-5">
-        <h3 class="halls-title mb-3">Our halls</h3>
-        <div class="container"> <!-- Need to use php-circle -->
-            <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
-                <div class="col col-lg-8 p-4 inner-halls">
-                    <h3 class="text-uppercase">Loft</h3>
-                    <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium eum quidem explicabo hic at inventore deleniti provident nihil eaque facere nam. Excepturi.</p>
-                    <button type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</button>
-                </div>
-<!--                <div class="col">-->
-<!--                    <img class="img-fluid" src="--><?php //the_field('image-about-us') ?><!--" alt="">-->
-<!--                </div>-->
-            </div>
-            <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
-                <div class="col col-lg-8 p-4 inner-halls">
-                    <h3 class="text-uppercase">Loft</h3>
-                    <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium eum quidem explicabo hic at inventore deleniti provident nihil eaque facere nam. Excepturi.</p>
-                    <button type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</button>
-                </div>
-                <!--                <div class="col">-->
-                <!--                    <img class="img-fluid" src="--><?php //the_field('image-about-us') ?><!--" alt="">-->
-                <!--                </div>-->
-            </div>
-            <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
-                <div class="col col-lg-8 p-4 inner-halls">
-                    <h3 class="text-uppercase">Loft</h3>
-                    <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt maxime sequi accusamus adipisci vel atque, accusantium eum quidem explicabo hic at inventore deleniti provident nihil eaque facere nam. Excepturi.</p>
-                    <button type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</button>
-                </div>
-                <!--                <div class="col">-->
-                <!--                    <img class="img-fluid" src="--><?php //the_field('image-about-us') ?><!--" alt="">-->
-                <!--                </div>-->
-            </div>
+        <h3 class="halls-title mb-3"><?php the_field('halls-title'); ?></h3>
+        <div class="container">
+            <?php
+                $halls = get_field('halls-card');
+                for($i = 1; $i <= 3; $i++){ ?>
+                    <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
+                        <div class="col col-lg-8 p-4 inner-halls">
+                            <h3 class="text-uppercase"><?= $halls['hall-item-title-' . $i]; ?></h3>
+                            <p class="my-4"><?= $halls['hall-item-description-' . $i]; ?></p>
+                            <a href="<?= $halls['hall-item-link-' . $i]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
+                        </div>
+                    </div>
+            <?php } ?>
         </div>
     </section>
     <div class="row m-0">
@@ -98,5 +78,13 @@ function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
         </div>
     </div>
 </div>
+<!--<pre>-->
+<?php
+//
+//$features = get_field('halls-card');
+//var_dump($features);
+//
+//?>
+<!--</pre>-->
 <?php
 get_footer();
