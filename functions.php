@@ -255,3 +255,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function debug( $data )
+{
+    echo '<pre>';
+    echo print_r( $data, 1 );
+    echo '</pre>';
+}

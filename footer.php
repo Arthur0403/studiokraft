@@ -11,6 +11,7 @@
 
 ?>
 
+</section>
     <footer class="pt-lg-5 inner-page-footer">
         <p class="footer-title"><span class="blogname"><?php echo bloginfo( 'name' ); ?></span></p>
         <div class="footer-container">
