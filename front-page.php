@@ -16,7 +16,7 @@ get_header();
 
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" image_size="original" autoplay="false" design="design-2" lazyload="ondemand"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
     </div>
     <section class="about-us">
         <div class="container">
