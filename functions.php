@@ -206,7 +206,7 @@ function studiokraft_scripts()
 
     wp_add_inline_script( 'jquery', 'addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }', 'before' );
 
-    wp_enqueue_script( 'studiokraft-script-aos', get_template_directory_uri() . '/assets/js/aos.js', array(), NULL, TRUE );
+    wp_enqueue_script( 'studiokraft-script-aos', get_template_directory_uri() . '/assets/js/aos.js', array('wpsisac-public-script'), NULL, TRUE );
     wp_add_inline_script( 'studiokraft-script-aos', "AOS.init({ easing: 'ease-out-back', duration: 1000 });", 'after' );
     wp_enqueue_script( 'studiokraft-script-lightbox-plus-jquery', get_template_directory_uri() . '/assets/js/lightbox-plus-jquery.min.js', array( 'jquery' ), NULL, TRUE );
     wp_enqueue_script( 'studiokraft-script-move-top', get_template_directory_uri() . '/assets/js/move-top.js', array(), NULL, TRUE );
