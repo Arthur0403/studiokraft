@@ -151,30 +151,30 @@ a:visited {
 /*    justify-content:flex-start;*/
 /*}*/
 
-.inner-halls {
-    position: absolute;
-    right: 30%;
-    background-color: white;
-    z-index: 1;
-}
+/*.inner-halls {*/
+/*    position: absolute;*/
+/*    right: 30%;*/
+/*    background-color: white;*/
+/*    z-index: 1;*/
+/*}*/
 
-.halls-block:nth-child(2n) .inner-halls {
-    left: 30%;
-}
+/*.halls-block:nth-child(2n) .inner-halls {*/
+/*    left: 30%;*/
+/*}*/
 
-.hall-img{
-    position: relative;
-}
+/*.hall-img{*/
+/*    position: relative;*/
+/*}*/
 
-.hall-img > img {
-    width: 469px;
-    height: 556px;
-    float: right;
-}
+/*.hall-img > img {*/
+/*    width: 469px;*/
+/*    height: 556px;*/
+/*    float: right;*/
+/*}*/
 
-.halls-block:nth-child(2n) .hall-img > img {
-    float: left;
-}
+/*.halls-block:nth-child(2n) .hall-img > img {*/
+/*    float: left;*/
+/*}*/
 
 .content-main-w3 {
     padding: 0 !important;
@@ -195,3 +195,88 @@ a:visited {
 .page {
     margin-bottom: 0 !important;
 }
+
+.features-item{
+    position: relative;
+}
+
+.features-item::before{
+    content: '';
+    background: url("http://ellaboranto.ru/wp-content/themes/studiokraft/assets/images/dslr.png");
+    display: block;
+    position: absolute;
+    height: 1rem;
+}
+
+@media (min-width: 320px) {
+    .about-right {
+        order: 1;
+    }
+
+    .inner-halls {
+        position: static;
+        order: 1;
+        flex-basis: auto;
+    }
+
+    .halls-block{
+        margin-bottom: 3rem;
+    }
+
+    .hall-img{
+        position: relative;
+        order: 0;
+    }
+
+    .hall-img > img {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    .halls-block:nth-child(2n) .hall-img > img {
+        float: none;
+    }
+
+}
+
+/*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
+@media (min-width: 576px) {}
+
+/*// Средние девайсы («таблетки», >= 768px)*/
+@media (min-width: 768px) { }
+
+/*// Большие девайсы (десктопы, >= 992px)*/
+@media (min-width: 992px) {
+    .about-right {
+        order: 0;
+    }
+
+    .inner-halls {
+        position: absolute;
+        right: 30%;
+        background-color: white;
+        z-index: 1;
+    }
+
+    .halls-block:nth-child(2n) .inner-halls {
+        left: 30%;
+    }
+
+    .hall-img{
+        position: relative;
+    }
+
+    .hall-img > img {
+        width: 469px;
+        height: 556px;
+        float: right;
+    }
+
+    .halls-block:nth-child(2n) .hall-img > img {
+        float: left;
+    }
+}
+
+/*// Экстрабольшие девайсы (большие десктопы, >= 1200px)*/
+@media (min-width: 1200px) { }

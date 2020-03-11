@@ -39,7 +39,7 @@ get_header();
             <div class="row">
                 <?php $features = get_field( 'features' );
                 foreach ( $features as $item ): ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up"><?= $item ?></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate features-item" data-aos="fade-up"><?= $item ?></div>
                 <?php endforeach; ?>
             </div>
         </div>
