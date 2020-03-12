@@ -43,6 +43,14 @@ function studiokraft_customize_register( $wp_customize )
             'render_callback' => 'studiokraft_customize_partial_blogdescription',
         ) );
         // Custom info
+        $wp_customize->selective_refresh->add_partial( 'studiokraft_address', array(
+            'selector'        => '.container_top .address',
+            'render_callback' => 'studiokraft_customize_partial_address',
+        ) );
+        $wp_customize->selective_refresh->add_partial( 'studiokraft_navigation', array(
+            'selector'        => '.container_top .navigation',
+            'render_callback' => 'studiokraft_customize_partial_address',
+        ) );
         $wp_customize->selective_refresh->add_partial( 'studiokraft_phone', array(
             'selector'        => '.container_top .phone',
             'render_callback' => 'studiokraft_customize_partial_phone',
@@ -50,10 +58,6 @@ function studiokraft_customize_register( $wp_customize )
         $wp_customize->selective_refresh->add_partial( 'studiokraft_mail', array(
             'selector'        => '.container_top .mail',
             'render_callback' => 'studiokraft_customize_partial_mail',
-        ) );
-        $wp_customize->selective_refresh->add_partial( 'studiokraft_address', array(
-            'selector'        => '.container_top .address',
-            'render_callback' => 'studiokraft_customize_partial_address',
         ) );
     }
 
@@ -141,11 +145,127 @@ function studiokraft_customize_register( $wp_customize )
             'type'    => 'checkbox',
         )
     );
+    $wp_customize->add_setting( 'studiokraft_navigation', array(
+        'default'   => '',
+        'transport' => 'postMessage',
+    ));
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_navigation',
+            array(
+                'label'   => __( 'Ссылка на карту', 'studiokraft' ),
+                'section' => 'studiokraft_site_data',
+                'type'    => 'text',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_show_navigation', array(
+        'default'   => true,
+        'transport' => 'postMessage',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_show_navigation',
+        array(
+            'label'   => __( 'показывать ссылку на карту', 'studiokraft' ),
+            'section' => 'studiokraft_site_data',
+            'type'    => 'checkbox',
+        )
+    );
 
-//    $wp_customize->add_section( 'studiokraft_site_data', array(
-//        'title'    => __( 'Информация о компании', 'studiokraft' ),
-//        'priority' => '20',
-//    ));
+    $wp_customize->add_section( 'studiokraft_social', array(
+        'title'    => __( 'Социальные сети', 'studiokraft' ),
+        'priority' => '25',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_vk', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_vk',
+        array(
+            'label'   => __( 'Вконтакте', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_facebook', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_facebook',
+        array(
+            'label'   => __( 'Facebook', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_instagram', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_instagram',
+        array(
+            'label'   => __( 'Instagram', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_whatsapp', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_whatsapp',
+        array(
+            'label'   => __( 'WhatsApp', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_viber', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_viber',
+        array(
+            'label'   => __( 'Viber', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_telegram', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_telegram',
+        array(
+            'label'   => __( 'Telegram', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_skype', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_skype',
+        array(
+            'label'   => __( 'Skype', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+    $wp_customize->add_setting( 'studiokraft_social_ok', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_social_ok',
+        array(
+            'label'   => __( 'Одноклассники', 'studiokraft' ),
+            'section' => 'studiokraft_social',
+            'type'    => 'text',
+    ));
+
     $wp_customize->add_section( 'studiokraft_settings_gallery', array(
         'title'    => __( 'Настройки галереи', 'studiokraft' ),
         'priority' => '85',

@@ -16,7 +16,7 @@ get_header();
 
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
     </div>
     <section class="about-us">
         <div class="container">
@@ -62,12 +62,14 @@ get_header();
             <?php endforeach; ?>
         </div>
     </section>
-    <div class="row m-0">
+    <div class="container-fluid gallery-lightbox my-5">
+        <div class="row m-0">
 
-        <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
+            <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
 
-        <div class="button-center">
-            <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+            <div class="button-center">
+                <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+            </div>
         </div>
     </div>
 <?php

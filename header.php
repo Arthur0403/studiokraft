@@ -23,10 +23,13 @@
 
     <div class="header_top_w3ls">
         <div class="container container_top">
-
-            <div class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
-                <p><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span></p>
-                <p><a href="https://yandex.ru/maps/-/CKa0a6iu2300">Как добраться</a></p>
+            <div class="info">
+                <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
+                    <span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span>
+                </p>
+                <p class="navigation<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo " show"; ?>">
+                    <a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_address' ); ?>">Как добраться</a>
+                </p>
             </div>
             <div class="info">
                 <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
