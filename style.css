@@ -1077,17 +1077,103 @@ a.navbar-brand:hover .blogname {
 	color : #fbb034;
 }
 
-.wpsisac-slide-wrap {
-	height : 600px;
+.slick-slider {
+	margin-bottom : 35px;
 }
 
-.wpsisac-slick-slider-wrp img {
-	position: absolute;
-	width: 101%;
-	height : auto;
-	top : 50%;
-	left : 50%;
-	-webkit-transform : translate(-50%,-50%);-moz-transform : translate(-50%,-50%);-ms-transform : translate(-50%,-50%);-o-transform : translate(-50%,-50%);transform : translate(-50%,-50%);
+.wpsisac-slick-slider.design-2 .slick-dots {
+	bottom : -35px !important;
+}
+
+.wpsisac-slick-slider.design-2 .slick-arrow {
+	top : 0 !important;
+}
+
+.wpsisac-slick-slider button.slick-next,
+.wpsisac-slick-slider button.slick-prev {
+	background : none !important;
+}
+
+.wpsisac-slick-slider button.slick-next,
+.wpsisac-slick-slider button.slick-next:hover,
+.wpsisac-slick-slider button.slick-next:focus {
+	background      : url(assets/images/arrow-right.png) center center no-repeat !important;
+	background-size : 15px 26px !important;
+}
+
+.wpsisac-slick-slider button.slick-prev,
+.wpsisac-slick-slider button.slick-prev:hover,
+.wpsisac-slick-slider button.slick-prev:focus {
+	background      : url(assets/images/arrow-left.png) center center no-repeat !important;
+	background-size : 15px 26px !important;
+}
+
+.wpsisac-slick-slider.design-2 .slick-next {
+	right : -5% !important;
+}
+
+.wpsisac-slick-slider.design-2 .slick-prev {
+	left : -5% !important;
+}
+
+.wpsisac-slick-slider button.slick-arrow {
+	width  : 15%;
+	height : 100%;
+}
+
+.wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-content {
+	height : 100%;
+}
+
+.wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-short-content p {
+	font-size : 1.25rem;
+}
+
+.wpsisac-slick-slider h2.wpsisac-slide-title {
+	margin-top  : 20% !important;
+	font-size   : 1.75rem;
+	line-height : 70px;
+	font-weight : 500;
+}
+
+.wpsisac-slick-slider .slick-dots li button {
+	border   : 2px solid #1572bb;
+	width    : 15px !important;
+	height   : 15px !important;
+	position : relative;
+	cursor   : pointer;
+}
+
+.wpsisac-slick-slider .slick-dots li.slick-active button {
+	background : none !important;
+}
+
+.wpsisac-slick-slider .slick-dots li.slick-active button::after {
+	position         : absolute;
+	content          : "";
+	display          : block;
+	top              : 2px;
+	left             : 2px;
+	width            : 7px;
+	height           : 7px;
+	background-color : #1572bb;
+	border-radius    : 50%;
+}
+
+.wpsisac-slide-wrap {
+	height : 50vh;
+}
+
+.wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore {
+	position   : absolute;
+	display    : block;
+	top        : 0;
+	left       : 0;
+	width      : 100%;
+	height     : 100%;
+	color      : transparent;
+	border     : none;
+	background : none;
 }
 
 .social-icons {
@@ -1099,56 +1185,16 @@ a.navbar-brand:hover .blogname {
 }
 
 .gallery_effect {
-	margin     : 0 0 15px 15px;
-	padding    : 0;
-	box-shadow : 0 5px 5px #000000b0;
+	margin  : 0 0 15px 15px;
+	padding : 0;
 }
 
 .gallery_effect img {
 	height : auto;
 }
 
-/*.gallery_effect figure {*/
-/*	margin : 0;*/
-/*}*/
-
-/*.horizontal {*/
-/*	margin-bottom : 31px;*/
-/*	margin-left : 30px;*/
-/*}*/
-
-/*.vertical {*/
-/*	margin-bottom : 30px;*/
-/*	margin-left : 30px;*/
-/*}*/
-
 .button-center {
 	margin : 50px auto 75px;
-}
-
-.power-button {
-	display          : inline-block;
-	padding          : 7px 40px 6px;
-	font-size        : 1.25rem;
-	line-height      : 1.25;
-	text-transform   : uppercase;
-	color            : #1572bb;
-	border           : none;
-	border-radius    : 5px;
-	background-color : #ffffff;
-	box-shadow       : 0 0 0 2px #1572bb;
-}
-
-.power-button:visited {
-	color : #c4c4c4;
-}
-
-.power-button:hover,
-.power-button:active {
-	color            : #ffffff;
-	background-color : #1572bb;
-	text-shadow      : 0 0 3px #ffffff;
-	box-shadow       : inset 0 0 0 1px #ffffff, 0 0 0 2px #1572bb;
 }
 
 .pagination {
@@ -1272,6 +1318,10 @@ footer a {
 
 	.menu-item:nth-child(n+4) {
 		order : 2;
+	}
+
+	.wpsisac-slide-wrap {
+		height : 650px;
 	}
 
 	.footer-container {
