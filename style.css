@@ -1017,12 +1017,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-weight   : 500;
 }
 
-.container_top .info {
+.container_top .info:not(:first-child) {
 	margin-left : auto;
 	text-align  : right;
 }
 
 .container_top .address,
+.container_top .navigation,
 .container_top .phone,
 .container_top .mail {
 	display : none;
@@ -1097,32 +1098,37 @@ a.navbar-brand:hover .blogname {
 .wpsisac-slick-slider button.slick-next,
 .wpsisac-slick-slider button.slick-next:hover,
 .wpsisac-slick-slider button.slick-next:focus {
-	background      : url(assets/images/arrow-right.png) center center no-repeat !important;
-	background-size : 15px 26px !important;
+	background      : url(assets/images/arrow-right.png) center right no-repeat !important;
+	background-size : 35px auto !important;
 }
 
 .wpsisac-slick-slider button.slick-prev,
 .wpsisac-slick-slider button.slick-prev:hover,
 .wpsisac-slick-slider button.slick-prev:focus {
-	background      : url(assets/images/arrow-left.png) center center no-repeat !important;
-	background-size : 15px 26px !important;
+	background      : url(assets/images/arrow-left.png) center left no-repeat !important;
+	background-size : 35px auto !important;
 }
 
 .wpsisac-slick-slider.design-2 .slick-next {
-	right : -5% !important;
+	right : 0 !important;
 }
 
 .wpsisac-slick-slider.design-2 .slick-prev {
-	left : -5% !important;
+	left : 0 !important;
 }
 
 .wpsisac-slick-slider button.slick-arrow {
-	width  : 15%;
+	width  : 8%;
 	height : 100%;
 }
 
 .wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-content {
-	height : 100%;
+	height            : 100%;
+	-webkit-transform : none;transform : none;
+	top               : 0;
+	display           : flex;
+	flex-direction    : column;
+	justify-content   : flex-end;
 }
 
 .wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-short-content p {
@@ -1130,7 +1136,7 @@ a.navbar-brand:hover .blogname {
 }
 
 .wpsisac-slick-slider h2.wpsisac-slide-title {
-	margin-top  : 20% !important;
+	margin-top  : 0 !important;
 	font-size   : 1.75rem;
 	line-height : 70px;
 	font-weight : 500;
@@ -1161,7 +1167,7 @@ a.navbar-brand:hover .blogname {
 }
 
 .wpsisac-slide-wrap {
-	height : 50vh;
+	height : 70vh;
 }
 
 .wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore {
@@ -1180,8 +1186,8 @@ a.navbar-brand:hover .blogname {
 	margin-left : 0;
 }
 
-.row.gallery {
-	margin : 0 15px 0 0;
+.container-fluid.gallery-lightbox.my-5 {
+	padding-left: 0px;
 }
 
 .gallery_effect {
@@ -1229,9 +1235,7 @@ span.page-numbers {
 }
 
 a.page-numbers:hover,
-a.page-numbers:active,
-.stepanov:hover,
-.stepanov:active {
+a.page-numbers:active {
 	box-shadow  : inset 0 0 3px #ffffff, 0 0 3px #ffffff;
 	text-shadow : 0 0 3px #ffffff;
 }
@@ -1271,7 +1275,7 @@ footer a {
 	font-size     : 1rem;
 	text-align    : center;
 }
-
+/*https://yandex.ru/maps/-/CKa0a6iu2300*/
 .social-icons {
 	padding      : 15px 25px;
 	margin-left  : auto;
@@ -1285,6 +1289,14 @@ footer a {
 
 .social-icons li:nth-child(4) {
 	margin-right : unset;
+}
+
+ul.social-icons li a {
+	padding-top: 4px;
+}
+
+.fab {
+	font-size : 1.5rem;
 }
 
 @media (min-width : 768px) {
