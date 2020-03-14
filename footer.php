@@ -15,15 +15,32 @@
     <footer class="pt-lg-5 inner-page-footer">
         <p class="footer-title"><span class="blogname"><?php echo bloginfo( 'name' ); ?></span></p>
         <div class="footer-container">
+<!--            --><?php //debug(get_theme_mods()); ?>
             <ul class="social-icons justify-content-center footer-item">
-                <li class="mr-1"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-twitter"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                <li class="mr-1"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-twitter"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                <li class="mx-1"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                <?php if (get_theme_mod( 'studiokraft_social_vk' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_vk' ); ?>"><span class="fab fa-vk"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_facebook' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_facebook' ); ?>"><span class="fab fa-facebook-f"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_instagram' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_instagram' ); ?>"><span class="fab fa-instagram"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_whatsapp' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_whatsapp' ); ?>"><span class="fab fa-whatsapp"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_viber' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_viber' ); ?>"><span class="fab fa-viber"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_telegram' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_telegram' ); ?>"><span class="fab fa-telegram-plane"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_skype' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_skype' ); ?>"><span class="fab fa-skype"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_ok' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_ok' ); ?>"><span class="fab fa-odnoklassniki"></span></a></li>
+                <?php endif; ?>
             </ul>
             <div class="footer-info footer-item">
                 <div class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
