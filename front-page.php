@@ -34,18 +34,18 @@ get_header();
         </div>
     </section>
     <section class="features mb-5">
-        <h3 style="text-align: center">ОСОБЕННОСТИ</h3>
+        <h3 style="text-align: center"><?php the_field('features_title'); ?></h3>
         <div class="container">
             <div class="row">
                 <?php $features = get_field( 'features' );
                 foreach ( $features as $item ): ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate" data-aos="fade-up"><?php echo $item ?></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate features-item" data-aos="fade-up"><?php echo $item ?></div>
                 <?php endforeach; ?>
             </div>
         </div>
     </section>
     <section class="halls mb-5">
-        <h3 class="halls-title mb-3"><?php the_field( 'halls-title' ); ?></h3>
+        <h3 class="halls-title mb-3 mx-auto"><?php the_field( 'halls-title' ); ?></h3>
         <div class="container">
             <?php $halls = get_field( 'halls_card' );
             foreach ( $halls as $innerHall ): ?>
@@ -62,14 +62,24 @@ get_header();
             <?php endforeach; ?>
         </div>
     </section>
-    <div class="row m-0">
+   <section class="gallery">
+       <div class="container">
+           <div class="col">
+               <div class="gallery-title-wrap">
+                   <h3 class="tittle gallery-title"><?php the_field('gallery_title'); ?></h3>
+                   <div class="black-border mb-4"></div>
+               </div>
+               <div class="row m-0">
 
-        <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
+                   <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
 
-        <div class="button-center">
-            <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
-        </div>
-    </div>
+                   <div class="button-center">
+                       <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
 <?php
 //
 //$halls = get_field('halls_card');

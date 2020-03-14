@@ -104,7 +104,13 @@ a:visited {
     font-size: 3rem !important;
     font-weight: 900;
     color: #1572BB;
+    line-height: 4.5rem;
+}
 
+.halls-title {
+    transform: translateY(-2rem);
+    background-color: white;
+    max-width: 300px;
 }
 
 .black-border {
@@ -196,17 +202,62 @@ a:visited {
     margin-bottom: 0 !important;
 }
 
-.features-item{
-    position: relative;
+/*.features-item{*/
+/*    position: relative;*/
+/*    !*padding-left: 2rem;*!*/
+/*    padding-right: 4rem;*/
+/*}*/
+
+/*.features-item::before{*/
+/*    content: '';*/
+/*    background: url(/wp-content/themes/studiokraft/assets/images/dslr.png) no-repeat center center;*/
+/*    position: absolute;*/
+/*    left: -2rem;*/
+/*    height: 2rem;*/
+/*    width: 2rem;*/
+/*    background-size: contain;*/
+/*}*/
+
+.gallery-title-wrap {
+    margin: 0 auto;
+    max-width: 220px;
 }
 
-.features-item::before{
-    content: '';
-    background: url("http://ellaboranto.ru/wp-content/themes/studiokraft/assets/images/dslr.png");
-    display: block;
-    position: absolute;
-    height: 1rem;
+.halls {
+    border-top: 1.5px solid #C4C4C4;
 }
+
+/*Hall page*/
+.page-banner {
+    /*position: relative;*/
+}
+
+.page-content {
+    /*position: absolute;*/
+    background-color: #fff;
+    margin-top: -5rem;
+}
+
+.page-content__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.custom-btn-hall {
+    display: block;
+}
+
+.custom-dropdown-hall {
+    color: #272727;
+    width: 100%;
+    border:1px solid #ffc107;
+    border-radius: 0px;
+    outline: none;
+    background-color: #fff;
+}
+
 
 @media (min-width: 320px) {
     .about-right {
