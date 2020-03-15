@@ -62,7 +62,7 @@ get_header();
             <?php endforeach; ?>
         </div>
     </section>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
    <section class="gallery">
        <div class="container">
            <div class="col">
@@ -81,18 +81,6 @@ get_header();
            </div>
        </div>
    </section>
-=======
-    <div class="container-fluid gallery-lightbox my-5">
-        <div class="row m-0">
-
-            <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
-
-            <div class="button-center">
-                <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
-            </div>
-        </div>
-    </div>
->>>>>>> d1491604f2a916ffd4c09a44913d2886c4d24247
 <?php
 //
 //$halls = get_field('halls_card');

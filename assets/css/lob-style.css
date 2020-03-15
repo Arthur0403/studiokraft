@@ -287,7 +287,27 @@ a:visited {
     display: none !important;
 }
 
+/* Halls common */
+.dressing-room {
+    background-color: rgba(255, 194, 13, 0.5);
+}
 
+.dressing-room_title {
+    font-size:3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.dressing-room-img {
+    width: 518px;
+    height: 556px;
+}
+
+.inner-dressing-room {
+    background-color: #fff;
+    transform: translate(8%, -15%);
+}
 @media (min-width: 320px) {
     .about-right {
         order: 1;
@@ -318,13 +338,33 @@ a:visited {
         float: none;
     }
 
+    .dressing-room-img {
+        width: 100%;
+    }
+
+    .inner-dressing-room {
+        transform: translate(0, 0);
+    }
+
+    .dressing-room_title {
+        font-size: 2rem;
+    }
+
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
 @media (min-width: 576px) {}
 
 /*// Средние девайсы («таблетки», >= 768px)*/
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+    /*.dressing-room-img {*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*.inner-dressing-room {*/
+    /*    transform: translate(0, 0);*/
+    /*}*/
+}
 
 /*// Большие девайсы (десктопы, >= 992px)*/
 @media (min-width: 992px) {
