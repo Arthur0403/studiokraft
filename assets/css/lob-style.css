@@ -258,6 +258,35 @@ a:visited {
     background-color: #fff;
 }
 
+.link-rules {
+    color: #1572BB;
+    text-decoration: underline;
+    font-family: 'Forum';
+}
+
+.link-rules:visited {
+    color: #1572BB;
+}
+
+.inventary-title {
+    text-align: center;
+    color: #1572BB;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.inventary-img {
+    display: block;
+    height: 247px;
+    width: 249px;
+}
+
+.slick-arrow,
+.slick-prev,
+.slick-next{
+    display: none !important;
+}
+
 
 @media (min-width: 320px) {
     .about-right {
