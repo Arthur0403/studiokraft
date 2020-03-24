@@ -989,26 +989,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Custom style
 --------------------------------------------------------------*/
 .main_logo .logo-text-group {
-	transform-origin: 50% 50%;
-	animation: round 1.5s ease-in;
+	transform-origin : 50% 50%;
+	animation        : round 1.5s ease-in;
 }
 
 .main_logo .logo-border-group {
 	/*transform-origin: center;*/
-	animation: zoom 1s ease-in;
+	animation : zoom 1s ease-in;
 	/*transform-origin: 75px 75px;transform: scale(1);*/
 }
 
 @keyframes round {
-	0%   {transform: translateY(200%);}
-	80%  {transform: translateY(150%);}
-	100% {transform: translateY(0%);}
+	0% {transform : translateY(200%);}
+	80% {transform : translateY(150%);}
+	100% {transform : translateY(0%);}
 }
 
 @keyframes zoom {
-	0%   {transform-origin: 103px 88px;transform: scale(-1);}
-	50%  {transform-origin: 103px 11px;transform: scale(-0.5);}
-	100% {transform-origin: 103px -768px;transform: scale(1);}
+	0% {transform-origin : 103px 88px;transform : scale(-1);}
+	50% {transform-origin : 103px 11px;transform : scale(-0.5);}
+	100% {transform-origin : 103px -768px;transform : scale(1);}
 	/*10%   {transform-origin: 75px 0px;transform: scale(-1);}*/
 	/*90%  {transform-origin: 75px 0px;transform: scale(1.2);}*/
 }
@@ -1046,7 +1046,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-weight   : 500;
 }
 
-.container_top .info:not(:first-child) {
+.container_top .header-info:not(:first-child) {
 	margin-left : auto;
 	text-align  : right;
 }
@@ -1060,6 +1060,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .container_top .show {
 	display : block;
+}
+
+.header-info .studiokraft-address,
+.header-info .studiokraft-phone,
+.header-info .studiokraft-mail {
+	font-family : 'Roboto', sans-serif;
+	color       : white;
+	font-size   : 0.9rem;
 }
 
 .logo-wthree {
@@ -1297,6 +1305,134 @@ a.page-numbers:active {
 	box-shadow : inset 0 0 3px #1572bb, 0 0 3px #1572bb;
 }
 
+/*   Contacts   */
+
+.info-item {
+	display        : flex;
+	flex-direction : row;
+	align-items    : baseline;
+	margin-bottom  : 27px;
+}
+
+.info-block p:first-child {
+	margin-top : 13px;
+}
+
+.info-block p {
+	margin-bottom : 0;
+}
+
+.info .studiokraft-address,
+.info .studiokraft-phone,
+.info .studiokraft-mail,
+.info .social {
+	font-family : 'Forum', serif;
+	color       : #272727;
+	font-size   : 1.2rem;
+	line-height : 1.5;
+}
+
+.info-icon {
+	margin-right : 10px;
+	color        : #272727;
+}
+
+.info-item.address .info-icon {
+	transform : translateY(9px);
+}
+
+.info-item.phone .info-icon {
+	transform : translateY(11px);
+}
+
+.info-item.mail .info-icon,
+.info-item.social .info-icon {
+	transform : translateY(7px);
+}
+
+.info-item .fas {
+	font-size : 2rem;
+}
+
+/*   Form   */
+
+.wpforms-field-textarea {
+	width : 100% !important;
+}
+
+.info-item_title,
+.info-section div.wpforms-container-full .wpforms-form .wpforms-field-label {
+	font-family : 'Roboto', sans-serif;
+	font-weight : bold;
+	font-size   : 1.5rem;
+	line-height : 1.2;
+}
+
+.info-section div.wpforms-container-full .wpforms-form input[type="text"],
+.info-section div.wpforms-container-full .wpforms-form input[type="email"],
+.info-section div.wpforms-container-full .wpforms-form input[type="text-area"] {
+	padding     : 15px 57px;
+	height      : 57px;
+	font-family : 'Roboto', sans-serif;
+	font-size   : 1.5rem;
+	line-height : 1.2;
+}
+
+.info-section div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
+	height : 237px;
+}
+
+.wpforms-submit-container {
+	display         : flex;
+	justify-content : flex-end;
+}
+
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"],
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:disabled) {
+	color            : #1572bb;
+	background-color : #ffc107;
+	border-color     : #ffc107;
+}
+
+.map {
+	margin-top : 30px;
+	height     : 60vh;
+}
+
+.tittle-center {
+	text-align : center;
+}
+
+.navigation .tittle {
+	margin-top    : 42px;
+	margin-bottom : 24px;
+}
+
+.navigation video {
+	margin : 52px auto;
+	width  : 100%;
+	height : auto;
+}
+
+.attention-wrapper {
+	padding          : 46px 0;
+	background-color : #ffc20d;
+}
+
+.attention-title {
+	display     : block;
+	text-align  : center;
+	font-family : 'Roboto', sans-serif;
+	font-weight : bold;
+	font-size   : 2.25rem;
+	line-height : 1.15;
+	color       : #272727;
+}
+
+.attention-text {
+	margin-top : 15px;
+}
+
 footer.inner-page-footer,
 footer.pt-lg-5 {
 	border-top  : 1px ridge #ffffff;
@@ -1378,6 +1514,22 @@ ul.social-icons li a:active {
 }
 
 @media (min-width : 768px) {
+
+	.info-section .wpforms-field-container {
+		display        : flex;
+		flex-direction : row;
+		flex-wrap      : wrap;
+	}
+
+	.wpforms-field-text,
+	.wpforms-field-email {
+		width : 47% !important;
+	}
+
+	.wpforms-field-text {
+		margin-right : auto !important;
+	}
+
 }
 
 @media (max-width : 991px) {
@@ -1425,6 +1577,26 @@ ul.social-icons li a:active {
 
 	.wpsisac-slider-short-content {
 		display : block;
+	}
+
+	/*   Contacts   */
+	.info {
+		display         : flex;
+		justify-content : space-between;
+	}
+
+	.info-section:first-child {
+		display        : flex;
+		flex-direction : column;
+		width          : 30%;
+	}
+
+	.info-section:last-child {
+		width : 67.8%;
+	}
+
+	.map {
+		height : 596px;
 	}
 
 	.footer-container {
