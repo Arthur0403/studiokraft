@@ -13,19 +13,26 @@
  */
 
 get_header();
-function debug($data){echo '<pre>';echo print_r($data, 1);echo '</pre>';}
+
 ?>
-<div class="container-fluid gallery-lightbox my-5">
-    <div class="row m-0">
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-title-wrap">
+                <h3 class="tittle gallery-title">Галлерея</h3>
+                <div class="black-border mb-4"></div>
+            </div>
+            <div class="row m-0">
 
-        <?php get_template_part( 'template-parts/content', 'gallery-4' ); ?>
+                <?php get_template_part( 'template-parts/content', 'gallery-page' ); ?>
 
-    <?php the_posts_pagination( array(
-            'end_size' => 1,
-            'mid_size' => 1,
-            'type'     => 'list',
-        ) ); ?>
-    </div>
-</div>
+            <?php the_posts_pagination( array(
+                    'end_size' => 1,
+                    'mid_size' => 1,
+                    'type'     => 'list',
+                ) ); ?>
+
+            </div>
+        </div>
+    </section>
 <?php
 get_footer();

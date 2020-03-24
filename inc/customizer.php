@@ -66,6 +66,18 @@ function studiokraft_customize_register( $wp_customize )
         'title'    => __( 'Информация о компании', 'studiokraft' ),
         'priority' => '20',
     ));
+    $wp_customize->add_setting( 'studiokraft_show_logo', array(
+        'default'   => true,
+        'transport' => 'postMessage',
+    ));
+    $wp_customize->add_control(
+        'studiokraft_show_logo',
+        array(
+            'label'   => __( 'включить логотип', 'studiokraft' ),
+            'section' => 'studiokraft_site_data',
+            'type'    => 'checkbox',
+        )
+    );
     $wp_customize->add_setting( 'studiokraft_phone', array(
         'default'           => '',
         'transport'         => 'postMessage',

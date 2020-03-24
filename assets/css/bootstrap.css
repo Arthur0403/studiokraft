@@ -2457,6 +2457,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"],
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -2475,23 +2476,29 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:hover,
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:focus,
 .btn:hover, .btn:focus {
   text-decoration: none;
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:focus,
 .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:disabled,
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:not(:disabled),
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 
+div.wpforms-container-full .wpforms-form button.btn[type="submit"]:not(:disabled):active,
 .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
   background-image: none;
 }
@@ -2637,28 +2644,33 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"],
 .btn-warning {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,
 .btn-warning:hover {
   color: #212529;
   background-color: #e0a800;
   border-color: #d39e00;
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:focus,
 .btn-warning:focus, .btn-warning.focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:disabled,
 .btn-warning.disabled, .btn-warning:disabled {
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:disabled),
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
 .show > .btn-warning.dropdown-toggle {
   color: #212529;
