@@ -14,9 +14,10 @@
 
 get_header();
 
+//debug(get_theme_mods());
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
     </div>
     <section class="about-us">
         <div class="container">
@@ -62,21 +63,26 @@ get_header();
             <?php endforeach; ?>
         </div>
     </section>
-    <div class="container-fluid gallery-lightbox my-5">
-        <div class="row m-0">
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-title-wrap">
+                <h3 class="tittle gallery-title"><?php the_field( 'gallery_title' ); ?></h3>
+                <div class="black-border mb-4"></div>
+            </div>
+            <div class="row m-0">
 
             <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
 
-            <div class="button-center">
-                <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+                <div class="button-center">
+                    <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 <?php
 //
 //$halls = get_field('halls_card');
 //debug($halls);
 //
-//?>
-<?php
+//
 get_footer();
