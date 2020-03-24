@@ -104,7 +104,13 @@ a:visited {
     font-size: 3rem !important;
     font-weight: 900;
     color: #1572BB;
+    line-height: 4.5rem;
+}
 
+.halls-title {
+    transform: translateY(-2rem);
+    background-color: white;
+    max-width: 300px;
 }
 
 .black-border {
@@ -198,18 +204,112 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-.features-item{
-    position: relative;
+/*.features-item{*/
+/*    position: relative;*/
+/*    !*padding-left: 2rem;*!*/
+/*    padding-right: 4rem;*/
+/*}*/
+
+/*.features-item::before{*/
+/*    content: '';*/
+/*    background: url(/wp-content/themes/studiokraft/assets/images/dslr.png) no-repeat center center;*/
+/*    position: absolute;*/
+/*    left: -2rem;*/
+/*    height: 2rem;*/
+/*    width: 2rem;*/
+/*    background-size: contain;*/
+/*}*/
+
+.gallery-title-wrap {
+    margin: 0 auto;
+    max-width: 220px;
 }
 
-.features-item::before{
-    content: '';
-    background: url("http://ellaboranto.ru/wp-content/themes/studiokraft/assets/images/dslr.png");
+.halls {
+    border-top: 1.5px solid #C4C4C4;
+}
+
+/*Hall page*/
+.page-banner {
+    /*position: relative;*/
+}
+
+.page-content {
+    /*position: absolute;*/
+    background-color: #fff;
+    margin-top: -5rem;
+}
+
+.page-content__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.custom-btn-hall {
     display: block;
-    position: absolute;
-    height: 1rem;
 }
 
+.custom-dropdown-hall {
+    color: #272727;
+    width: 100%;
+    border:1px solid #ffc107;
+    border-radius: 0px;
+    outline: none;
+    background-color: #fff;
+}
+
+.link-rules {
+    color: #1572BB;
+    text-decoration: underline;
+    font-family: 'Forum';
+}
+
+.link-rules:visited {
+    color: #1572BB;
+}
+
+.inventary-title {
+    text-align: center;
+    color: #1572BB;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.inventary-img {
+    display: block;
+    height: 247px;
+    width: 249px;
+}
+
+.slick-arrow,
+.slick-prev,
+.slick-next{
+    display: none !important;
+}
+
+/* Halls common */
+.dressing-room {
+    background-color: rgba(255, 194, 13, 0.5);
+}
+
+.dressing-room_title {
+    font-size:3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.dressing-room-img {
+    width: 518px;
+    height: 556px;
+}
+
+.inner-dressing-room {
+    background-color: #fff;
+    transform: translate(8%, -15%);
+}
 @media (min-width: 320px) {
     .about-right {
         order: 1;
@@ -240,13 +340,33 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         float: none;
     }
 
+    .dressing-room-img {
+        width: 100%;
+    }
+
+    .inner-dressing-room {
+        transform: translate(0, 0);
+    }
+
+    .dressing-room_title {
+        font-size: 2rem;
+    }
+
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
 @media (min-width: 576px) {}
 
 /*// Средние девайсы («таблетки», >= 768px)*/
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+    /*.dressing-room-img {*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*.inner-dressing-room {*/
+    /*    transform: translate(0, 0);*/
+    /*}*/
+}
 
 /*// Большие девайсы (десктопы, >= 992px)*/
 @media (min-width: 992px) {
