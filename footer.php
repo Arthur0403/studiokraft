@@ -13,10 +13,10 @@
 
 </section>
     <footer class="pt-lg-5 inner-page-footer">
-        <p class="footer-title"><span class="blogname"><?php echo bloginfo( 'name' ); ?></span></p>
         <div class="footer-container">
 <!--            --><?php //debug(get_theme_mods()); ?>
             <ul class="social-icons justify-content-center footer-item">
+                <p class="footer-title"><span class="blogname"><?php echo bloginfo( 'name' ); ?></span></p>
                 <?php if (get_theme_mod( 'studiokraft_social_vk' )) : ?>
                     <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_vk' ); ?>"><span class="fab fa-vk"></span></a></li>
                 <?php endif; ?>
@@ -69,6 +69,5 @@
     </footer>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

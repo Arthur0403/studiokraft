@@ -56,6 +56,9 @@ get_header();
             </div>
         </div>
     </section>
+<div>
+    <?php get_template_part( 'template-parts/content', 'inventary' ); ?>
+</div>
     <?php
     get_footer();
     ?>

@@ -3,7 +3,7 @@
     'posts_per_page' => '20',
 ) );
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 1 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 1 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 1 || $i === 7 || $i === 11 || $i === 16 ) : ?>
             <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">
@@ -16,7 +16,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
     <?php if ( $i === 16 ) : ?></div><?php endif; ?>
 <?php $i++; endwhile; endif; wp_reset_postdata();
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 2 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 2 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 2 || $i === 12 || $i === 17 ) : ?>
             <div class="gallery_grid1 hover08<?php if ( $i === 2 ) { echo ' vertical'; } else { echo ' horizontal'; } ?>" data-aos="fade-up">
                 <div class="gallery_effect">
@@ -33,7 +33,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
     <?php if ( $i === 17 ) : ?></div><?php endif; ?>
 <?php $i++; endwhile; endif; wp_reset_postdata();
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 3 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 3 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 3 || $i === 8 || $i === 18 ) : ?>
             <div class="gallery_grid1 hover08<?php if ( $i === 8 ) { echo ' vertical'; } else { echo ' horizontal'; } ?>" data-aos="fade-up">
                 <div class="gallery_effect">
@@ -50,7 +50,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
     <?php if ( $i === 18 ) : ?></div><?php endif; ?>
 <?php $i++; endwhile; endif; wp_reset_postdata();
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 4 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 4 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 4 || $i === 9 || $i === 13 || $i === 19 ) : ?>
             <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">
@@ -63,7 +63,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
     <?php if ( $i === 19 ) : ?></div><?php endif; ?>
 <?php $i++; endwhile; endif; wp_reset_postdata();
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 5 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 5 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 5 || $i === 14 || $i === 20 ) : ?>
             <div class="gallery_grid1 hover08<?php if ( $i === 5 ) { echo ' vertical'; } else { echo ' horizontal'; } ?>" data-aos="fade-up">
                 <div class="gallery_effect">
@@ -80,7 +80,7 @@ if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->t
     <?php if ( $i === 20 ) : ?></div><?php endif; ?>
 <?php $i++; endwhile; endif; wp_reset_postdata();
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 6 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 6 ) : ?><div class="col-md-2 col-sm-4 p-0 snap-img"><?php endif; ?>
         <? if ( $i === 6 || $i === 10 || $i === 15 || $i === 15 ) : ?>
             <div class="gallery_grid1 horizontal hover08" data-aos="fade-up">
                 <div class="gallery_effect">

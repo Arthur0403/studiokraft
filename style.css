@@ -988,6 +988,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Custom style
 --------------------------------------------------------------*/
+.main_logo .logo-text-group {
+	transform-origin: 50% 50%;
+	animation: round 1.5s ease-in;
+}
+
+.main_logo .logo-border-group {
+	/*transform-origin: center;*/
+	animation: zoom 1s ease-in;
+	/*transform-origin: 75px 75px;transform: scale(1);*/
+}
+
+@keyframes round {
+	0%   {transform: translateY(200%);}
+	80%  {transform: translateY(150%);}
+	100% {transform: translateY(0%);}
+}
+
+@keyframes zoom {
+	0%   {transform-origin: 103px 88px;transform: scale(-1);}
+	50%  {transform-origin: 103px 11px;transform: scale(-0.5);}
+	100% {transform-origin: 103px -768px;transform: scale(1);}
+	/*10%   {transform-origin: 75px 0px;transform: scale(-1);}*/
+	/*90%  {transform-origin: 75px 0px;transform: scale(1.2);}*/
+}
+
+.main_logo:hover .logo-simbol {
+
+}
+
 .post,
 .page {
 	margin : 0;
@@ -1039,9 +1068,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	align-items    : center;
 }
 
+img.custom-logo {
+	width  : 150px !important;
+	height : 150px !important;
+}
+
 a.navbar-brand span {
 	font-weight : normal;
 	font-size   : unset;
+}
+
+.navbar-brand svg {
+	width  : 150px;
+	height : 150px;
 }
 
 .navbar-brand .blogname {
@@ -1057,6 +1096,7 @@ a.navbar-brand:hover .blogname {
 
 .blogdescription {
 	font-size : 14px !important;
+	color     : #ffffff;
 }
 
 .navbar-light .navbar-nav .menu-item > a {
@@ -1082,12 +1122,9 @@ a.navbar-brand:hover .blogname {
 	margin-bottom : 35px;
 }
 
-.wpsisac-slick-slider.design-2 .slick-dots {
-	bottom : -35px !important;
-}
-
 .wpsisac-slick-slider.design-2 .slick-arrow {
-	top : 0 !important;
+	display : none !important;
+	top     : 0 !important;
 }
 
 .wpsisac-slick-slider button.slick-next,
@@ -1123,7 +1160,7 @@ a.navbar-brand:hover .blogname {
 }
 
 .wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-content {
-	height            : 100%;
+	height            : 90%;
 	-webkit-transform : none;transform : none;
 	top               : 0;
 	display           : flex;
@@ -1142,12 +1179,25 @@ a.navbar-brand:hover .blogname {
 	font-weight : 500;
 }
 
+.wpsisac-slider-short-content {
+	display : none;
+}
+
+.wpsisac-slick-slider.design-2 .slick-dots {
+	bottom : 0 !important;
+}
+
+.wpsisac-slick-slider .slick-dots li {
+	margin : 0 4px !important;
+}
+
 .wpsisac-slick-slider .slick-dots li button {
-	border   : 2px solid #1572bb;
-	width    : 15px !important;
-	height   : 15px !important;
-	position : relative;
-	cursor   : pointer;
+	position         : relative;
+	width            : 15px !important;
+	height           : 15px !important;
+	background-color : transparent !important;
+	border           : 2px solid #1572bb;
+	cursor           : pointer;
 }
 
 .wpsisac-slick-slider .slick-dots li.slick-active button {
@@ -1166,8 +1216,9 @@ a.navbar-brand:hover .blogname {
 	border-radius    : 50%;
 }
 
+.wpsisac-image-slide,
 .wpsisac-slide-wrap {
-	height : 70vh;
+	height : 80vh;
 }
 
 .wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore {
@@ -1187,7 +1238,7 @@ a.navbar-brand:hover .blogname {
 }
 
 .container-fluid.gallery-lightbox.my-5 {
-	padding-left: 0px;
+	padding-left : 0px;
 }
 
 .gallery_effect {
@@ -1200,7 +1251,8 @@ a.navbar-brand:hover .blogname {
 }
 
 .button-center {
-	margin : 50px auto 75px;
+	margin     : 50px auto 75px;
+	text-align : center;
 }
 
 .pagination {
@@ -1219,35 +1271,36 @@ ul.page-numbers li:not(:last-child) {
 }
 
 a.page-numbers,
-span.page-numbers {
+.page-numbers.current {
 	padding          : 10px 14px 9px;
 	border-radius    : 5px;
-	border           : 2px solid #ffffff;
-	background-color : #007cc0;
+	border           : 2px solid #1572bb;
+	background-color : #ffffff;
 	text-transform   : uppercase;
-	font-weight      : 500;
-	color            : #ffffff;
+	font-weight      : 600;
+	color            : #1572bb;
 	cursor           : pointer;
+	transition       : .3s;
+	line-height      : 1;
 }
 
-span.page-numbers {
-	font-weight : 600;
+.page-numbers.current {
+	font-weight      : 600;
+	border           : unset;
+	cursor           : unset;
+	border           : 2px solid transparent;
+	background-color : #ffffff;
 }
 
 a.page-numbers:hover,
 a.page-numbers:active {
-	box-shadow  : inset 0 0 3px #ffffff, 0 0 3px #ffffff;
-	text-shadow : 0 0 3px #ffffff;
+	box-shadow : inset 0 0 3px #1572bb, 0 0 3px #1572bb;
 }
 
-span.page-numbers {
-	border : unset;
-	cursor : unset;
-}
-
-footer {
+footer.inner-page-footer,
+footer.pt-lg-5 {
 	border-top  : 1px ridge #ffffff;
-	padding-top : 20px;
+	padding-top : 20px !important;
 }
 
 footer span,
@@ -1258,6 +1311,7 @@ footer a {
 
 .footer-title {
 	margin-bottom : 5px;
+	width         : 100%;
 	font-size     : 18px;
 	font-weight   : bold;
 	text-align    : center;
@@ -1275,16 +1329,18 @@ footer a {
 	font-size     : 1rem;
 	text-align    : center;
 }
-/*https://yandex.ru/maps/-/CKa0a6iu2300*/
+
 .social-icons {
 	padding      : 15px 25px;
 	margin-left  : auto;
 	margin-right : auto;
+	width        : 310px;
 	display      : flex;
+	flex-wrap    : wrap;
 }
 
 .social-icons li {
-	margin : 10px 5px 0 0 !important;
+	margin : 15px 15px 0 0 !important;
 }
 
 .social-icons li:nth-child(4) {
@@ -1292,11 +1348,33 @@ footer a {
 }
 
 ul.social-icons li a {
-	padding-top: 4px;
+	padding-top : 4px;
+}
+
+ul.social-icons li a:hover,
+ul.social-icons li a:active {
+	border : 2px solid transparent;
+}
+
+.copy-right {
+	display         : flex;
+	flex-wrap       : wrap;
+	justify-content : center;
+	text-align      : center;
+}
+
+.copy-right a {
+	display : block;
+	width   : 100%;
 }
 
 .fab {
 	font-size : 1.5rem;
+}
+
+#toTop {
+	background : #1572bb url(assets/images/move_up.png) no-repeat 11px 11px;
+	border     : 1px solid #dddddd;
 }
 
 @media (min-width : 768px) {
@@ -1332,8 +1410,21 @@ ul.social-icons li a {
 		order : 2;
 	}
 
+	.wpsisac-image-slide,
 	.wpsisac-slide-wrap {
 		height : 650px;
+	}
+
+	.wpsisac-slick-slider.design-2 .slick-arrow {
+		display : block !important;
+	}
+
+	.wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-content {
+		height : 95%;
+	}
+
+	.wpsisac-slider-short-content {
+		display : block;
 	}
 
 	.footer-container {
@@ -1357,7 +1448,21 @@ ul.social-icons li a {
 		border-right : 4px double #ffffff;
 	}
 
+	.social-icons li {
+		margin : 10px 5px 0 0 !important;
+	}
+
 	.footer-links p {
 		text-align : left;
+	}
+
+	.copy-right {
+		flex-wrap   : nowrap;
+		align-items : baseline;
+	}
+
+	.copy-right a {
+		margin-left : 5px;
+		width       : auto;
 	}
 }
