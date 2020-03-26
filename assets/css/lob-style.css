@@ -43,12 +43,12 @@ a:visited {
     color: white !important;
 }
 
-.studiokraft-address,
-.studiokraft-phone,
-.studiokraft-mail{
+.info .studiokraft-address,
+.info .phone .studiokraft-phone,
+.info .mail .studiokraft-mail{
     font-family: 'Roboto';
     color: white;
-    font-size: 0.9rem
+    font-size: 0.9rem;
 }
 
 .navbar-brand .blogdescription {
@@ -300,6 +300,22 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     background-color: rgba(255, 194, 13, 0.5);
 }
 
+#navbarSupportedContent {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#menu-glavnoe-menyu {
+    width: 65%;
+    justify-content: space-between;
+}
+
+.container_top {
+    justify-content: space-between !important;
+}
 @media (min-width: 320px) {
     .about-right {
         order: 1;

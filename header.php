@@ -20,7 +20,6 @@
 
 <body <?php body_class(); ?>>
 <section class="content-main-w3 inner-page" id="home">
-
     <div class="header_top_w3ls">
         <div class="container container_top">
             <div class="header-info">
@@ -49,6 +48,7 @@
                 <?php if ( has_custom_logo() ) : ?><?php the_custom_logo(); ?><?php else : ?>
                     <span class="blogname"><?php echo bloginfo( 'name' ); ?></span><?php endif; ?>
                 <span class="blogdescription"><?php $studiokraft_description = get_bloginfo( 'description', 'display' );
+                debug(the_custom_logo(0));
                     if ( $studiokraft_description || is_customize_preview() ) : ?><?php echo $studiokraft_description; ?><?php endif; ?></span>
             </a>
         </div>
