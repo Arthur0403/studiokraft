@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .header_top_w3ls,
 footer {
     background: #1572BB;
@@ -63,11 +65,13 @@ a:visited {
 .page-about-banner {
     padding: 100px 40px;
     vertical-align: middle;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin:0;
     background: url('../wp-content/uploads/2020/02/sesja.jpg');
     background-size: cover;
     background-position: center center;
+    -webkit-box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;
     box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;
 }
 
@@ -108,6 +112,8 @@ a:visited {
 }
 
 .halls-title {
+    -webkit-transform: translateY(-2rem);
+    -ms-transform: translateY(-2rem);
     transform: translateY(-2rem);
     background-color: white;
     max-width: 300px;
@@ -135,7 +141,12 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .about-right{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -149,6 +160,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .halls-block {
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
     justify-content:flex-end;
 }
 
@@ -309,21 +322,40 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 #menu-glavnoe-menyu {
-    width: 65%;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .container_top {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
     justify-content: space-between !important;
 }
+
+.footer-title {
+    display: none;
+}
+
+.content-main-w3, .inner-page-footer {
+    /*padding: 0 0 1em;*/
+    background: #121213 !important;
+}
+
 @media (min-width: 320px) {
     .about-right {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
     }
 
     .inner-halls {
         position: static;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
+        -ms-flex-preferred-size: auto;
         flex-basis: auto;
     }
 
@@ -333,6 +365,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .hall-img{
         position: relative;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
         order: 0;
     }
 
@@ -351,6 +385,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .inner-dressing-room {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
         background-color: #fff;
     }
@@ -359,10 +395,31 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-size: 2rem;
     }
 
+    .container_top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .sub-menu {
+        list-style: none;
+        /*padding: 10px;*/
+    }
+
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+
+}
 
 /*// Средние девайсы («таблетки», >= 768px)*/
 @media (min-width: 768px) {
@@ -370,11 +427,27 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         /*width: 518px;*/
         height: 556px;
     }
+
+    /*.container_top {*/
+    /*    flex-direction: column;*/
+    /*    align-items: center;*/
+    /*}*/
+
+    /*.info {*/
+    /*    text-align: center;*/
+    /*}*/
+
+    #menu-glavnoe-menyu {
+        max-width: 720px;
+    }
+
 }
 
 /*// Большие девайсы (десктопы, >= 992px)*/
 @media (min-width: 992px) {
     .about-right {
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
         order: 0;
     }
 
@@ -412,8 +485,80 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     .inner-dressing-room {
         background-color: #fff;
         /*transform: translate(8%, -15%);*/
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
     }
+
+    .phone {
+        margin-right: 3rem;
+    }
+
+    .container_top {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .info {
+        text-align: left;
+    }
+
+    #menu-glavnoe-menyu {
+        max-width: 960px;
+    }
+
+    .menu-item-102:hover .sub-menu {
+        display: block;
+    }
+
+    .sub-menu {
+        position: absolute;
+        /*top: 6.5rem;*/
+        display: none;
+        list-style: none;
+        padding: 10px;
+        background-color: white;
+        z-index: 10;
+        -webkit-transform: translateX(-15%);
+        -ms-transform: translateX(-15%);
+        transform: translateX(-15%);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+
+    .sub-menu:hover {
+        display: block;
+    }
+
+    .sub-menu .menu-item > a{
+        text-transform: inherit !important;
+        color: #979797 !important;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        text-align: center;
+    }
+
+    .sub-menu .menu-item > a:hover{
+        color: #1572BB !important;
+        text-decoration: underline;
+    }
+
+    .sub-menu .menu-item {
+        padding: 4px 6px;
+    }
+}
+
+@media (min-width: 1024px){
+    /*#menu-glavnoe-menyu {*/
+    /*    width: 85%;*/
+    /*}*/
 }
 
 /*// Экстрабольшие девайсы (большие десктопы, >= 1200px)*/
@@ -425,6 +570,38 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .inner-dressing-room {
         background-color: #fff;
+        -webkit-transform: translate(8%, -15%);
+        -ms-transform: translate(8%, -15%);
         transform: translate(8%, -15%);
     }
+
+    #menu-glavnoe-menyu {
+        max-width: 1140px;
+    }
+
+    /*.sub-menu {*/
+    /*    position: absolute;*/
+    /*    top: 6.5rem;*/
+    /*    display: none;*/
+    /*    list-style: none;*/
+    /*    padding: 10px;*/
+    /*    background-color: white;*/
+    /*    z-index: 10;*/
+    /*    transform: translateX(-15%);*/
+    /*}*/
+
+    /*.sub-menu .menu-item > a{*/
+    /*    text-transform: inherit !important;*/
+    /*    color: #979797 !important;*/
+    /*    transition: .5s;*/
+    /*}*/
+
+    /*.sub-menu .menu-item > a:hover{*/
+    /*    color: #1572BB !important;*/
+    /*    text-decoration: underline;*/
+    /*}*/
+
+    /*.sub-menu .menu-item {*/
+    /*    padding: 4px 6px;*/
+    /*}*/
 }
