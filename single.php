@@ -17,7 +17,6 @@ get_header();
 ?>
 
     <div class="container-fluid p-0">
-
         <?php
             while ( have_posts() ) :
                 the_post();

@@ -13,12 +13,12 @@
 
 </section>
     <footer class="pt-lg-5 inner-page-footer">
-        <p class="footer-title">
-            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <?php if ( has_custom_logo() ) : the_custom_logo(); ?><?php else : ?>
-                    <span class="blogname"><?php echo bloginfo( 'name' ); ?></span><?php endif; ?>
-            </a>
-        </p>
+<!--        <p class="footer-title">-->
+<!--            <a class="navbar-brand" href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!--                --><?php //if ( has_custom_logo() ) : the_custom_logo(); ?><!----><?php //else : ?>
+<!--                    <span class="blogname">--><?php //echo bloginfo( 'name' ); ?><!--</span>--><?php //endif; ?>
+<!--            </a>-->
+<!--        </p>-->
         <div class="footer-container">
 <!--            --><?php //debug(get_theme_mods()); ?>
             <ul class="social-icons justify-content-center footer-item">
@@ -68,8 +68,8 @@
                 <p><a href="">Бронирование</a></p>
             </div>
         </div>
-        <div class="footer-container">
-            <p class="copy-right my-3"><span>© 2020 - <?php echo date('Y'); ?> </span><a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
+        <div class="social_media_w3layouts text-center">
+            <p class="copy-right-w3ls my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
         </div>
     </footer>
 

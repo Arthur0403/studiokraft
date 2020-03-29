@@ -1507,7 +1507,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 
 footer.inner-page-footer,
 footer.pt-lg-5 {
-	/*border-top  : 1px ridge #ffffff;*/
 	padding-top : 20px !important;
 }
 
@@ -1701,6 +1700,11 @@ ul.social-icons li a:active {
 
 	.footer-info {
 		order : -1;
+	}
+
+	.footer-info,
+	.footer-links {
+		min-width: 318px;
 	}
 
 	.footer-info p {

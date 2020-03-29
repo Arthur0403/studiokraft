@@ -46,7 +46,7 @@
 		});
 	});
 
-	// Info
+	// Address
 
 	wp.customize('studiokraft_address', function (value) {
 		value.bind(function (newval) {
@@ -57,18 +57,6 @@
 	wp.customize('studiokraft_show_address', function (value) {
 		value.bind(function (newval) {
 			true === newval ? $('.container_top .address').addClass('show') : $('.address').removeClass('show');
-		});
-	});
-
-	wp.customize('studiokraft_navigation', function (value) {
-		value.bind(function (newval) {
-			$('.studiokraft-navigation').text(newval);
-		});
-	});
-
-	wp.customize('studiokraft_show_address', function (value) {
-		value.bind(function (newval) {
-			true === newval ? $('.container_top .navigation').addClass('show') : $('.navigation').removeClass('show');
 		});
 	});
 

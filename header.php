@@ -30,7 +30,7 @@
                     <a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_address' ); ?>">Как добраться</a>
                 </p>
             </div>
-            <div class="header-info">
+            <div class="info">
                 <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
                     <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
                         <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
@@ -45,7 +45,7 @@
         </div>
         <div class="logo-wthree text-center logo-wthree__top">
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <?php if ( has_custom_logo() ) : the_custom_logo(); ?><?php else : ?>
+                <?php if ( has_custom_logo() ) : ?><?php the_custom_logo(); ?><?php else : ?>
                     <span class="blogname"><?php echo bloginfo( 'name' ); ?></span><?php endif; ?>
                 <span class="blogdescription"><?php $studiokraft_description = get_bloginfo( 'description', 'display' );
                     if ( $studiokraft_description || is_customize_preview() ) : ?><?php echo $studiokraft_description; ?><?php endif; ?></span>

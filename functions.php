@@ -269,3 +269,14 @@ function debug( $data )
     echo print_r( $data, 1 );
     echo '</pre>';
 }
+
+/**
+ * Allow SVG files in Media Library.
+ */
+function extra_mime_types( $mimes ) {
+
+    $mimes['svg'] = 'image/svg+xml';
+
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'extra_mime_types' );

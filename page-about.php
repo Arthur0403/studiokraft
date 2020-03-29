@@ -21,7 +21,7 @@
                     </div> -->
                     <div class="col-lg-8 about-center mt-lg-4" data-aos="flip-left">
                         <h4 class="sub-tittle">Photography Studio</h4>
-                        <h3 class="tittle text-uppercase"><?php echo the_field('about_title'); ?></h3>
+                        <h3 class="tittle text-uppercase"><?php the_field('about_title'); ?></h3>
                         <p class="my-4"><?php the_field('description_text'); ?></p>
 
                         <!-- <ul class="author d-flex">
