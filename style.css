@@ -988,34 +988,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Custom style
 --------------------------------------------------------------*/
-.main_logo .logo-text-group {
-	transform-origin : 50% 50%;
-	animation        : round 1.5s ease-in;
-}
-
-.main_logo .logo-border-group {
-	/*transform-origin: center;*/
-	animation : zoom 1s ease-in;
-	/*transform-origin: 75px 75px;transform: scale(1);*/
-}
-
-@keyframes round {
-	0% {transform : translateY(200%);}
-	80% {transform : translateY(150%);}
-	100% {transform : translateY(0%);}
-}
-
-@keyframes zoom {
-	0% {transform-origin : 103px 88px;transform : scale(-1);}
-	50% {transform-origin : 103px 11px;transform : scale(-0.5);}
-	100% {transform-origin : 103px -768px;transform : scale(1);}
-	/*10%   {transform-origin: 75px 0px;transform: scale(-1);}*/
-	/*90%  {transform-origin: 75px 0px;transform: scale(1.2);}*/
-}
-
-.main_logo:hover .logo-simbol {
-
-}
 
 .post,
 .page {
@@ -1214,7 +1186,7 @@ a.navbar-brand:hover .blogname {
 
 .wpsisac-slick-slider .slick-dots li.slick-active button::after {
 	position         : absolute;
-	content          : "";
+	content          : '';
 	display          : block;
 	top              : 2px;
 	left             : 2px;
@@ -1436,34 +1408,105 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 /*   Pravila   */
 
 .container--rules {
-	margin-top : 84px;
-	padding    : 24px 43px;
-	border     : 1px solid #c4c4c4;
+	margin-top : 50px;
+}
+
+.container--rules .has-background {
+	background : transparent;
+}
+
+.container--rules h2,
+.container--rules h3 {
+	font-family : 'Forum', serif;
+	font-size   : 1.75rem;
+	color       : #272727;
 }
 
 .container--rules h2 {
-	font-family : "Roboto", serif;
-	font-size   : 1.5rem;
-	color       : #272727;
+	margin    : 35px 0 25px;
+	font-size : 2.25rem;
 }
 
-.rules {
-	padding     : 22px 0 3px 20px;
-	font-family : "Forum", serif;
-	font-size   : 1.5rem;
+.container--rules h3 {
+	margin-left : 20px;
+}
+
+.container--rules .wp-block-group__inner-container .wp-block-group__inner-container .rules-panel {
+	display : none;
+}
+
+.rules-item {
+	border : 1px solid #c4c4c4;
+}
+
+.rules-item:not(:last-child) {
+	border-bottom : none;
+}
+
+.rules-item > .wp-block-group__inner-container {
+	padding  : 3px 0;
+	cursor   : pointer;
+	position : relative;
+}
+
+.rules-item > .wp-block-group__inner-container::before {
+	position       : absolute;
+	content        : '';
+	display        : inline-block;
+	top            : 16px;
+	left           : -1px;
+	height         : 8px;
+	width          : 8px;
+	margin-right   : 1rem;
+	margin-left    : .5rem;
+	vertical-align : middle;
+	border-right   : 2px solid;
+	border-bottom  : 2px solid;
+	transform      : rotate(-45deg);
+	transition     : transform .2s ease-out;
+}
+
+.rules-item > .is-active::before {
+	transform : rotate(45deg);
+}
+
+.rules .rules-panel {
+	display        : none;
+	padding-bottom : 15px;
+}
+
+.rules-panel,
+.rules-panel p,
+.rules-panel span {
+	font-family : 'Forum', serif;
+	font-size   : 1.2rem;
 	color       : #272727;
-	line-height : 1.1;
+	line-height : 1.5;
+}
+
+.rules-panel ol,
+.rules-panel ul {
+	padding       : 15px 0 3px 25px;
+	margin-bottom : 0;
+}
+
+.rules-panel p {
+	padding : 0 10px;
+}
+
+.rules-list li {
+	padding : 5px;
+	border  : none;
 }
 
 .rules a {
-	font-family : "Forum", serif;
-	font-size   : 1.5rem;
-	line-height : 1.1;
+	font-family : 'Forum', serif;
+	font-size   : 1.2rem;
+	line-height : 1.5;
 }
 
 footer.inner-page-footer,
 footer.pt-lg-5 {
-	/*border-top  : 1px ridge #ffffff;*/
 	padding-top : 20px !important;
 }
 
@@ -1558,6 +1601,29 @@ ul.social-icons li a:active {
 		margin-right : auto !important;
 	}
 
+	.rules .rules-panel {
+		padding-bottom : 0;
+	}
+
+	.rules-item > .wp-block-group__inner-container {
+		padding : 10px 35px;
+	}
+
+	.rules-item > .wp-block-group__inner-container::before {
+		top  : 23px;
+		left : 7px;
+	}
+
+	.container--rules h3 {
+		margin-left : 0;
+	}
+
+	.rules-panel ol,
+	.rules-panel ul {
+		padding : 22px 0 3px 35px;
+	}
+
+
 }
 
 @media (max-width : 991px) {
@@ -1634,6 +1700,11 @@ ul.social-icons li a:active {
 
 	.footer-info {
 		order : -1;
+	}
+
+	.footer-info,
+	.footer-links {
+		min-width: 318px;
 	}
 
 	.footer-info p {

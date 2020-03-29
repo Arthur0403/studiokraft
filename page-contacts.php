@@ -8,7 +8,7 @@ get_header();
     <div class="container-fluid p-0">
         <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
     </div>
-    <section class="banner-bottom-w3layouts py-lg-5 py-md-5 py-3">
+    <section class="banner-bottom-w3layouts"><!-- py-lg-5 py-md-5 py-3-->
         <div class="container">
             <div class="gallery-title-wrap">
                 <h1 class="tittle gallery-title">Контакты</h1>
