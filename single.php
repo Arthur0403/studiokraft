@@ -7,7 +7,13 @@
  * @package Studio_Kraft
  */
 
+if (get_the_category()[0]->slug === get_theme_mod( 'studiokraft_category_gallery' )) {
+    get_header('hide');
+} else {
+    get_header();
+}
 get_header();
+
 ?>
 
     <div class="container-fluid p-0">
@@ -21,10 +27,9 @@ get_header();
                 the_post_navigation();
 
                 // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-
+//                if ( comments_open() || get_comments_number() ) :
+//                    comments_template();
+//                endif;
             endwhile; // End of the loop.
         ?>
 

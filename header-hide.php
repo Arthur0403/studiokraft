@@ -1,4 +1,8 @@
 <?php
+
+header("HTTP/1.0 404 Not Found");
+header("Location: /");
+die;
 /**
  * The header for our theme
  *
@@ -10,9 +14,4 @@
  */
 
 ?>
-<!DOCTYPE html>
-<html lang="RU">
-<head>
-    <meta http-equiv="refresh" content="1;URL=http://studiokraft.loc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+
