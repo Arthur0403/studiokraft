@@ -46,20 +46,9 @@ get_header();
                 </div>
         </div>
     </section>
-    <section class="mb-4 inventary">
-        <div class="container">
-            <h3 class="my-4 mx-auto inventary-title">Инвентарь</h3>
-            <div class="row">
-                <?php $inventary = get_field('inventary');
-                foreach ($inventary as $item): ?>
-                    <div class="col col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <img src="<?= $item['inventary_item_img'] ?>" alt="" class="inventary-img">
-                        <span class="inventary-subscribe"><?= $item['inventary_item_subscribe'] ?></span>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
+    <div>
+        <?php get_template_part( 'template-parts/content', 'inventary' ); ?>
+    </div>
 <?php
 get_footer();
 ?>
