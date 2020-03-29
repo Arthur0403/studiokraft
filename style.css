@@ -1126,9 +1126,9 @@ a.navbar-brand:hover .blogname {
 	color : #fbb034;
 }
 
-.slick-slider {
-	margin-bottom : 35px;
-}
+/*.slick-slider {*/
+/*	margin-bottom : 35px;*/
+/*}*/
 
 .wpsisac-slick-slider.design-2 .slick-arrow {
 	display : none !important;
@@ -1433,9 +1433,37 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	margin-top : 15px;
 }
 
+/*   Pravila   */
+
+.container--rules {
+	margin-top : 84px;
+	padding    : 24px 43px;
+	border     : 1px solid #c4c4c4;
+}
+
+.container--rules h2 {
+	font-family : "Roboto", serif;
+	font-size   : 1.5rem;
+	color       : #272727;
+}
+
+.rules {
+	padding     : 22px 0 3px 20px;
+	font-family : "Forum", serif;
+	font-size   : 1.5rem;
+	color       : #272727;
+	line-height : 1.1;
+}
+
+.rules a {
+	font-family : "Forum", serif;
+	font-size   : 1.5rem;
+	line-height : 1.1;
+}
+
 footer.inner-page-footer,
 footer.pt-lg-5 {
-	border-top  : 1px ridge #ffffff;
+	/*border-top  : 1px ridge #ffffff;*/
 	padding-top : 20px !important;
 }
 
