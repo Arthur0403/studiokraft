@@ -60,6 +60,12 @@
 		});
 	});
 
+	wp.customize('studiokraft_show_navigation', function (value) {
+		value.bind(function (newval) {
+			true === newval ? $('.container_top .navigation').addClass('show') : $('.navigation').removeClass('show');
+		});
+	});
+
 	wp.customize('studiokraft_phone', function (value) {
 		value.bind(function (newval) {
 			$('.studiokraft-phone').text(newval);
