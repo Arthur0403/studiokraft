@@ -179,7 +179,7 @@ function studiokraft_customize_register( $wp_customize )
     $wp_customize->add_control(
         'studiokraft_show_navigation',
         array(
-            'label'   => __( 'показывать ссылку на карту', 'studiokraft' ),
+            'label'   => __( 'включить ссылку на карту', 'studiokraft' ),
             'section' => 'studiokraft_site_data',
             'type'    => 'checkbox',
         )

@@ -3,7 +3,7 @@
     'posts_per_page' => '20',
 ) );
 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php if ( $i === 1 || $i === 5 || $i === 8 || $i === 11 || $i === 15 || $i === 18 ) : ?><div class="col-lg-2 col-md-2 col-sm-3 p-0 snap-img"><?php endif; ?>
+    <?php if ( $i === 1 || $i === 5 || $i === 8 || $i === 11 || $i === 15 || $i === 18 ) : ?><div class="col-md-2 col-sm-6 p-0 snap-img"><?php endif; ?>
         <div class="gallery_grid1 hover08<?php if ( $i === 5 || $i === 9 || $i === 15 || $i === 20 ) { echo ' vertical'; } else { echo ' horizontal'; } ?>" data-aos="fade-up">
             <div class="gallery_effect">
                 <?php// echo $i; ?>

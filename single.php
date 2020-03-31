@@ -7,7 +7,7 @@
  * @package Studio_Kraft
  */
 
-if (get_the_category()[0]->slug === get_theme_mod( 'studiokraft_category_gallery' )) {
+if ( in_category( get_theme_mod( 'studiokraft_category_gallery' ) ) ) {
     get_header('hide');
 } else {
     get_header();
@@ -21,7 +21,7 @@ get_header();
             while ( have_posts() ) :
                 the_post();
 
-                get_template_part( 'template-parts/content', get_post_format() );
+                get_template_part( 'template-parts/content', get_the_category()[0]->slug );
 
 
                 the_post_navigation();
