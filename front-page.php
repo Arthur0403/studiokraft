@@ -26,7 +26,7 @@ get_header();
                     <h3 class="tittle text-uppercase"><?php the_field('about-us-title'); ?></h3>
                     <div class="black-border"></div>
                     <p class="my-4"><?php the_field('about-us'); ?></p>
-                    <button type="button" class="btn btn-warning custom-btn">Забронировать</button>
+                    <a href="http://ellaboranto.ru/bronirovanie/" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
                 </div>
                 <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">
                     <img class="img-fluid" src="<?php the_field('image-about-us') ?>" alt="">
