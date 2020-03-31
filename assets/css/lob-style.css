@@ -343,6 +343,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     background: #121213 !important;
 }
 
+.attention-text {
+    text-align: center;
+}
+
 @media (min-width: 320px) {
     .about-right {
         -webkit-box-ordinal-group: 2;
