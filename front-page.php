@@ -17,7 +17,7 @@ get_header();
 //debug(get_theme_mods());
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
     </div>
     <section class="about-us">
         <div class="container">

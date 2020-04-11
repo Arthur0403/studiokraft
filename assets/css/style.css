@@ -31,7 +31,6 @@ body {
 	margin      : 0;
 	font-size   : 100%;
 	font-family : 'Blogger Sans', sans-serif;
-	background  : #ffffff;
 }
 
 body a {
@@ -572,14 +571,14 @@ a.hover-2.btn:hover {
 footer {
 	margin     : 0 auto;
 	width      : 90%;
-	border-top : 1px ridge rgba(8, 93, 140, 0.48);
+	/*border-top : 1px ridge rgba(8, 93, 140, 0.48);*/
 }
 
 .inner-page-footer {
-	background : #007cc0;
+	/*background : #007cc0;*/
 	padding    : 2em 0;
 	width      : 100%;
-	border-top : 1px ridge rgba(8, 93, 140, 0.48);
+	/*border-top : 1px ridge rgba(8, 93, 140, 0.48);*/
 }
 
 .social_media_w3layouts {

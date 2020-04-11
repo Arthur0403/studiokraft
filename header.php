@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <section class="content-main-w3 inner-page" id="home">
-    <div class="header_top_w3ls">
+    <div class="header_top">
         <div class="container container_top">
             <div class="header-info">
                 <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">

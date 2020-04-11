@@ -22,13 +22,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #toTop {
-	bottom : 40px;
+	bottom              : 40px;
+	background-image    : url(assets/images/move_up.png);
+	background-position : center;
+	background-size     : 11px 11px;
 }
+
+/*.header_top a {*/
+/*	opacity : 0.8;*/
+/*}*/
 
 .content-main-w3,
 .inner-page-footer {
-	padding    : 0 0 1em;
-	background : #1572bb;
+	padding : 0 0 1em;
 }
 
 .container_top {
@@ -41,7 +47,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .container_top a,
 .container_top p {
 	margin-bottom : 5px;
-	color         : #ffffffcc;
 	font-weight   : 500;
 }
 
@@ -65,7 +70,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .header-info .studiokraft-phone,
 .header-info .studiokraft-mail {
 	font-family : 'Roboto', sans-serif;
-	color       : white;
 	font-size   : 0.9rem;
 }
 
@@ -116,7 +120,6 @@ a.navbar-brand:hover .blogname {
 }
 
 .navbar-light .navbar-nav .menu-item > a {
-	color          : #ffffff;
 	letter-spacing : 2px;
 	font-size      : 16px;
 	text-transform : uppercase;
@@ -212,7 +215,7 @@ a.navbar-brand:hover .blogname {
 	width            : 15px !important;
 	height           : 15px !important;
 	background-color : transparent !important;
-	border           : 2px solid #1572bb;
+	border           : 2px solid;
 	cursor           : pointer;
 }
 
@@ -221,15 +224,14 @@ a.navbar-brand:hover .blogname {
 }
 
 .wpsisac-slick-slider .slick-dots li.slick-active button::after {
-	position         : absolute;
-	content          : '';
-	display          : block;
-	top              : 2px;
-	left             : 2px;
-	width            : 7px;
-	height           : 7px;
-	background-color : #1572bb;
-	border-radius    : 50%;
+	position      : absolute;
+	content       : '';
+	display       : block;
+	top           : 2px;
+	left          : 2px;
+	width         : 7px;
+	height        : 7px;
+	border-radius : 50%;
 }
 
 .container-title,
@@ -414,12 +416,17 @@ a.page-numbers:active {
 
 .info-section div.wpforms-container-full .wpforms-form input[type="text"],
 .info-section div.wpforms-container-full .wpforms-form input[type="email"],
-.info-section div.wpforms-container-full .wpforms-form input[type="text-area"] {
-	padding     : 15px 57px;
-	height      : 57px;
-	font-family : 'Roboto', sans-serif;
-	font-size   : 1.5rem;
-	line-height : 1.2;
+.info-section div.wpforms-container-full .wpforms-form textarea {
+	padding          : 15px 15px 15px 57px;
+	height           : 57px;
+	font-family      : 'Roboto', sans-serif;
+	font-size        : 1.5rem;
+	line-height      : 1.2;
+	background-color : #ffffffaa;
+}
+
+.info-section div.wpforms-container-full .wpforms-form textarea {
+	padding : 15px 15px;
 }
 
 .info-section div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
@@ -470,7 +477,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	font-weight : bold;
 	font-size   : 2.25rem;
 	line-height : 1.15;
-	color       : #272727;
 }
 
 .attention-text {
@@ -491,7 +497,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 .container--rules h3 {
 	font-family : 'Forum', serif;
 	font-size   : 1.75rem;
-	color       : #272727;
 }
 
 .container--rules h2 {
@@ -577,6 +582,16 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	line-height : 1.5;
 }
 
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,
+.btn-warning:hover {
+	filter : brightness(80%);
+}
+
+div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:active,
+.btn-warning:active {
+	filter : brightness(60%);
+}
+
 footer.inner-page-footer,
 footer.pt-lg-5 {
 	padding-top : 20px !important;
@@ -645,6 +660,7 @@ ul.social-icons li a:active {
 .copy-right a {
 	display : block;
 	width   : 100%;
+	color   : #ffc107;
 }
 
 .fab {
@@ -652,8 +668,7 @@ ul.social-icons li a:active {
 }
 
 #toTop {
-	background : #1572bb url(assets/images/move_up.png) no-repeat 11px 11px;
-	border     : 1px solid #dddddd;
+	border : 1px solid #dddddd;
 }
 
 @media (min-width : 576px) and (max-width : 767px) {
@@ -670,7 +685,7 @@ ul.social-icons li a:active {
 @media (min-width : 768px) {
 
 	.gallery_effect {
-		margin  : 0px 5px 10px 5px;
+		margin : 0px 5px 10px 5px;
 	}
 
 	.info-item {

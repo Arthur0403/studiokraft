@@ -23,16 +23,11 @@ span {
     line-height: 1.5;
 }
 
-a:visited {
-    color: white;
-}
-
 .navbar-brand>span {
     font-size: .5rem !important;
 }
 
-
-.header_top_w3ls {
+.header_top {
     padding: 20px;
 }
 
@@ -109,7 +104,6 @@ a:visited {
 .halls-title {
     font-size: 3rem !important;
     font-weight: 900;
-    color: #1572BB;
     line-height: 4.5rem;
 }
 
@@ -162,7 +156,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
 .custom-btn-white {
     color: #1572BB;
-    border: 1px solid #1572BB;
+    border: 1px solid;
 }
 
 .halls-title {
@@ -348,11 +342,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     display: none;
 } */
 
-.content-main-w3,
-.inner-page-footer {
-    /*padding: 0 0 1em;*/
-    background: #121213 !important;
-}
+/*.content-main-w3, .inner-page-footer {*/
+/*    padding: 0 0 1em;*/
+/*    background: #121213 !important;*/
+/*}*/
 
 .attention-text {
     text-align: center;
