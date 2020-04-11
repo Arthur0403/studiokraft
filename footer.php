@@ -66,8 +66,8 @@
                 <p><a href="">Бронирование</a></p>
             </div>
         </div>
-        <div class="social_media_w3layouts text-center">
-            <p class="copy-right-w3ls my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
+        <div class="social_media text-center">
+            <p class="copy-right my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
         </div>
     </footer>
 

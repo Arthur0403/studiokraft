@@ -19,7 +19,7 @@ get_header();
         <?php endwhile; endif ?>
         </div>
     </div>
-    <section class="banner-bottom-w3layouts py-lg-5 py-md-5 py-3">
+    <section class="rules py-lg-5 py-md-5 py-3">
         <div class="attention-wrapper">
             <div class="container">
                 <div class="attention">

@@ -16,7 +16,7 @@ function studiokraft_customize_register( $wp_customize )
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-    $wp_customize->add_setting( 'studiokraft_background_color', array(
+    $wp_customize->add_setting( 'studiokraft_header_background_color', array(
         'default'           => '#1572bb',
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
@@ -24,11 +24,139 @@ function studiokraft_customize_register( $wp_customize )
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'studiokraft_background_color',
+            'studiokraft_header_background_color',
             array(
-                'label'   => __( 'Цвет фона', 'studiokraft' ),
+                'label'   => __( 'Цвет Header', 'studiokraft' ),
                 'section' => 'colors',
-                'setting' => 'studiokraft_background_color',
+                'setting' => 'studiokraft_header_background_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_header_color', array(
+        'default'           => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_header_color',
+            array(
+                'label'   => __( 'Цвет текста в Header', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_header_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_main_background_color', array(
+        'default'           => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_main_background_color',
+            array(
+                'label'   => __( 'Основной цвет', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_main_background_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_main_color', array(
+        'default'           => '#272727',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_main_color',
+            array(
+                'label'   => __( 'Основной цвет текста', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_main_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_title_color', array(
+        'default'           => '#000000',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_title_color',
+            array(
+                'label'   => __( 'Цвет заголовков', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_title_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_accent_color', array(
+        'default'           => '#1572bb',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_accent_color',
+            array(
+                'label'   => __( 'Акцентный цвет', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_accent2_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_accent2_color', array(
+        'default'           => '#ffc107',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_accent2_color',
+            array(
+                'label'   => __( 'Акцентный цвет2', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_accent2_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_footer_background_color', array(
+        'default'           => '#121213',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_footer_background_color',
+            array(
+                'label'   => __( 'Цвет футера', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_footer_background_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_footer_color', array(
+        'default'           => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_footer_color',
+            array(
+                'label'   => __( 'Цвет текста футера', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_footer_color',
             )
         )
     );
@@ -305,9 +433,28 @@ function studiokraft_customize_css()
 {
     ?>
     <style type="text/css">
-        .content-main-w3 { background : <?php echo get_theme_mod( 'studiokraft_background_color' ); ?>; }
+        .header_top{background-color:<?php echo get_theme_mod( 'studiokraft_header_background_color' );?>;}
+        .header_top p,.header_top span,.header_top a,.info .studiokraft-address,.info .phone .studiokraft-phone,.info .mail .studiokraft-mail{color:<?php echo get_theme_mod( 'studiokraft_header_color' );?>;}
+        html,body,section.contacts,section.rules,.inner-halls{background-color:<?php echo get_theme_mod( 'studiokraft_main_background_color' );?>;}
+        section p,section span,.attention-title,.features-item,.rules-panel,.rules-panel p,.rules-panel span,.info-item_title,.info-section div.wpforms-container-full .wpforms-form .wpforms-field-label{color:<?php echo get_theme_mod( 'studiokraft_main_color' );?>;}
+        .info-section div.wpforms-container-full .wpforms-form input[type="text"],.info-section div.wpforms-container-full .wpforms-form input[type="email"],.info-section div.wpforms-container-full .wpforms-form textarea{color:<?php echo get_theme_mod( 'studiokraft_main_color' );?>cc;}
+        h1,h2,h3,h4,h5,h6{color:<?php echo get_theme_mod( 'studiokraft_title_color' );?>;}
+        .wpsisac-slick-slider .slick-dots li button,.custom-btn-white{border-color:<?php echo get_theme_mod( 'studiokraft_accent_color' );?>;}
+        .wpsisac-slick-slider .slick-dots li.slick-active button::after,#toTop{background-color:<?php echo get_theme_mod( 'studiokraft_accent_color' );?>}
+        .tittle,.halls-title,.custom-btn,.custom-btn:visited,.btn-light:hover,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"],.btn-warning,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,.btn-warning:hover,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:disabled),.btn-warning:not(:disabled):not(.disabled):active,.btn-warning:not(:disabled):not(.disabled).active,.show>.btn-warning.dropdown-toggle{color:<?php echo get_theme_mod( 'studiokraft_accent_color' );?>;}
+        div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"],.btn-warning,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,.btn-warning:hover,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:disabled),.btn-warning:not(:disabled):not(.disabled):active,.btn-warning:not(:disabled):not(.disabled).active,.show > .btn-warning.dropdown-toggle{background-color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;border-color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;}
+        div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:focus,.btn-warning:focus, .btn-warning.focus,.btn-warning:not(:disabled):not(.disabled):active:focus,.btn-warning:not(:disabled):not(.disabled).active:focus,.show>.btn-warning.dropdown-toggle:focus{box-shadow: 0 0 0 0.2rem <?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;
+}
+        .navbar-light .navbar-nav .show>a,.navbar-light .navbar-nav .current-menu-item>a,.navbar-light .navbar-nav .menu-item>a:hover,.navbar-light .navbar-nav .menu-item>a:focus{color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;}
+        .attention-wrapper{background-color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>88;}
+        footer.inner-page-footer{background-color:<?php echo get_theme_mod( 'studiokraft_footer_background_color' );?>;}
+        footer span, footer p, footer a,p.copy-right{color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
+        .social-icons{border-left-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;border-right-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
+        ul.social-icons li a{border-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
+}
     </style>
     <?php
+    //  studiokraft_footer_color
 }
 
 add_action( 'wp_head', 'studiokraft_customize_css' );

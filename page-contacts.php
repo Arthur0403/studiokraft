@@ -16,7 +16,7 @@ get_header();
         <?php endwhile; endif ?>
         </div>
     </div>
-    <section class="banner-bottom-w3layouts"><!-- py-lg-5 py-md-5 py-3-->
+    <section class="contacts"><!-- py-lg-5 py-md-5 py-3-->
         <div class="container">
             <div class="info-wrapper">
                 <div class="info-section">
@@ -57,7 +57,8 @@ get_header();
                     </div>
                 </div>
                 <div class="info-section">
-                    <?php echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
+                    <?php echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
+<!--                    --><?php //echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
                 </div>
             </div>
         </div>
