@@ -9,9 +9,17 @@ get_header();
 ?>
 
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
+        <div class="container-title">
+        <?php if ( have_posts() ) : while ( have_posts() ) :
+            the_post(); ?>
+            <div class="container-title wrapper">
+                <h1><?php the_title(); ?></h1>
+            </div>
+            <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
+        <?php endwhile; endif ?>
+        </div>
     </div>
-    <section class="banner-bottom-w3layouts py-lg-5 py-md-5 py-3">
+    <section class="rules py-lg-5 py-md-5 py-3">
         <div class="attention-wrapper">
             <div class="container">
                 <div class="attention">

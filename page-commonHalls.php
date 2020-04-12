@@ -11,7 +11,7 @@ get_header();
         <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
     </div>
     <section class="halls mb-5">
-        <h3 class="halls-title mb-3 mx-auto"><?php the_field( 'halls-title' ); ?></h3>
+        <h3 class="halls-title halls-title-common mb-3 mx-auto"><?php the_field( 'halls-title' ); ?></h3>
         <div class="container">
             <?php $halls = get_field( 'halls_card' );
             foreach ( $halls as $innerHall ): ?>
@@ -34,9 +34,9 @@ get_header();
                 <div class="row align-items-center aos-init aos-animate justify-content-between" data-aos="fade-up">
                     <?php $dressingRooms = get_field( 'dressing_rooms' );
                     foreach ( $dressingRooms as $innerHall ): ?>
-                    <div class="col col-lg-5 mb-4">
+                    <div class="col col-lg-6 mb-4">
                         <img src="<?php echo $innerHall[ 'hall_img' ]; ?>" alt="" class="dressing-room-img">
-                        <div class="inner-dressing-room p-4">
+                        <div class="inner-dressing-room col-lg-10 p-4">
                             <h3 class="text-uppercase"><?php echo $innerHall[ 'hall_title' ]; ?></h3>
                             <p class="my-4"><?php echo $innerHall[ 'hall_description' ]; ?></p>
                             <a href="<?php echo $innerHall[ 'hall_link' ]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>

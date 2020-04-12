@@ -101,7 +101,7 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
             'status',
             'video',
             'audio',
-            'chat'
+            'chat',
         ) );
 
         // Set up the WordPress core custom background feature.
@@ -125,8 +125,8 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
             'flex-height' => TRUE,
         ) );
 
-        add_image_size( 'gallery-thumb', 520, 460, TRUE );
-        add_image_size( 'gallery-thumb-vertical', 520, 946, TRUE );
+        add_image_size( 'gallery-thumb', 545, 482, TRUE );
+        add_image_size( 'gallery-thumb-vertical', 545, 986, TRUE );
 
         add_theme_support( 'editor-styles' );
         add_theme_support( 'dark-editor-style' );
@@ -263,6 +263,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Allow SVG files in Media Library.
+ */
+function extra_mime_types( $mimes )
+{
+
+    $mimes[ 'svg' ] = 'image/svg+xml';
+
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'extra_mime_types' );
+
 function debug( $data )
 {
     echo '<pre>';
@@ -270,13 +282,15 @@ function debug( $data )
     echo '</pre>';
 }
 
-/**
- * Allow SVG files in Media Library.
- */
-function extra_mime_types( $mimes ) {
+remove_filter('pre_term_description', 'wp_filter_kses');
 
-    $mimes['svg'] = 'image/svg+xml';
-
-    return $mimes;
-}
-add_filter( 'upload_mimes', 'extra_mime_types' );
+//$filters = array( 'pre_term_description',
+//                  'pre_link_description',
+//                  'pre_link_notes',
+//                  'pre_user_description' );
+//foreach ( $filters as $filter ) {
+//    remove_filter( $filter, 'wp_filter_kses' );
+//}
+//foreach ( array( 'term_description' ) as $filter ) {
+//    remove_filter( $filter, 'wp_kses_data' );
+//}

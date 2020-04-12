@@ -17,7 +17,7 @@ get_header();
 //debug(get_theme_mods());
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
     </div>
     <section class="about-us">
         <div class="container">
@@ -26,7 +26,7 @@ get_header();
                     <h3 class="tittle text-uppercase"><?php the_field('about-us-title'); ?></h3>
                     <div class="black-border"></div>
                     <p class="my-4"><?php the_field('about-us'); ?></p>
-                    <button type="button" class="btn btn-warning custom-btn">Забронировать</button>
+                    <a href="http://ellaboranto.ru/bronirovanie/" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
                 </div>
                 <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">
                     <img class="img-fluid" src="<?php the_field('image-about-us') ?>" alt="">

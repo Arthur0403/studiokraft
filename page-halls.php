@@ -12,11 +12,11 @@ get_header();
     <section class="banner-bottom-w3layouts py-3 pb-0">
         <div class="container">
             <div class="row">
+            <h3 class="page-content__title title-up mx-auto"><?php the_field('page_title'); ?></h3>
                 <div class="page-banner">
                     <img class="img-fluid" src="<?php the_field('image_cover') ?>" alt="">
                 </div>
                 <div class="page-content col-lg-8 py-4 px-5 mx-auto">
-                    <h3 class="page-content__title mb-3"><?php the_field('page_title'); ?></h3>
                     <p class="page-content__description mb-3"><?php the_field('hall_description'); ?></p>
                     <table class="table table-bordered table-hover table-responsive-sm mb-2">
                         <thead>
