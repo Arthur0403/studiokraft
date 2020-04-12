@@ -70,7 +70,11 @@
             <p class="copy-right my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
         </div>
     </footer>
-
+<a href="/bronirovanie/" class="call-us flip-vertical-right">
+  <span class="call-text">
+    Бронь<br>онлайн
+  </span>
+</a>
 <?php wp_footer(); ?>
 
 </body>
