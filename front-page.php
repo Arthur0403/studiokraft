@@ -16,8 +16,16 @@ get_header();
 
 //debug(get_theme_mods());
 ?>
-    <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" /*arrows="false"*/]' ); ?>
+    <div class="container-fluid p-0 container-slider">
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" arrows="false" dots="false"]' ); ?>
+        <div class="logo-slider">
+            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <?php if ( has_custom_logo() ) : ?><?php the_custom_logo(); ?><?php else : ?>
+                    <span class="blogname"><?php echo bloginfo( 'name' ); ?></span><?php endif; ?>
+                <span class="blogdescription"><?php $studiokraft_description = get_bloginfo( 'description', 'display' );
+                    if ( $studiokraft_description || is_customize_preview() ) : ?><?php echo $studiokraft_description; ?><?php endif; ?></span>
+            </a>
+        </div>
     </div>
     <section class="about-us">
         <div class="container">

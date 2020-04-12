@@ -40,14 +40,14 @@
                 </p>
             </div>
         </div>
-        <div class="logo-wthree text-center logo-wthree__top">
-            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <?php if ( has_custom_logo() ) : ?><?php the_custom_logo(); ?><?php else : ?>
-                    <span class="blogname"><?php echo bloginfo( 'name' ); ?></span><?php endif; ?>
-                <span class="blogdescription"><?php $studiokraft_description = get_bloginfo( 'description', 'display' );
-                    if ( $studiokraft_description || is_customize_preview() ) : ?><?php echo $studiokraft_description; ?><?php endif; ?></span>
-            </a>
-        </div>
+<!--        <div class="logo-wthree text-center logo-wthree__top">-->
+<!--            <a class="navbar-brand" href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!--                --><?php //if ( has_custom_logo() ) : ?><!----><?php //the_custom_logo(); ?><!----><?php //else : ?>
+<!--                    <span class="blogname">--><?php //echo bloginfo( 'name' ); ?><!--</span>--><?php //endif; ?>
+<!--                <span class="blogdescription">--><?php //$studiokraft_description = get_bloginfo( 'description', 'display' );
+//                    if ( $studiokraft_description || is_customize_preview() ) : ?><!----><?php //echo $studiokraft_description; ?><!----><?php //endif; ?><!--</span>-->
+<!--            </a>-->
+<!--        </div>-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

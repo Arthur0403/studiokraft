@@ -73,11 +73,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-size   : 0.9rem;
 }
 
-.logo-wthree {
+.logo-wthree,
+.logo-slider {
 	display        : flex;
 	flex-direction : column;
 	align-items    : center;
-
 }
 
 img.custom-logo {
@@ -114,10 +114,10 @@ a.navbar-brand:hover .blogname {
 	color : #0056b3;
 }
 
-.blogdescription {
-	font-size : 14px !important;
-	color     : #ffffff;
-}
+/*.blogdescription {*/
+/*	font-size : 14px !important;*/
+/*	color     : #ffffff;*/
+/*}*/
 
 .navbar-light .navbar-nav .menu-item > a {
 	letter-spacing : 2px;
@@ -140,6 +140,10 @@ a.navbar-brand:hover .blogname {
 /*.slick-slider {*/
 /*	margin-bottom : 35px;*/
 /*}*/
+
+.container-slider {
+	position : relative;
+}
 
 .wpsisac-slick-slider.design-2 .slick-arrow {
 	display : none !important;
@@ -250,6 +254,22 @@ a.navbar-brand:hover .blogname {
 	color      : transparent;
 	border     : none;
 	background : none;
+}
+
+.logo-slider {
+	position  : absolute;
+	left      : 50%;
+	top       : 50%;
+	width     : 100%;
+	transform : translate(-50%, -50%);
+}
+
+.logo-slider .blogdescription {
+	padding     : 10px 15px;
+	font-size   : 1.1rem !important;
+	text-align  : center;
+	color       : #ffffff;
+	text-shadow : 0 0 3px #000000;
 }
 
 .container-title {

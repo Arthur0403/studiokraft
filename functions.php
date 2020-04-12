@@ -52,30 +52,30 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         /*
          * Add in the header and logo menu
          */
-        add_filter( 'wp_nav_menu_items', 'logo_menu_item', 10, 2 );
-        function logo_menu_item( $items, $args )
-        {
-            if ( $args->theme_location == 'header-menu' ) {
-                $logo_menu_link = esc_url( home_url( '/' ) );
-                if ( has_custom_logo() ) {
-                    $logo_menu_logoname = get_custom_logo();
-                } else {
-                    $logo_name = get_bloginfo( 'name' );
-                    $logo_menu_logoname = '<span class="blogname">' . $logo_name . '</span>';
-                }
-
-                $studiokraft_description = get_bloginfo( 'description', 'display' );
-                if ( $studiokraft_description || is_customize_preview() ) {
-                    $logo_menu_description = $studiokraft_description;
-                };
-                $items .= '<li class="logo-wthree text-center">                
-                                <a class="navbar-brand" href="' . $logo_menu_link . '">' . $logo_menu_logoname . '
-                                    <span class="blogdescription">' . $logo_menu_description . '</span>
-                                </a>
-                            </li>';
-            }
-            return $items;
-        }
+//        add_filter( 'wp_nav_menu_items', 'logo_menu_item', 10, 2 );
+//        function logo_menu_item( $items, $args )
+//        {
+//            if ( $args->theme_location == 'header-menu' ) {
+//                $logo_menu_link = esc_url( home_url( '/' ) );
+//                if ( has_custom_logo() ) {
+//                    $logo_menu_logoname = get_custom_logo();
+//                } else {
+//                    $logo_name = get_bloginfo( 'name' );
+//                    $logo_menu_logoname = '<span class="blogname">' . $logo_name . '</span>';
+//                }
+//
+//                $studiokraft_description = get_bloginfo( 'description', 'display' );
+//                if ( $studiokraft_description || is_customize_preview() ) {
+//                    $logo_menu_description = $studiokraft_description;
+//                };
+//                $items .= '<li class="logo-wthree text-center">
+//                                <a class="navbar-brand" href="' . $logo_menu_link . '">' . $logo_menu_logoname . '
+//                                    <span class="blogdescription">' . $logo_menu_description . '</span>
+//                                </a>
+//                            </li>';
+//            }
+//            return $items;
+//        }
 
         /*
          * Switch default core markup for search form, comment form, and comments
@@ -156,20 +156,20 @@ add_action( 'after_setup_theme', 'studiokraft_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function studiokraft_widgets_init()
-{
-    register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'studiokraft' ),
-        'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'studiokraft' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
-}
+//function studiokraft_widgets_init()
+//{
+//    register_sidebar( array(
+//        'name'          => esc_html__( 'Sidebar', 'studiokraft' ),
+//        'id'            => 'sidebar-1',
+//        'description'   => esc_html__( 'Add widgets here.', 'studiokraft' ),
+//        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//        'after_widget'  => '</section>',
+//        'before_title'  => '<h2 class="widget-title">',
+//        'after_title'   => '</h2>',
+//    ) );
+//}
 
-add_action( 'widgets_init', 'studiokraft_widgets_init' );
+//add_action( 'widgets_init', 'studiokraft_widgets_init' );
 
 function get_posts_per_page_20( $query )
 {
