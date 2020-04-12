@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<section class="content-main-w3 inner-page" id="home">
+<header class="content-main-w3 inner-page" id="home">
     <div class="header_top">
         <div class="container container_top">
             <div class="header-info">
@@ -62,4 +62,4 @@
 
         </nav>
     </div>
-</section>
+</header>

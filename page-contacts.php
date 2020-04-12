@@ -5,18 +5,19 @@
 get_header();
 
 ?>
-    <div class="container-fluid p-0">
-        <div class="container-title">
-        <?php if ( have_posts() ) : while ( have_posts() ) :
-            the_post(); ?>
-            <div class="container-title wrapper">
-                <h1><?php the_title(); ?></h1>
-            </div>
-            <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
-        <?php endwhile; endif ?>
-        </div>
-    </div>
-    <section class="contacts"><!-- py-lg-5 py-md-5 py-3-->
+<!--    <div class="container-fluid p-0">-->
+<!--        <div class="container-title">-->
+<!--        --><?php //if ( have_posts() ) : while ( have_posts() ) :
+//            the_post(); ?>
+<!--            <div class="container-title wrapper">-->
+<!--                -->
+<!--            </div>-->
+<!--            --><?php //echo get_the_post_thumbnail($post->ID, 'full'); ?>
+<!--        --><?php //endwhile; endif ?>
+<!--        </div>-->
+<!--    </div>-->
+    <section class="contacts py-lg-5 py-md-5 py-3"><!-- py-lg-5 py-md-5 py-3-->
+        <h1><?php the_title(); ?></h1>
         <div class="container">
             <div class="info-wrapper">
                 <div class="info-section">
