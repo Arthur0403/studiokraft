@@ -433,7 +433,7 @@ function studiokraft_customize_css()
 {
     ?>
     <style type="text/css">
-        .header_top{background-color:<?php echo get_theme_mod( 'studiokraft_header_background_color' );?>;}
+        header{background-color:<?php echo get_theme_mod( 'studiokraft_header_background_color' );?>;}
         .header_top p,.header_top span,.header_top a,.info .studiokraft-address,.info .phone .studiokraft-phone,.info .mail .studiokraft-mail{color:<?php echo get_theme_mod( 'studiokraft_header_color' );?>;}
         html,body,section.contacts,section.rules,.inner-halls{background-color:<?php echo get_theme_mod( 'studiokraft_main_background_color' );?>;}
         section p,section span,.attention-title,.features-item,.rules-panel,.rules-panel p,.rules-panel span,.info-item_title,.info-section div.wpforms-container-full .wpforms-form .wpforms-field-label{color:<?php echo get_theme_mod( 'studiokraft_main_color' );?>;}

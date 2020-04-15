@@ -16,6 +16,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 # Custom style
 --------------------------------------------------------------*/
+html,
+body {
+	font-size : 14px;
+}
+
 .post,
 .page {
 	margin : 0;
@@ -308,6 +313,12 @@ a.navbar-brand:hover .blogname {
 	width     : auto;
 	height    : 100%;
 	transform : translate(-50%, -50%);
+}
+
+.contacts h1,
+.rules h1 {
+	margin-bottom : 45px;
+	text-align    : center;
 }
 
 .social-icons {
@@ -763,6 +774,11 @@ ul.social-icons li a:active {
 }
 
 @media (min-width : 992px) {
+	html,
+	body {
+		font-size : 16px;
+	}
+
 	.navbar-nav {
 		align-items : center;
 	}
