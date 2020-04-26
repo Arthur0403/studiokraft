@@ -246,6 +246,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     align-items: center;
 }
 
+.features-item > span {
+    text-align: center;
+    line-height: 1;
+    margin-top: 1rem;
+}
 /* .features-item::before{
     content: "\f005";
     position: absolute;
