@@ -71,6 +71,16 @@ body {
 	display : block;
 }
 
+header ul.social-icons a {
+	width       : 30px;
+	height      : 30px;
+	line-height : 28px;
+}
+
+header .fab {
+	font-size : 1rem;
+}
+
 .header-info .studiokraft-address,
 .header-info .studiokraft-phone,
 .header-info .studiokraft-mail {
@@ -321,7 +331,7 @@ a.navbar-brand:hover .blogname {
 	text-align    : center;
 }
 
-.social-icons {
+footer .social-icons {
 	margin-left : 0;
 }
 
@@ -655,7 +665,7 @@ footer a {
 	text-align    : center;
 }
 
-.social-icons {
+footer .social-icons {
 	padding      : 15px 25px;
 	margin-left  : auto;
 	margin-right : auto;
@@ -664,20 +674,20 @@ footer a {
 	flex-wrap    : wrap;
 }
 
-.social-icons li {
+footer .social-icons li {
 	margin : 15px 15px 0 0 !important;
 }
 
-.social-icons li:nth-child(4) {
+footer .social-icons li:nth-child(4) {
 	margin-right : unset;
 }
 
-ul.social-icons li a {
+footer .social-icons li a {
 	padding-top : 4px;
 }
 
-ul.social-icons li a:hover,
-ul.social-icons li a:active {
+footer .social-icons li a:hover,
+footer .social-icons li a:active {
 	border : 2px solid transparent;
 }
 
@@ -771,6 +781,21 @@ ul.social-icons li a:active {
 	.navbar-collapse .logo-wthree {
 		display : none;
 	}
+
+	header .social-icons {
+		order     : 1;
+		display   : flex;
+		flex-wrap : wrap;
+	}
+
+	header .social-icons li {
+		margin : 7px 15px 0 0 !important;
+	}
+
+	/*header .navbar-brand .blogname,*/
+	/*footer .navbar-brand .blogname {*/
+	/*	font-size : 2rem !important;*/
+	/*}*/
 }
 
 @media (min-width : 992px) {
@@ -867,7 +892,7 @@ ul.social-icons li a:active {
 		text-align : right;
 	}
 
-	.social-icons {
+	footer .social-icons {
 		margin       : 0 25px 15px;
 		flex-wrap    : wrap;
 		width        : 230px;
@@ -875,7 +900,7 @@ ul.social-icons li a:active {
 		border-right : 4px double #ffffff;
 	}
 
-	.social-icons li {
+	footer .social-icons li {
 		margin : 10px 5px 0 0 !important;
 	}
 
