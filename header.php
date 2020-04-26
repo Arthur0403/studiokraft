@@ -27,6 +27,32 @@
                     <?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?><a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_navigation' ); ?>"><?php endif; ?><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span><?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?></a><?php endif; ?>
                 </p>
             </div>
+            <ul class="social-icons justify-content-center">
+                <?php if (get_theme_mod( 'studiokraft_social_vk' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_vk' ); ?>"><span class="fab fa-vk"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_facebook' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_facebook' ); ?>"><span class="fab fa-facebook-f"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_instagram' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_instagram' ); ?>"><span class="fab fa-instagram"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_whatsapp' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_whatsapp' ); ?>"><span class="fab fa-whatsapp"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_viber' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_viber' ); ?>"><span class="fab fa-viber"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_telegram' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_telegram' ); ?>"><span class="fab fa-telegram-plane"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_skype' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_skype' ); ?>"><span class="fab fa-skype"></span></a></li>
+                <?php endif; ?>
+                <?php if (get_theme_mod( 'studiokraft_social_ok' )) : ?>
+                    <li class="mr-1"><a href="<?php echo get_theme_mod( 'studiokraft_social_ok' ); ?>"><span class="fab fa-odnoklassniki"></span></a></li>
+                <?php endif; ?>
+            </ul>
             <div class="info">
                 <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
                     <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
