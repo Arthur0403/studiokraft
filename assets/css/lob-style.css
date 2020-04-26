@@ -241,15 +241,22 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     position: relative;
     padding-left: 2rem;
     padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.features-item::before{
+/* .features-item::before{
     content: "\f005";
     position: absolute;
     left: -1rem;
     color: #1572BB;
     font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
     font-size: 2rem;
+} */
+
+.features-img {
+    height: 5rem;
 }
 
 .gallery-title-wrap {
