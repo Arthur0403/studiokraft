@@ -27,29 +27,32 @@ get_header();
             </a>
         </div>
     </div>
-    <section class="about-us">
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-lg-6 aos-init aos-animate about-right" data-aos="flip-left">
-                    <h3 class="tittle text-uppercase"><?php the_field('about-us-title'); ?></h3>
-                    <div class="black-border"></div>
-                    <p class="my-4"><?php the_field('about-us'); ?></p>
-                    <a href="http://ellaboranto.ru/bronirovanie/" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
-                </div>
-                <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">
-                    <img class="img-fluid" src="<?php the_field('image-about-us') ?>" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="features mb-5">
-        <h3 style="text-align: center"><?php the_field('features_title'); ?></h3>
+<!--    <section class="about-us">-->
+<!--        <div class="container">-->
+<!--            <div class="row py-5">-->
+<!--                <div class="col-lg-6 aos-init aos-animate about-right" data-aos="flip-left">-->
+<!--                    <h3 class="tittle text-uppercase">--><?php //the_field('about-us-title'); ?><!--</h3>-->
+<!--                    <div class="black-border"></div>-->
+<!--                    <p class="my-4">--><?php //the_field('about-us'); ?><!--</p>-->
+<!--                    <a href="http://ellaboranto.ru/bronirovanie/" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">-->
+<!--                    <img class="img-fluid" src="--><?php //the_field('image-about-us') ?><!--" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <section class="features py-5">
+<!--        <h3 style="text-align: center">--><?php //the_field('features_title'); ?><!--</h3>-->
         <div class="container">
             <div class="row">
                 <?php $features = get_field( 'features' );
-                foreach ( $features as $item ): ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 py-3 aos-init aos-animate features-item" data-aos="fade-up"><?php echo $item ?></div>
-                <?php endforeach; ?>
+                for($i = 1; $i <= count($features)/2; $i++ ): ?>
+                    <div class="col-lg-2 col-md-6 col-sm-12 py-3 aos-init aos-animate features-item" data-aos="fade-up">
+                        <img src="<?php echo $features["features-img-$i"]; ?>" alt="" class="features-img">
+                        <span><?php echo $features["features-item-$i"] ?></span>
+                    </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
@@ -62,7 +65,7 @@ get_header();
                     <div class="col col-lg-8 p-4 inner-halls">
                         <h3 class="text-uppercase"><?php echo $innerHall[ 'hall_title' ]; ?></h3>
                         <p class="my-4"><?php echo $innerHall[ 'hall_description' ]; ?></p>
-                        <a href="<?php echo $innerHall[ 'hall_link' ]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>
+                        <a href="<?php echo $innerHall[ 'hall_link' ]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Подробнее</a>
                     </div>
                     <div class="col hall-img">
                         <img src="<?php echo $innerHall[ 'hall_img' ]; ?>" alt="">
