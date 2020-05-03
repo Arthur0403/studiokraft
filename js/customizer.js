@@ -76,6 +76,7 @@
 		value.bind(function (newval) {
 			$('div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"],.btn-warning,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,.btn-warning:hover,div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:disabled),.btn-warning:not(:disabled):not(.disabled):active,.btn-warning:not(:disabled):not(.disabled).active,.show > .btn-warning.dropdown-toggle').css('background-color', newval).css('border-color', newval);
 			$('.navbar-light .navbar-nav .show>a,.navbar-light .navbar-nav .current-menu-item>a,.navbar-light .navbar-nav .menu-item>a:hover,.navbar-light .navbar-nav .menu-item>a:focus').css('color', newval);
+			$('.navbar-light .navbar-nav .menu-item>a:hover::before,.navbar-light .navbar-nav .menu-item>a:focus::before,.navbar-light .navbar-nav .current-menu-item>a::before').css('background-color', newval);
 			$('div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:focus,.btn-warning:focus, .btn-warning.focus,.btn-warning:not(:disabled):not(.disabled):active:focus,.btn-warning:not(:disabled):not(.disabled).active:focus,.show>.btn-warning.dropdown-toggle:focus').css('box-shadow-color', newval);
 		});
 	});
