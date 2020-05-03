@@ -564,16 +564,19 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         order: 0;
     }
 
-    .inner-halls {
+    .halls-block .inner-halls {
         position: absolute;
-        right: 30%;
+        /*right: 30%;*/
+        left: 30%;
+        bottom: 3%;
         background-color: white;
-        z-index: 1;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        z-index: 1;
     }
 
     .halls-block:nth-child(2n) .inner-halls {
-        left: 30%;
+        /*right: 30%;*/
+        left: 3%;
         box-shadow: 0 10px 10px rgba(0,0,0,0.22), 0 14px 28px rgba(0,0,0,0.25);
     }
 
@@ -582,8 +585,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .hall-img>img {
-        width: 469px;
-        height: 556px;
+        /*width: 469px;*/
+        /*height: 556px;*/
         float: right;
     }
 
