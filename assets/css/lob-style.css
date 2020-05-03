@@ -441,6 +441,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     text-indent: 2rem;
 }
 
+.content-main-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 
 @keyframes pulsate {
     0% {
@@ -527,6 +532,12 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .custom-btn {
         width: 100%;
+    }
+
+    .content-image {
+        width: 100%;
+        float: none;
+        margin-bottom: 2rem;
     }
 
 }
@@ -642,6 +653,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         position: absolute;
         /*top: 6.5rem;*/
         display: none;
+        width: 200px;
         list-style: none;
         padding: 10px;
         background-color: white;
@@ -652,6 +664,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
 
     .sub-menu:hover {
@@ -685,6 +698,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     /*#menu-glavnoe-menyu {*/
     /*    width: 85%;*/
     /*}*/
+    .content-image {
+        width: 40%;
+        float: right;
+        margin-left: 2rem;
+    }
 }
 
 /*// Экстрабольшие девайсы (большие десктопы, >= 1200px)*/

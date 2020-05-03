@@ -944,18 +944,8 @@ footer .social-icons li a:active {
 		order : 2;
 	}
 
-	.navbar-light .navbar-nav .menu-item > a::before,
-	.navbar-light .navbar-nav .menu-item > a::before,
-	.navbar-light .navbar-nav .current-menu-item > a::before {
-		bottom : 15px;
-	}
 
-	.navbar-light .navbar-nav .menu-item:first-child > a::before,
-	.navbar-light .navbar-nav .menu-item:first-child > a::before,
-	.navbar-light .navbar-nav .current-menu-item.menu-item:first-child > a::before {
-		left      : 0;
-		transform : translateX(0);
-	}
+
 
 	.navbar-light .navbar-nav .menu-item:last-child > a::before,
 	.navbar-light .navbar-nav .menu-item:last-child > a::before,
