@@ -441,6 +441,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     text-indent: 2rem;
 }
 
+.content-main-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 
 @keyframes pulsate {
     0% {
@@ -529,6 +534,12 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         width: 100%;
     }
 
+    .content-image {
+        width: 100%;
+        float: none;
+        margin-bottom: 2rem;
+    }
+
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
@@ -564,16 +575,19 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         order: 0;
     }
 
-    .inner-halls {
+    .halls-block .inner-halls {
         position: absolute;
-        right: 30%;
+        /*right: 30%;*/
+        left: 30%;
+        bottom: 3%;
         background-color: white;
-        z-index: 1;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        z-index: 1;
     }
 
     .halls-block:nth-child(2n) .inner-halls {
-        left: 30%;
+        /*right: 30%;*/
+        left: 3%;
         box-shadow: 0 10px 10px rgba(0,0,0,0.22), 0 14px 28px rgba(0,0,0,0.25);
     }
 
@@ -582,8 +596,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .hall-img>img {
-        width: 469px;
-        height: 556px;
+        /*width: 469px;*/
+        /*height: 556px;*/
         float: right;
     }
 
@@ -639,6 +653,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         position: absolute;
         /*top: 6.5rem;*/
         display: none;
+        width: 200px;
         list-style: none;
         padding: 10px;
         background-color: white;
@@ -649,6 +664,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
 
     .sub-menu:hover {
@@ -682,6 +698,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     /*#menu-glavnoe-menyu {*/
     /*    width: 85%;*/
     /*}*/
+    .content-image {
+        width: 40%;
+        float: right;
+        margin-left: 2rem;
+    }
 }
 
 /*// Экстрабольшие девайсы (большие десктопы, >= 1200px)*/

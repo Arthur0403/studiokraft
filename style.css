@@ -121,9 +121,15 @@ header .fab {
 	align-items    : center;
 }
 
+/*img.custom-logo {*/
+/*	width     : 350px !important;*/
+/*	height    : 350px !important;*/
+/*	animation : start 1s linear;*/
+/*}*/
+
 img.custom-logo {
-	width     : 150px !important;
-	height    : 150px !important;
+	width     : 12rem !important;
+	height    : 12rem !important;
 	animation : start 1s linear;
 }
 
@@ -350,6 +356,10 @@ a.navbar-brand:hover .blogname {
 	text-align  : center;
 	color       : #ffffff;
 	text-shadow : 0 0 3px #000000;
+	border-top: 3px solid #ffffff;
+	border-bottom: 3px solid #ffffff;
+	width: 95%;
+	margin-top: 1rem;
 }
 
 .container-title {
@@ -910,6 +920,11 @@ footer .social-icons li a:active {
 		padding : 22px 0 3px 35px;
 	}
 
+	.logo-slider .blogdescription {
+		font-size: 1.1rem !important;
+		width: 40%;
+	}
+
 }
 
 @media (max-width : 991px) {
@@ -1141,5 +1156,15 @@ footer .social-icons li a:active {
 	.copy-right a {
 		margin-left : 5px;
 		width       : auto;
+	}
+
+	img.custom-logo {
+		width     : 20rem !important;
+		height    : 20rem !important;
+	}
+
+	.logo-slider .blogdescription {
+		font-size: 1.8rem !important;
+		width: 40%;
 	}
 }
