@@ -190,7 +190,9 @@ a.navbar-brand:hover .blogname {
 
 .navbar-light .navbar-nav .menu-item > a::before,
 .navbar-light .navbar-nav .menu-item > a::before,
-.navbar-light .navbar-nav .current-menu-item > a::before {
+.navbar-light .navbar-nav .current-menu-item > a::before,
+.navbar-light .navbar-nav .current-menu-item > a:hover::before,
+.navbar-light .navbar-nav .current-menu-item > a:focus::before {
 	position         : absolute;
 	display          : block;
 	content          : '';
@@ -203,16 +205,16 @@ a.navbar-brand:hover .blogname {
 	transform        : translateX(-50%);
 }
 
+/*.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:hover::before,*/
+/*.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:focus::before {*/
+/*	opacity : 0;*/
+/*}*/
+
 .navbar-light .navbar-nav .menu-item > a:hover::before,
 .navbar-light .navbar-nav .menu-item > a:focus::before,
-.navbar-light .navbar-nav .current-menu-item > a::before {
+.navbar-light .navbar-nav .current-menu-item>a::before {
 	transition : .5s;
 	opacity    : 1;
-}
-
-.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:hover::before,
-.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:focus::before {
-	opacity : 0;
 }
 
 /*.slick-slider {*/
@@ -388,14 +390,11 @@ a.navbar-brand:hover .blogname {
 	transform : translate(-50%, -50%);
 }
 
+.pages h1,
 .contacts h1,
 .rules h1 {
 	margin-bottom : 45px;
 	text-align    : center;
-}
-
-footer .social-icons {
-	margin-left : 0;
 }
 
 .gallery_effect {
@@ -589,25 +588,31 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 
 /*   Pravila   */
 
+.container--pages,
 .container--rules {
 	margin-top : 50px;
 }
 
+.container--pages .has-background,
 .container--rules .has-background {
 	background : transparent;
 }
 
+.container--pages h2,
+.container--pages h3,
 .container--rules h2,
 .container--rules h3 {
 	font-family : 'Forum', serif;
 	font-size   : 1.75rem;
 }
 
+.container--pages h2,
 .container--rules h2 {
 	margin    : 35px 0 25px;
 	font-size : 2.25rem;
 }
 
+.container--pages h3,
 .container--rules h3 {
 	margin-left : 20px;
 }
@@ -634,7 +639,7 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	position       : absolute;
 	content        : '';
 	display        : inline-block;
-	top            : 16px;
+	top            : 13px;
 	left           : -1px;
 	height         : 8px;
 	width          : 8px;
@@ -657,18 +662,28 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .rules-panel,
+.rules p,
 .rules-panel p,
-.rules-panel span {
+.rules-panel span,
+.rules-panel li,
+.pages p,
+.pages span,
+.pages li,
+.rules-list {
 	font-family : 'Forum', serif;
 	font-size   : 1.2rem;
 	color       : #272727;
-	line-height : 1.5;
+	line-height : 1.3;
 }
 
 .rules-panel ol,
 .rules-panel ul {
 	padding       : 15px 0 3px 25px;
 	margin-bottom : 0;
+}
+
+.rules-panel li {
+	padding-bottom : 10px;
 }
 
 .rules-panel p {
@@ -680,10 +695,63 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	border  : none;
 }
 
+.rules-panel li p {
+	padding-right : 0;
+}
+
+ol.rules,
+ul.rules {
+	padding-left : 2rem;
+}
+
+ol.rules ul,
+ul.rules ul,
+ol.rules ol,
+ul.rules ol {
+	padding-top  : 5px;
+	padding-left : 1rem;
+	list-style   : disc;
+}
+
+ol.rules ul.list-style-inside,
+ul.rules ul.list-style-inside,
+ol.rules ol.list-style-inside,
+ul.rules ol.list-style-inside {
+	padding-top  : 5px;
+	padding-left : 0;
+	list-style   : inside;
+}
+
+ol.rules p:last-child,
+ul.rules p:last-child {
+	margin-bottom : 0;
+}
+
 .rules a {
 	font-family : 'Forum', serif;
 	font-size   : 1.2rem;
-	line-height : 1.5;
+	line-height : 1.3;
+}
+
+ol.rules ul.list-padding-left,
+ul.rules ul.list-padding-left,
+ol.rules ol.list-padding-left,
+ul.rules ol.list-padding-left {
+	padding-left : 2rem;
+	margin-top   : -10px;
+}
+
+.table-price table {
+	margin : 0 auto;
+	width  : 100%;
+}
+
+.table-price td {
+	width : 40%;
+}
+
+.table-price td:first-child {
+	width : 20%;
 }
 
 div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,
@@ -694,6 +762,10 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover
 div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:active,
 .btn-warning:active {
 	filter : brightness(60%);
+}
+
+footer .social-icons {
+	margin-left : 0;
 }
 
 footer.inner-page-footer,
@@ -930,21 +1002,24 @@ footer .social-icons li a:active {
 	}
 
 	.navbar-light .navbar-nav .menu-item > a::before,
-	.navbar-light .navbar-nav .menu-item > a::before,
-	.navbar-light .navbar-nav .current-menu-item > a::before {
+	.navbar-light .navbar-nav .menu-item > a::before {
 		bottom : 15px;
 	}
 
+	.navbar-light .navbar-nav .current-menu-item > a::before,
+	.navbar-light .navbar-nav .current-menu-item > a:hover::before,
+	.navbar-light .navbar-nav .current-menu-item > a:focus::before {
+		bottom : 10px;
+	}
+
 	.navbar-light .navbar-nav .menu-item:first-child > a::before,
-	.navbar-light .navbar-nav .menu-item:first-child > a::before,
-	.navbar-light .navbar-nav .current-menu-item.menu-item:first-child > a::before {
+	.navbar-light .navbar-nav .menu-item:first-child > a::before {
 		left      : 0;
 		transform : translateX(0);
 	}
 
 	.navbar-light .navbar-nav .menu-item:last-child > a::before,
-	.navbar-light .navbar-nav .menu-item:last-child > a::before,
-	.navbar-light .navbar-nav .current-menu-item.menu-item:last-child > a::before {
+	.navbar-light .navbar-nav .menu-item:last-child > a::before {
 		left      : auto;
 		right     : 0;
 		transform : translateX(0);
@@ -995,6 +1070,33 @@ footer .social-icons li a:active {
 
 	.map {
 		height : 596px;
+	}
+
+	.rules-item > .wp-block-group__inner-container::before {
+		top : 22px;
+	}
+
+	.rules-panel,
+	.rules p,
+	.pages p,
+	.rules-panel p,
+	.rules-panel span,
+	.rules-panel li,
+	.rules-list {
+		line-height : 1.5;
+	}
+
+	.rules a {
+		line-height : 1.5;
+	}
+
+	.pages ul,
+	.pages ol {
+		padding-left : 2rem;
+	}
+
+	.table-price table {
+		width : 80%;
 	}
 
 	.footer-container {
