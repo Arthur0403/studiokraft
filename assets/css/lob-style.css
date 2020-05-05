@@ -436,9 +436,14 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 
-.content-paragraph{
+.content-paragraph {
     margin-bottom: 1rem;
     text-indent: 2rem;
+}
+
+.content-paragraph a{
+    font-family: "Forum";
+    text-decoration: underline;
 }
 
 .content-main-title {
@@ -645,7 +650,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         max-width: 960px;
     }
 
-    .menu-item-102:hover .sub-menu {
+    .menu-item-699:hover .sub-menu {
         display: block;
     }
 
