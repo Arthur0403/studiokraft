@@ -19,7 +19,9 @@ get_header();
 <!--        </div>-->
 <!--    </div>-->
     <section class="rules py-lg-5 py-md-5 py-3">
-        <h1><?php the_title(); ?></h1>
+        <div class="container container--rules">
+            <h1><?php the_title(); ?></h1>
+        </div>
         <div class="attention-wrapper">
             <div class="container">
                 <div class="attention">

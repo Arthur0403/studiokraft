@@ -15,26 +15,27 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<section class="pages py-lg-5 py-md-5 py-3">
+        <div class="container container--pages">
+            <h1><?php the_title(); ?></h1>
+        </div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+        <div class="container container--pages">
 
-			get_template_part( 'template-parts/content', 'page' );
+            <?php if ( have_posts() ) : while ( have_posts() ) :
+                the_post(); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+                <?php the_content(); ?>
 
-		endwhile; // End of the loop.
-		?>
+            <?php endwhile; ?>
+                <!-- post navigation -->
+            <?php else : ?>
+                404
+            <?php endif ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </div>
+    </section>
 
 <?php
-get_sidebar();
+
 get_footer();
