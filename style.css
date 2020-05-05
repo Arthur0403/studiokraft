@@ -211,10 +211,12 @@ a.navbar-brand:hover .blogname {
 	transform        : translateX(-50%);
 }
 
-/*.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:hover::before,*/
-/*.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:focus::before {*/
-/*	opacity : 0;*/
-/*}*/
+.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:hover::before,
+.navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a:focus::before,
+.navbar-light .navbar-nav .menu-item .sub-menu .current-menu-item > a::before {
+		bottom  : 10px;
+		opacity : 0;
+	}
 
 .navbar-light .navbar-nav .current-menu-item > a::before,
 .navbar-light .navbar-nav .menu-item > a:hover::before,
@@ -1069,11 +1071,6 @@ footer .social-icons li a:active {
 	.navbar-light .navbar-nav .menu-item .sub-menu .menu-item:last-child > a:focus::before {
 		transform : translateX(-50%);
 		left      : 50%;
-	}
-
-	.sub-menu .menu-item > a::before {
-		bottom  : 10px;
-		opacity : 0;
 	}
 
 	.container-title,
