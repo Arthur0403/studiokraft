@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <header class="content-main-w3 inner-page" id="home">
     <div class="header_top">
-        <div class="container">
+        <div class="container container_top">
             <ul class="social-icons">
                 <?php if (get_theme_mod( 'studiokraft_social_vk' )) : ?>
                     <li><a href="<?php echo get_theme_mod( 'studiokraft_social_vk' ); ?>"><span class="fab fa-vk"></span></a></li>
@@ -48,34 +48,20 @@
                     <li><a href="<?php echo get_theme_mod( 'studiokraft_social_ok' ); ?>"><span class="fab fa-odnoklassniki"></span></a></li>
                 <?php endif; ?>
             </ul>
+            <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
+                <?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?><a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_navigation' ); ?>"><?php endif; ?><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span><?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?></a><?php endif; ?>
+            </p>
+            <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
+                <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
+                    <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
+                </a>
+            </p>
+            <p class="mail<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo " show"; ?>">
+                <a href="mailto:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?>">
+                    <span class="studiokraft-mail"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?></span>
+                </a>
+            </p>
         </div>
-        <div class="container container_top">
-            <div class="header-info">
-                <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
-                    <?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?><a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_navigation' ); ?>"><?php endif; ?><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span><?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?></a><?php endif; ?>
-                </p>
-            </div>
-            <div class="info">
-                <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
-                    <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
-                        <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
-                    </a>
-                </p>
-                <p class="mail<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo " show"; ?>">
-                    <a href="mailto:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?>">
-                        <span class="studiokraft-mail"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?></span>
-                    </a>
-                </p>
-            </div>
-        </div>
-<!--        <div class="logo-wthree text-center logo-wthree__top">-->
-<!--            <a class="navbar-brand" href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
-<!--                --><?php //if ( has_custom_logo() ) : ?><!----><?php //the_custom_logo(); ?><!----><?php //else : ?>
-<!--                    <span class="blogname">--><?php //echo bloginfo( 'name' ); ?><!--</span>--><?php //endif; ?>
-<!--                <span class="blogdescription">--><?php //$studiokraft_description = get_bloginfo( 'description', 'display' );
-//                    if ( $studiokraft_description || is_customize_preview() ) : ?><!----><?php //echo $studiokraft_description; ?><!----><?php //endif; ?><!--</span>-->
-<!--            </a>-->
-<!--        </div>-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
