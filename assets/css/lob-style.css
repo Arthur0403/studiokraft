@@ -750,3 +750,20 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     /*    padding: 4px 6px;*/
     /*}*/
 }
+
+.custom-warning {
+    border: 2px solid black;
+    padding: 10px;
+    max-width: 30rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.custom-warning:hover {
+    box-shadow: 5px 5px 1px 1px, -5px -5px 1px 1px grey;
+    transition: all 0.5s ease;
+}
+
+.table-price td {
+    border: 1px solid #dedede;
+}

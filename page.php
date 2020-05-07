@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<section class="pages py-lg-5 py-md-5 py-3">
+	<section class="pages py-lg-1 py-md-5 py-3">
         <div class="container container--pages">
             <h1><?php the_title(); ?></h1>
         </div>

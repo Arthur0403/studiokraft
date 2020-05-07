@@ -18,18 +18,18 @@ get_header();
 <!--        --><?php //endwhile; endif ?>
 <!--        </div>-->
 <!--    </div>-->
-    <section class="rules py-lg-5 py-md-5 py-3">
+    <section class="rules py-lg-1 py-md-5 py-3">
         <div class="container container--rules">
             <h1><?php the_title(); ?></h1>
         </div>
-        <div class="attention-wrapper">
-            <div class="container">
-                <div class="attention">
-                    <span class="attention-title">Внимание!</span>
-                    <p class="attention-text"><?php the_field( 'attention' ); ?></p>
-                </div>
-            </div>
-        </div>
+<!--        <div class="attention-wrapper">-->
+<!--            <div class="container">-->
+<!--                <div class="attention">-->
+<!--                    <span class="attention-title">Внимание!</span>-->
+<!--                    <p class="attention-text">--><?php //the_field( 'attention' ); ?><!--</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="container container--rules">
 
             <?php if ( have_posts() ) : while ( have_posts() ) :
@@ -43,6 +43,14 @@ get_header();
                 404
             <?php endif ?>
 
+        </div>
+        <div class="attention-wrapper">
+            <div class="container">
+                <div class="attention">
+                    <span class="attention-title">Внимание!</span>
+                    <p class="attention-text"><?php the_field( 'attention' ); ?></p>
+                </div>
+            </div>
         </div>
     </section>
 
