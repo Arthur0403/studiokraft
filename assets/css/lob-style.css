@@ -624,10 +624,6 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         transform: translate(0, 0);
     }
 
-    .phone {
-        margin-right: 3rem;
-    }
-
     .container_top {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
