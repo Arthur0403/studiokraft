@@ -22,7 +22,7 @@
 <header class="content-main inner-page" id="home">
     <div class="header_top">
         <div class="container container_top">
-            <ul class="social-icons">
+            <ul class="social-icons tablet">
                 <?php if (get_theme_mod( 'studiokraft_social_vk' )) : ?>
                     <li><a href="<?php echo get_theme_mod( 'studiokraft_social_vk' ); ?>"><span class="fab fa-vk"></span></a></li>
                 <?php endif; ?>
@@ -48,10 +48,10 @@
 <!--                    <li><a href="--><?php //echo get_theme_mod( 'studiokraft_social_ok' ); ?><!--"><span class="fab fa-odnoklassniki"></span></a></li>-->
 <!--                --><?php //endif; ?>
             </ul>
-            <p class="hidden_block address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
+            <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
                 <?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?><a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_navigation' ); ?>"><?php endif; ?><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span><?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?></a><?php endif; ?>
             </p>
-            <p class="hidden_block phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
+            <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
                 <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
                     <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
                 </a>

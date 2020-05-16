@@ -52,6 +52,31 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         /*
          * Add in the header and logo menu
          */
+        add_filter( 'wp_nav_menu_items', 'logo_menu_item', 10, 2 );
+        function logo_menu_item( $items, $args )
+        {
+            if ( $args->theme_location == 'header-menu' ) {
+                if ( get_theme_mod( 'studiokraft_social_vk' ) ) {
+                    $social = '<li><a href = "' . get_theme_mod( 'studiokraft_social_vk' ) . '" ><span class="fab fa-vk" ></span ></a ></li>';
+                };
+                if ( get_theme_mod( 'studiokraft_social_facebook' ) ) {
+                    $social .= '<li><a href = "' . get_theme_mod( 'studiokraft_social_facebook' ) . '" ><span class="fab fa-facebook-f" ></span ></a ></li>';
+                };
+                if (get_theme_mod( 'studiokraft_social_instagram' )) {
+                    $social .= '<li><a href = "' . get_theme_mod( 'studiokraft_social_instagram' ) . '" ><span class="fab fa-instagram" ></span ></a ></li>';
+                };
+                if (get_theme_mod( 'studiokraft_social_whatsapp' )) {
+                    $social .= '<li ><a href = "' . get_theme_mod( 'studiokraft_social_whatsapp' ) . '" ><span class="fab fa-whatsapp" ></span ></a ></li>';
+                };
+                $items .= '<ul class="social-icons mobile">
+                                ' . $social . '
+                           </ul>';
+            }
+            return $items;
+        }
+        /*
+         * Add in the header and logo menu
+         */
 //        add_filter( 'wp_nav_menu_items', 'logo_menu_item', 10, 2 );
 //        function logo_menu_item( $items, $args )
 //        {

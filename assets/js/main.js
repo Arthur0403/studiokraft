@@ -14,9 +14,9 @@ $(function () {
 	$(window).scroll(function () {
 		display = $(this).scrollTop() >= 50;
 		if (display) {
-			$(".hidden_block").addClass("display_none");
+			$(".header_top").addClass("mmove");
 		} else {
-			$(".hidden_block").removeClass("display_none");
+			$(".header_top").removeClass("mmove");
 		}
 	});
 });

@@ -185,8 +185,8 @@ a.navbar-brand:hover .blogname {
 
 .navbar-light .navbar-nav .menu-item > a,
 .navbar-light .navbar-nav .menu-item .sub-menu .menu-item > a {
-	margin         : 0 !important;
-	padding        : 10px 15px;
+	margin         : 0 0 3px !important;
+	padding        : 5px 15px;
 	display        : block;
 	letter-spacing : 2px;
 	font-size      : 16px;
@@ -237,6 +237,14 @@ a.navbar-brand:hover .blogname {
 	transition : .5s;
 	opacity    : 1;
 	bottom     : 5px;
+}
+
+.social-icons.mobile {
+	order : 0;
+}
+
+.menu-item {
+	order : 1;
 }
 
 /*.slick-slider {*/
@@ -911,12 +919,36 @@ footer .social-icons li a:active {
 }
 
 @media (max-width : 767px) {
-	.display_none {
+	.mmove .container_top p {
+		text-align : left;
+	}
+
+	.mmove .mail {
+		display : none;
+	}
+
+	.mmove .navbar-toggler {
+		position   : absolute;
+		top        : -50px;
+		right      : 0;
+		transition : .5s;
+	}
+
+	.mmove .navbar {
+		padding    : 0 1rem;
+		transition : .5s;
+	}
+
+	.social-icons.tablet {
 		display : none !important;
 	}
 }
 
 @media (min-width : 768px) {
+
+	.social-icons.mobile {
+		display : none !important;
+	}
 
 	.container_top {
 		flex-direction : row;
@@ -1032,10 +1064,15 @@ footer .social-icons li a:active {
 		text-align : right;
 	}
 
+
 	header ul.social-icons {
 		justify-content : flex-end;
 	}
 
+	header ul.social-icons li:first-of-type {
+		margin-left : 0;
+	}
+	
 	header ul.social-icons a {
 		width       : 25px;
 		height      : 25px;
@@ -1068,14 +1105,14 @@ footer .social-icons li a:active {
 		padding : 20px 30px;
 	}
 
-	.navbar-light .navbar-nav .menu-item:first-child > a,
-	.navbar-light.margin_add .navbar-nav .menu-item:first-child > a {
+	.navbar-light .navbar-nav .menu-item:first-of-type > a,
+	.navbar-light.margin_add .navbar-nav .menu-item:first-of-type > a {
 		padding-left : 0;
 		text-align   : left;
 	}
 
-	.navbar-light .navbar-nav .menu-item:last-child > a,
-	.navbar-light.margin_add .navbar-nav .menu-item:last-child > a {
+	.navbar-light .navbar-nav .menu-item:last-of-type > a,
+	.navbar-light.margin_add .navbar-nav .menu-item:last-of-type > a {
 		padding-right : 0;
 		text-align    : right;
 	}
