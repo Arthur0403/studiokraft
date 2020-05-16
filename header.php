@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header class="content-main-w3 inner-page" id="home">
+<header class="content-main inner-page" id="home">
     <div class="header_top">
         <div class="container container_top">
             <ul class="social-icons">
@@ -35,28 +35,28 @@
                 <?php if (get_theme_mod( 'studiokraft_social_whatsapp' )) : ?>
                     <li><a href="<?php echo get_theme_mod( 'studiokraft_social_whatsapp' ); ?>"><span class="fab fa-whatsapp"></span></a></li>
                 <?php endif; ?>
-                <?php if (get_theme_mod( 'studiokraft_social_viber' )) : ?>
-                    <li><a href="<?php echo get_theme_mod( 'studiokraft_social_viber' ); ?>"><span class="fab fa-viber"></span></a></li>
-                <?php endif; ?>
+<!--                --><?php //if (get_theme_mod( 'studiokraft_social_viber' )) : ?>
+<!--                    <li><a href="--><?php //echo get_theme_mod( 'studiokraft_social_viber' ); ?><!--"><span class="fab fa-viber"></span></a></li>-->
+<!--                --><?php //endif; ?>
                 <?php if (get_theme_mod( 'studiokraft_social_telegram' )) : ?>
                     <li><a href="<?php echo get_theme_mod( 'studiokraft_social_telegram' ); ?>"><span class="fab fa-telegram-plane"></span></a></li>
                 <?php endif; ?>
-                <?php if (get_theme_mod( 'studiokraft_social_skype' )) : ?>
-                    <li><a href="<?php echo get_theme_mod( 'studiokraft_social_skype' ); ?>"><span class="fab fa-skype"></span></a></li>
-                <?php endif; ?>
-                <?php if (get_theme_mod( 'studiokraft_social_ok' )) : ?>
-                    <li><a href="<?php echo get_theme_mod( 'studiokraft_social_ok' ); ?>"><span class="fab fa-odnoklassniki"></span></a></li>
-                <?php endif; ?>
+<!--                --><?php //if (get_theme_mod( 'studiokraft_social_skype' )) : ?>
+<!--                    <li><a href="--><?php //echo get_theme_mod( 'studiokraft_social_skype' ); ?><!--"><span class="fab fa-skype"></span></a></li>-->
+<!--                --><?php //endif; ?>
+<!--                --><?php //if (get_theme_mod( 'studiokraft_social_ok' )) : ?>
+<!--                    <li><a href="--><?php //echo get_theme_mod( 'studiokraft_social_ok' ); ?><!--"><span class="fab fa-odnoklassniki"></span></a></li>-->
+<!--                --><?php //endif; ?>
             </ul>
-            <p class="address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
+            <p class="hidden_block address<?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo " show"; ?>">
                 <?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?><a href="<?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) echo get_theme_mod( 'studiokraft_navigation' ); ?>"><?php endif; ?><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span><?php if ( TRUE === get_theme_mod( 'studiokraft_show_navigation' ) ) : ?></a><?php endif; ?>
             </p>
-            <p class="phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
+            <p class="hidden_block phone<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo " show"; ?>">
                 <a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
                     <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
                 </a>
             </p>
-            <p class="mail<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo " show"; ?>">
+            <p class="hidden_block mail<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo " show"; ?>">
                 <a href="mailto:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?>">
                     <span class="studiokraft-mail"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?></span>
                 </a>

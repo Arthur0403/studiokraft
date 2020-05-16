@@ -435,7 +435,7 @@ function studiokraft_customize_css()
     <style type="text/css">
         header{background-color:<?php echo get_theme_mod( 'studiokraft_header_background_color' );?>;}
         .header_top p,.header_top span,.header_top a,.info .studiokraft-address,.info .phone .studiokraft-phone,.info .mail .studiokraft-mail{color:<?php echo get_theme_mod( 'studiokraft_header_color' );?>;}
-        html,body,section.contacts,section.rules,.inner-halls{background-color:<?php echo get_theme_mod( 'studiokraft_main_background_color' );?>;}
+        html,body,section.contacts,section.rules,.inner-halls,figure{background-color:<?php echo get_theme_mod( 'studiokraft_main_background_color' );?>;}
         section p,section span,.attention-title,.features-item,.rules-panel,.rules-panel p,.rules-panel span,.info-item_title,.info-section div.wpforms-container-full .wpforms-form .wpforms-field-label{color:<?php echo get_theme_mod( 'studiokraft_main_color' );?>;}
         .info-section div.wpforms-container-full .wpforms-form input[type="text"],.info-section div.wpforms-container-full .wpforms-form input[type="email"],.info-section div.wpforms-container-full .wpforms-form textarea{color:<?php echo get_theme_mod( 'studiokraft_main_color' );?>cc;}
         h1,h2,h3,h4,h5,h6{color:<?php echo get_theme_mod( 'studiokraft_title_color' );?>;}

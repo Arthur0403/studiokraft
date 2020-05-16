@@ -33,19 +33,38 @@ body {
 	background-size     : 11px 11px;
 }
 
-.content-main-w3,
+.content-main,
 .inner-page-footer {
-	padding : 0 0 1em;
+	padding : 0 0 5px;
+}
+
+header.content-main {
+	position : sticky;
+	top      : -10px;
+	z-index  : 1;
+}
+
+.header_top {
+	padding : 20px 20px 0;
+}
+
+.container_top {
+	/*padding-bottom  : 10px;*/
+	display         : flex;
+	flex-direction  : column;
+	justify-content : stretch;
+	text-align      : center;
 }
 
 header ul.social-icons {
+	margin          : 0 auto;
 	display         : flex;
 	flex-direction  : row;
 	justify-content : center;
 }
 
 header .social-icons li {
-	margin : 0 10px 5px;
+	margin : 0 10px;
 }
 
 header ul.social-icons a {
@@ -75,16 +94,14 @@ header .fab {
 	font-size : 1.25rem;
 }
 
-.container_top {
-	padding-bottom  : 10px;
-	display         : flex;
-	justify-content : stretch;
-}
-
 .container_top a,
 .container_top p {
 	margin-bottom : 5px;
 	font-weight   : 500;
+}
+
+.container_top ul.social-icons li a {
+	margin-bottom : 0;
 }
 
 .container_top .header-info:not(:first-child) {
@@ -786,6 +803,7 @@ ul.rules ol.list-padding-left {
 
 .pages ul {
 	margin-bottom : 5px;
+	padding-left  : 0.5rem;
 }
 
 div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:hover,
@@ -892,7 +910,33 @@ footer .social-icons li a:active {
 	}
 }
 
+@media (max-width : 767px) {
+	.display_none {
+		display : none !important;
+	}
+}
+
 @media (min-width : 768px) {
+
+	.container_top {
+		flex-direction : row;
+		flex-wrap      : wrap;
+	}
+
+	.container_top ul.social-icons {
+		margin       : 0;
+		margin-right : auto;
+	}
+
+	.container_top p {
+		margin-left : 10px;
+		min-width   : 250px;
+		text-align  : right;
+	}
+
+	.container_top p:nth-of-type(even) {
+		text-align : left;
+	}
 
 	.gallery_effect {
 		margin : 0px 5px 10px 5px;
@@ -948,24 +992,19 @@ footer .social-icons li a:active {
 		font-size : 1.1rem !important;
 		width     : 40%;
 	}
+}
 
+@media (min-width : 768px) and (max-width : 991px) {
+	.margin_add {
+		margin-top : -45px;
+		transition : .3s;
+	}
 }
 
 @media (max-width : 991px) {
 	.navbar-collapse .logo-wthree {
 		display : none;
 	}
-
-	header ul.social-icons {
-		width     : 200px;
-		margin    : 0 auto;
-		flex-wrap : wrap;
-	}
-
-	/*header .navbar-brand .blogname,*/
-	/*footer .navbar-brand .blogname {*/
-	/*	font-size : 2rem !important;*/
-	/*}*/
 }
 
 @media (min-width : 992px) and (max-width : 1199px) {
@@ -978,6 +1017,19 @@ footer .social-icons li a:active {
 	html,
 	body {
 		font-size : 16px;
+	}
+
+	.container_top {
+		flex-wrap : nowrap;
+	}
+
+	.container_top p {
+		margin    : 0 0 5px 15px;
+		min-width : auto;
+	}
+
+	.container_top p:nth-of-type(even) {
+		text-align : right;
 	}
 
 	header ul.social-icons {
@@ -1016,14 +1068,21 @@ footer .social-icons li a:active {
 		padding : 20px 30px;
 	}
 
-	.navbar-light .navbar-nav .menu-item:first-child > a {
+	.navbar-light .navbar-nav .menu-item:first-child > a,
+	.navbar-light.margin_add .navbar-nav .menu-item:first-child > a {
 		padding-left : 0;
 		text-align   : left;
 	}
 
-	.navbar-light .navbar-nav .menu-item:last-child > a {
+	.navbar-light .navbar-nav .menu-item:last-child > a,
+	.navbar-light.margin_add .navbar-nav .menu-item:last-child > a {
 		padding-right : 0;
 		text-align    : right;
+	}
+
+	.navbar-expand-lg.margin_add .navbar-nav .menu-item > a {
+		padding    : 5px 30px;
+		transition : .5s;
 	}
 
 	.navbar-expand-lg .navbar-nav .menu-item:hover,
@@ -1077,6 +1136,14 @@ footer .social-icons li a:active {
 	.navbar-light .navbar-nav .menu-item .sub-menu .menu-item:last-child > a:focus::before {
 		transform : translateX(-50%);
 		left      : 50%;
+	}
+
+	.navbar-light.margin_add .navbar-nav .menu-item > a:hover::before,
+	.navbar-light.margin_add .navbar-nav .menu-item > a:focus::before,
+	.navbar-light.margin_add .navbar-nav .current-menu-item > a::before,
+	.navbar-light.margin_add .navbar-nav .current-menu-item > a:hover::before,
+	.navbar-light.margin_add .navbar-nav .current-menu-item > a:focus::before {
+		bottom : 0px;
 	}
 
 	.container-title,
@@ -1210,4 +1277,8 @@ footer .social-icons li a:active {
 		font-size : 1.8rem !important;
 		width     : 40%;
 	}
+}
+
+@media (min-width : 1200px) {
+
 }

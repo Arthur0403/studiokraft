@@ -90,10 +90,9 @@ ul {
 	padding-left : 5px;
 }
 
-.content-main-w3 {
-	position   : relative;
-	background : #007cc0;
-	padding    : 3em 0;
+.content-main{
+	position         : relative;
+	padding          : 3em 0;
 }
 
 a.navbar-brand {
@@ -680,7 +679,7 @@ p.copy-right-w3ls a:hover {
 		margin-top : 1em;
 	}
 
-	.content-main-w3 {
+	.content-main{
 		padding : 2em 0;
 	}
 
@@ -803,7 +802,7 @@ p.copy-right-w3ls a:hover {
 		font-size : 1em;
 	}
 
-	.content-main-w3 {
+	.content-main{
 		padding : 1.5em 0;
 	}
 }
