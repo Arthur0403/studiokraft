@@ -18,7 +18,7 @@ get_header();
 <!--        --><?php //endwhile; endif ?>
 <!--        </div>-->
 <!--    </div>-->
-    <section class="rules py-lg-1 py-md-5 py-3">
+    <section class="rules py-lg-5 py-md-5 py-3">
         <div class="container container--rules">
             <h1><?php the_title(); ?></h1>
         </div>
