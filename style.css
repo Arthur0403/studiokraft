@@ -625,7 +625,7 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .attention-wrapper {
-	padding          : 46px 0;
+	padding          : 3rem 0;
 	background-color : #ffc20d88;
 }
 
@@ -643,9 +643,7 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 /*   Pravila   */
-
-.container--pages,
-.container--rules {
+.container--rules:not(:first-of-type) {
 	margin-top : 50px;
 }
 
@@ -1176,7 +1174,7 @@ footer .social-icons li a:active {
 	}
 
 	.rules .attention-wrapper {
-		padding : 15px 0;
+		padding : 1.5rem 0;
 	}
 }
 
