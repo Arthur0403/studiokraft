@@ -2457,6 +2457,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
+.not-found .search-submit,
 div.wpforms-container-full .wpforms-form button.btn[type="submit"],
 .btn {
   display: inline-block;
