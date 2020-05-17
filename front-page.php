@@ -48,7 +48,7 @@ get_header();
             <div class="row">
                 <?php $features = get_field( 'features' );
                 for($i = 1; $i <= count($features)/2; $i++ ): ?>
-                    <div class="col-lg-2 col-md-6 col-sm-12 py-3 aos-init aos-animate features-item" data-aos="fade-up">
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-4 py-3 aos-init aos-animate features-item" data-aos="fade-up">
                         <img src="<?php echo $features["features-img-$i"]; ?>" alt="" class="features-img">
                         <span><?php echo $features["features-item-$i"] ?></span>
                     </div>
