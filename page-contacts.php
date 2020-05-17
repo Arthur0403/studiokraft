@@ -20,51 +20,40 @@ get_header();
         <h1><?php the_title(); ?></h1>
         <div class="container">
             <div class="info-wrapper">
-                <div class="info-section">
-                    <div class="info-item address">
-                        <div class="info-icon"><span class="fas far fab fa-map"></span></div>
-                        <div class="info-block">
-                            <p class="info-item_title">Адрес</p>
-                            <p><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span></p>
-                        </div>
-                    </div>
-                    <div class="info-item phone">
-                        <div class="info-icon"><span class="fas fa-phone"></span></i></div>
-                        <div class="info-block">
-                            <p class="info-item_title">Телефон</p>
-                            <p><a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
-                                    <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
-                            </a></p>
-                        </div>
-                    </div>
-                    <div class="info-item mail">
-                        <div class="info-icon"><span class="fas fa-envelope"></span></div>
-                        <div class="info-block">
-                            <p class="info-item_title">Почта</p>
-                            <p><a href="mailto:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?>">
-                                    <span class="studiokraft-mail"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?></span>
-                            </a></p>
-                        </div>
-                    </div>
-                    <div class="info-item social">
-                        <div class="info-icon"><span class="fas fa-users"></span></div>
-                        <div class="info-block">
-                            <p class="info-item_title">Социальные сети</p>
-                            <p><?php the_field( 'social-1' ); ?></p>
-                            <p><?php the_field( 'social-2' ); ?></p>
-                            <p><?php the_field( 'social-3' ); ?></p>
-                            <p><?php the_field( 'additionally' ); ?></p>
-                        </div>
+                <div class="info-item address">
+                    <div class="info-icon"><span class="fas far fab fa-map"></span></div>
+                    <div class="info-block">
+                        <p class="info-item_title">Адрес</p>
+                        <p><span class="studiokraft-address"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_address' ) ) echo get_theme_mod( 'studiokraft_address' ); ?></span></p>
                     </div>
                 </div>
-                <div class="info-section">
-<!--                    --><?php //echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
-                    <?php echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
+                <div class="info-item phone">
+                    <div class="info-icon"><span class="fas fa-phone"></span></i></div>
+                    <div class="info-block">
+                        <p class="info-item_title">Телефон</p>
+                        <p><a href="tel:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo str_replace( array( "(", ")", " ", "-" ), "", get_theme_mod( 'studiokraft_phone' ) ); ?> ">
+                                <span class="studiokraft-phone"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_phone' ) ) echo get_theme_mod( 'studiokraft_phone' ); ?></span>
+                        </a></p>
+                    </div>
+                </div>
+                <div class="info-item mail">
+                    <div class="info-icon"><span class="fas fa-envelope"></span></div>
+                    <div class="info-block">
+                        <p class="info-item_title">Почта</p>
+                        <p><a href="mailto:<?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?>">
+                                <span class="studiokraft-mail"><?php if ( TRUE === get_theme_mod( 'studiokraft_show_mail' ) ) echo get_theme_mod( 'studiokraft_mail' ); ?></span>
+                        </a></p>
+                    </div>
+                </div>
+                <div class="info-item social">
+                    <div class="info-icon"><span class="fas fa-users"></span></div>
+                    <div class="info-block">
+                        <p class="info-item_title">Социальные сети</p>
+                        <p class="info-item_social"><span><?php the_field( 'social-1' ); ?></span> <span><?php the_field( 'social-2' ); ?></span> <span><?php the_field( 'social-3' ); ?></span></p>
+                        <p><?php the_field( 'additionally' ); ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="map">
-            <iframe src="<?php the_field( 'map_yandex' ); ?>" width="100%" height="400" frameborder="0"></iframe>
         </div>
         <div class="container">
             <div class="navigation">
@@ -76,6 +65,15 @@ get_header();
                 preg_match( '/src="(.+?)"/', $iframe, $matches );
                 echo $matches[ 1 ];
                 ?>" controls></video>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="<?php the_field( 'map_yandex' ); ?>" width="100%" height="400" frameborder="0"></iframe>
+        </div>
+        <div class="container">
+            <div class="contact-form">
+                <?php echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
+<!--                --><?php //echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
             </div>
         </div>
         <div class="attention-wrapper">
