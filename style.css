@@ -54,7 +54,7 @@ header.content-main {
 
 .mmove {
 	box-shadow : 0 2px 15px 0 #000000;
-	transition: .5s;
+	transition : .5s;
 }
 
 .container_top {
@@ -497,6 +497,9 @@ a.page-numbers:active {
 }
 
 /*   Contacts   */
+.contacts {
+	padding-bottom : 0 !important;
+}
 
 .info-item {
 	display        : flex;
@@ -546,23 +549,31 @@ a.page-numbers:active {
 	font-size : 2rem;
 }
 
+.info-item_social {
+	display        : flex;
+	flex-direction : column;
+}
+
 /*   Form   */
+.contact-form {
+	margin : 3rem 0;
+}
 
 .wpforms-field-textarea {
 	width : 100% !important;
 }
 
 .info-item_title,
-.info-section div.wpforms-container-full .wpforms-form .wpforms-field-label {
+.contact-form div.wpforms-container-full .wpforms-form .wpforms-field-label {
 	font-family : 'Roboto', sans-serif;
 	font-weight : bold;
 	font-size   : 1.5rem;
 	line-height : 1.2;
 }
 
-.info-section div.wpforms-container-full .wpforms-form input[type="text"],
-.info-section div.wpforms-container-full .wpforms-form input[type="email"],
-.info-section div.wpforms-container-full .wpforms-form textarea {
+.contact-form div.wpforms-container-full .wpforms-form input[type="text"],
+.contact-form div.wpforms-container-full .wpforms-form input[type="email"],
+.contact-form div.wpforms-container-full .wpforms-form textarea {
 	padding          : 15px 15px 15px 57px;
 	height           : 57px;
 	font-family      : 'Roboto', sans-serif;
@@ -571,11 +582,11 @@ a.page-numbers:active {
 	background-color : #ffffffaa;
 }
 
-.info-section div.wpforms-container-full .wpforms-form textarea {
+.contact-form div.wpforms-container-full .wpforms-form textarea {
 	padding : 15px 15px;
 }
 
-.info-section div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
+.contact-form div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
 	height : 237px;
 }
 
@@ -953,7 +964,7 @@ footer .social-icons li a:active {
 	}
 
 	.halls-block .btn-light {
-		background: none;
+		background : none;
 	}
 }
 
@@ -1000,6 +1011,16 @@ footer .social-icons li a:active {
 		display        : flex;
 		flex-direction : row;
 		flex-wrap      : wrap;
+	}
+
+	.info-item_social {
+		display        : flex;
+		flex-direction : row;
+		flex-wrap      : wrap;
+	}
+
+	.info-item_social span {
+		margin-right : 10px;
 	}
 
 	.wpforms-field-text,
@@ -1052,6 +1073,22 @@ footer .social-icons li a:active {
 	.navbar-nav li:first-of-type {
 		margin-top : 10px;
 	}
+
+	.info-wrapper {
+		display        : flex;
+		flex-direction : column;
+		flex-wrap      : wrap;
+		max-height     : 300px;
+	}
+
+	.info-item {
+		width : 30%;
+	}
+
+	.info-item:last-of-type {
+		width       : 65%;
+		margin-left : auto;
+	}
 }
 
 @media (max-width : 991px) {
@@ -1088,7 +1125,6 @@ footer .social-icons li a:active {
 	.container_top p:nth-of-type(even) {
 		text-align : right;
 	}
-
 
 	header ul.social-icons {
 		justify-content : flex-end;
@@ -1152,9 +1188,19 @@ footer .social-icons li a:active {
 		position : relative;
 	}
 
+	.menu-item:hover .sub-menu {
+		display : block;
+	}
+
 	.sub-menu {
 		transform : translateX(-50%);
 		left      : 50%;
+	}
+
+	.navbar-light .navbar-nav .sub-menu .menu-item > a {
+		padding-left  : auto;
+		padding-right : auto;
+		text-align    : center;
 	}
 
 	.logo-wthree {
@@ -1236,27 +1282,44 @@ footer .social-icons li a:active {
 	}
 
 	/*   Contacts   */
+	.contact-form .wpforms-field-container,
 	.info-wrapper {
-		display         : flex;
-		justify-content : space-between;
-	}
-
-	.info-section:first-child {
 		display        : flex;
 		flex-direction : column;
-		width          : 30%;
+		flex-wrap      : wrap;
+		max-height     : 350px;
 	}
 
-	.info-section:last-child {
-		width : 67.8%;
+	.contact-form .wpforms-field-text,
+	.contact-form .wpforms-field-email,
+	.info-item {
+		width : 30% !important;
+	}
+
+	.contact-form .wpforms-field-textarea,
+	.info-item:last-child {
+		width       : 65% !important;
+		margin-left : auto !important;
+	}
+
+	.contact-form .wpforms-field-container {
+		max-height : 250px;
+	}
+
+	.contact-form div.wpforms-container-full .wpforms-form .wpforms-field {
+		padding-top : 13px;
+	}
+
+	.contact-form div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
+		height : 177px;
+	}
+
+	.contact-form div.wpforms-container-full .wpforms-form .wpforms-field-textarea .wpforms-field-label {
+		min-height : 36px;
 	}
 
 	.map {
 		height : 596px;
-	}
-
-	.rules-item > .wp-block-group__inner-container::before {
-		top : 22px;
 	}
 
 	.rules-panel,
