@@ -52,7 +52,8 @@
 	});
 	wp.customize('studiokraft_main_background_color', function (value) {
 		value.bind(function (newval) {
-			$('html,body,section.contacts,section.rules,.inner-halls').css('background-color', newval);
+			$('html,body,section.contacts,section.rules,figure,.halls-title,.btn-light').css('background-color', newval);
+			$('.halls-block .inner-halls').css('background-color' + 'bb', newval);
 		});
 	});
 	wp.customize('studiokraft_main_color', function (value) {
