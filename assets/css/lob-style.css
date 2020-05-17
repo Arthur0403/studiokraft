@@ -129,15 +129,18 @@ span {
     background: #aeafaf;
 }
 
+.not-found .search-submit:hover,
 .custom-btn {
     transition: 1s;
 }
 
+.not-found .search-submit:hover,
 .custom-btn:hover {
     background: #ffffff;
     text-decoration: underline;
 }
 
+.not-found .search-submit,
 div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .custom-btn {
     padding: 15px 24px;
@@ -149,6 +152,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     color: #000000;
 }
 
+.not-found .search-submit,
 div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .custom-btn:visited {
     /*color: #1572BB;*/
@@ -165,6 +169,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     justify-content: space-between;
 }
 
+.not-found .search-submit,
 .custom-btn-white {
     /*color: #1572BB;*/
     background-color: unset !important;
@@ -172,6 +177,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     border: 2px solid #000000 !important;
 }
 
+.not-found .search-submit:hover,
 .custom-btn-white:hover {
     text-decoration: none;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

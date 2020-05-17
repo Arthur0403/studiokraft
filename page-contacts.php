@@ -72,8 +72,8 @@ get_header();
         </div>
         <div class="container">
             <div class="contact-form">
-                <?php echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
-<!--                --><?php //echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
+<!--                --><?php //echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
+                <?php echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
             </div>
         </div>
         <div class="attention-wrapper">
