@@ -16,6 +16,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 # Custom style
 --------------------------------------------------------------*/
+/* #828282 */
+/* #e8e8e8 */
+
 html,
 body {
 	font-size : 14px;
@@ -35,7 +38,7 @@ body {
 
 .content-main,
 .inner-page-footer {
-	padding : 0 0 5px;
+	padding : 0;
 }
 
 header.content-main {
@@ -45,7 +48,13 @@ header.content-main {
 }
 
 .header_top {
-	padding : 20px 20px 0;
+	padding    : 20px 20px 5px;
+	box-shadow : 0 0 0 #000000;
+}
+
+.mmove {
+	box-shadow : 0 2px 15px 0 #000000;
+	transition: .5s;
 }
 
 .container_top {
@@ -942,6 +951,10 @@ footer .social-icons li a:active {
 	.social-icons.tablet {
 		display : none !important;
 	}
+
+	.halls-block .btn-light {
+		background: none;
+	}
 }
 
 @media (min-width : 768px) {
@@ -1031,11 +1044,23 @@ footer .social-icons li a:active {
 		margin-top : -45px;
 		transition : .3s;
 	}
+
+	.navbar-nav {
+		padding-bottom : 10px;
+	}
+
+	.navbar-nav li:first-of-type {
+		margin-top : 10px;
+	}
 }
 
 @media (max-width : 991px) {
 	.navbar-collapse .logo-wthree {
 		display : none;
+	}
+
+	.rules .attention-wrapper {
+		padding : 15px 0;
 	}
 }
 
@@ -1072,7 +1097,7 @@ footer .social-icons li a:active {
 	header ul.social-icons li:first-of-type {
 		margin-left : 0;
 	}
-	
+
 	header ul.social-icons a {
 		width       : 25px;
 		height      : 25px;
