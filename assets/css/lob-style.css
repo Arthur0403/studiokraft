@@ -167,8 +167,15 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
 .custom-btn-white {
     /*color: #1572BB;*/
+    background-color: unset !important;
     color: #000000;
     border: 2px solid #000000 !important;
+}
+
+.custom-btn-white:hover {
+    text-decoration: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
 }
 
 .halls-title {
