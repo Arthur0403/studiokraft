@@ -289,7 +289,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
 .page-content {
     /*position: absolute;*/
-    background-color: #fff;
+    /*background-color: #fff;*/
     /*margin-top: -5rem;*/
     /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
 }
@@ -489,6 +489,20 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         flex-basis: auto;
     }
 
+    .inner-halls p {
+        display: none;
+    }
+
+    .inner-halls h3 {
+        text-decoration: underline;
+    }
+
+    .hall-price {
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
     .halls-block {
         margin-bottom: 3rem;
     }
@@ -559,6 +573,18 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-size: .95rem;
     }
 
+    .inner-halls .custom-btn {
+        width: 0%;
+        padding: 4px 18px;
+        float: right;
+    }
+
+    .arrow-rigth {
+        font-size: 2rem;
+        transform: translateX(-5px);
+    }
+}
+
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
@@ -596,6 +622,14 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     .features-item span {
         font-size: 1.2rem;
     }
+
+    /*.inner-halls p {*/
+    /*    display: block;*/
+    /*}*/
+
+    /*.inner-halls .custom-btn-white:after {*/
+    /*    content: 'ПОДРОБНЕЕ'*/
+    /*}*/
 
 }
 
@@ -717,8 +751,27 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         padding: 4px 6px;
     }
 
-    .custom-btn {
+    .inner-halls .custom-btn {
         width: auto;
+        padding: 15px 24px;
+    }
+
+    .inner-halls p {
+        display: block;
+    }
+
+    .inner-halls .custom-btn-white::before {
+        content: 'Подробнее'
+    }
+
+    .arrow-rigth {
+        display: none;
+    }
+
+    .hall-price {
+        font-size: 1.2rem;
+        display: inline;
+        margin-top: 0rem;
     }
 }
 

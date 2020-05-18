@@ -11,7 +11,7 @@ get_header();
     <div class="container-fluid p-0 mb-4">
         <?php echo do_shortcode('[slick-slider category="5" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]'); ?>
     </div>
-    <section class="banner-bottom-w3layouts py-3 pb-0">
+    <section class="py-0 pb-0">
         <div class="container">
             <div class="row">
 <!--            <h3 class="page-content__title title-up mx-auto">--><?php //the_field('page_title'); ?><!--</h3>-->
