@@ -911,6 +911,7 @@ footer .social-icons li a:active {
 	flex-wrap       : wrap;
 	justify-content : center;
 	text-align      : center;
+	margin-bottom: 0 !important;
 }
 
 .copy-right a {
