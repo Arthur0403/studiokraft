@@ -55,18 +55,18 @@ span {
     background-color: white;
 }
 
-.page-about-banner {
-    padding: 100px 40px;
-    vertical-align: middle;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    background: url('../wp-content/uploads/2020/02/sesja.jpg');
-    background-size: cover;
-    background-position: center center;
-    -webkit-box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;
-    box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;
-}
+/*.page-about-banner {*/
+/*    padding: 100px 40px;*/
+/*    vertical-align: middle;*/
+/*    -webkit-box-sizing: border-box;*/
+/*    box-sizing: border-box;*/
+/*    margin: 0;*/
+/*    background: url('../wp-content/uploads/2020/02/sesja.jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center center;*/
+/*    -webkit-box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;*/
+/*    box-shadow: 0 0 0 130px rgba(0, 0, 0, 0.23) inset;*/
+/*}*/
 
 .page-about-banner>h2 {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
@@ -284,7 +284,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
 /*Hall page*/
 .page-banner {
-    /*position: relative;*/
+  margin: 0 auto;
 }
 
 .page-content {
@@ -331,10 +331,19 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     font-size: 3rem;
 }
 
+.inventary-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .inventary-img {
-    display: block;
-    height: 247px;
-    width: 249px;
+    width: 100%;
+}
+
+.inventary-subscribe {
+    align-self: start;
+    margin-top: .5rem;
 }
 
 .slick-arrow,
@@ -776,9 +785,6 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 @media (min-width: 1024px) {
-    /*#menu-glavnoe-menyu {*/
-    /*    width: 85%;*/
-    /*}*/
     .content-image {
         width: 40%;
         float: right;
@@ -803,32 +809,6 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     #menu-glavnoe-menyu {
         max-width: 1140px;
     }
-
-    /*.sub-menu {*/
-    /*    position: absolute;*/
-    /*    top: 6.5rem;*/
-    /*    display: none;*/
-    /*    list-style: none;*/
-    /*    padding: 10px;*/
-    /*    background-color: white;*/
-    /*    z-index: 10;*/
-    /*    transform: translateX(-15%);*/
-    /*}*/
-
-    /*.sub-menu .menu-item > a{*/
-    /*    text-transform: inherit !important;*/
-    /*    color: #979797 !important;*/
-    /*    transition: .5s;*/
-    /*}*/
-
-    /*.sub-menu .menu-item > a:hover{*/
-    /*    color: #1572BB !important;*/
-    /*    text-decoration: underline;*/
-    /*}*/
-
-    /*.sub-menu .menu-item {*/
-    /*    padding: 4px 6px;*/
-    /*}*/
 }
 
 .custom-warning {
@@ -847,79 +827,3 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .table-price td {
     border: 1px solid #dedede;
 }
-
-
-/*!* Content styles for text *!*/
-/*.content-item {*/
-/*    margin-bottom: 2rem;*/
-/*}*/
-
-/*.content-title {*/
-/*    margin-bottom: 1rem;*/
-/*    font-weight: 600;*/
-/*    font-size: 1.5rem;*/
-/*}*/
-
-/*.content-list {*/
-/*    font-family: "Forum";*/
-/*    padding-left: 3rem;*/
-/*    font-size: 1.2rem;*/
-/*}*/
-
-
-/*.content-paragraph {*/
-/*    margin-bottom: 1rem;*/
-/*    text-indent: 2rem;*/
-/*}*/
-
-/*.content-paragraph a{*/
-/*    font-family: "Forum";*/
-/*    text-decoration: underline;*/
-/*}*/
-
-/*.content-main-title {*/
-/*    text-align: center;*/
-/*    margin-bottom: 2rem;*/
-/*}*/
-
-/*320*/
-/*.content-item {*/
-/*    margin-bottom: 1rem;*/
-/*}*/
-
-/*.content-title {*/
-/*    font-size: 1.3rem;*/
-/*    text-align: justify;*/
-/*    margin-bottom: 1rem;*/
-/*    font-weight: 600;*/
-/*}*/
-
-/*.content-paragraph {*/
-/*    text-indent: 0;*/
-/*    margin-bottom: 1rem;*/
-/*}*/
-
-/*.content-list {*/
-/*    padding-left: 2rem;*/
-/*    font-family: "Forum";*/
-/*    padding-left: 2rem;*/
-/*    font-size: 1.2rem;*/
-/*}*/
-
-/*768*/
-/*.content-item {*/
-/*    margin-bottom: 2rem;*/
-/*}*/
-
-/*.content-title {*/
-/*    font-size: 1.5rem;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.content-paragraph {*/
-/*    text-indent: 2rem;*/
-/*}*/
-
-/*.content-list {*/
-/*    padding-left: 3rem;*/
-/*}*/

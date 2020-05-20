@@ -319,3 +319,15 @@ remove_filter('pre_term_description', 'wp_filter_kses');
 //foreach ( array( 'term_description' ) as $filter ) {
 //    remove_filter( $filter, 'wp_kses_data' );
 //}
+
+function getPageId($id){
+    if($id === 88) {
+        return 'Magic';
+    } elseif ($id === 84) {
+        return 'Loft';
+    } elseif ($id === 90) {
+        return 'Grey';
+    } elseif ($id === 553 || $id === 556) {
+        return 'Grim';
+    }
+}
