@@ -11,8 +11,8 @@
 
 ?>
 
-</section>
-    <footer class="pb-lg-3 inner-page-footer">
+    </section>
+    <footer>
         <p class="footer-title">
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <span class="blogname"><?php echo bloginfo( 'name' ); ?></span>
