@@ -62,10 +62,11 @@ get_header();
             <?php $halls = get_field( 'halls_card' );
             foreach ( $halls as $innerHall ): ?>
                 <div class="row align-items-center halls-block aos-init aos-animate" data-aos="fade-up">
-                    <div class="col col-lg-8 p-4 inner-halls">
+                    <div class="col col-lg-8 col-md-5 p-4 inner-halls">
                         <h3 class="text-uppercase"><?php echo $innerHall[ 'hall_title' ]; ?></h3>
+                        <span class="hall-price"><?php echo $innerHall['hall_price'] ?></span>
                         <p class="my-4"><?php echo $innerHall[ 'hall_description' ]; ?></p>
-                        <a href="<?php echo $innerHall[ 'hall_link' ]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white">Подробнее</a>
+                        <a href="<?php echo $innerHall[ 'hall_link' ]; ?>" type="button" class="btn btn-light custom-btn custom-btn-white"><i class="fa fa-angle-right arrow-rigth" aria-hidden="true"></i></a>
                     </div>
                     <div class="col hall-img">
                         <img src="<?php echo $innerHall[ 'hall_img' ]; ?>" alt="">
