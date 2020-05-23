@@ -1192,9 +1192,6 @@ footer .social-icons li a:active {
 		transform : translate(-50%, 50%);
 	}
 
-	footer {
-		padding : 3rem 0;
-	}
 }
 
 @media (min-width : 768px) and (max-width : 991px) {
@@ -1484,10 +1481,6 @@ footer .social-icons li a:active {
 	.table-price table {
 		width       : 80%;
 		line-height : 1.5;
-	}
-
-	footer {
-		padding : 3rem 0 4rem;
 	}
 
 	.footer-container {
