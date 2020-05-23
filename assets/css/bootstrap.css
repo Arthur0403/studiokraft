@@ -593,7 +593,8 @@ pre code {
   margin-left: auto;
 }
 
-.row {
+.row,
+.row .wp-block-group__inner-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

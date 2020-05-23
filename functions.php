@@ -152,12 +152,23 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
 
         add_image_size( 'gallery-thumb', 545, 482, TRUE );
         add_image_size( 'gallery-thumb-vertical', 545, 986, TRUE );
+        add_image_size( 'square', 800, 800, true );
+
+        add_filter('image_size_names_choose', 'true_new_image_sizes');
+        function true_new_image_sizes($sizes) {
+            $addsizes = array(
+                "square" => 'Квадрат'
+            );
+            $newsizes = array_merge($sizes, $addsizes);
+            return $newsizes;
+        }
 
         add_theme_support( 'editor-styles' );
         add_theme_support( 'dark-editor-style' );
     }
 endif;
 add_action( 'after_setup_theme', 'studiokraft_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -234,6 +245,7 @@ function studiokraft_scripts()
 
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery-2.2.3.min.js' );
+    wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/main.start.js' );
     wp_enqueue_script( 'jquery' );
 
     wp_add_inline_script( 'jquery', 'addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }', 'before' );
