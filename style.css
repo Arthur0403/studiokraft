@@ -690,6 +690,11 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	margin-bottom : 35px;
 }
 
+.has-light-green-cyan-background-color.row {
+	margin-left  : 0;
+	margin-right : 0;
+}
+
 .rules .content-paragraph {
 	text-indent : 0;
 }
@@ -740,34 +745,34 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	padding-bottom : 15px;
 }
 
-.rules-panel,
-.rules p,
-.rules-panel p,
-.rules-panel span,
-.rules-panel li,
-.pages p,
-.pages span,
-.pages li,
-.rules-list {
-	font-family : 'Forum', serif;
-	font-size   : 1.2rem;
-	color       : #272727;
-	line-height : 1.5;
-}
+/*.rules-panel,*/
+/*.rules p,*/
+/*.rules-panel p,*/
+/*.rules-panel span,*/
+/*.rules-panel li,*/
+/*.pages p,*/
+/*.pages span,*/
+/*.pages li,*/
+/*.rules-list {*/
+/*	font-family : 'Forum', serif;*/
+/*	font-size   : 1.2rem;*/
+/*	color       : #272727;*/
+/*	line-height : 1.5;*/
+/*}*/
 
-.rules-list {
-	padding-left : 25px;
-}
+/*.rules-list {*/
+/*	padding-left : 25px;*/
+/*}*/
 
-.rules-panel ol,
-.rules-panel ul {
-	padding       : 15px 0 3px 25px;
-	margin-bottom : 0;
-}
+/*.rules-panel ol,*/
+/*.rules-panel ul {*/
+/*	padding       : 15px 0 3px 25px;*/
+/*	margin-bottom : 0;*/
+/*}*/
 
-.rules-panel li {
-	padding-bottom : 10px;
-}
+/*.rules-panel li {*/
+/*	padding-bottom : 10px;*/
+/*}*/
 
 /*.rules-panel .wp-block-group__inner-container {*/
 /*	margin-top : 15px;*/
@@ -820,6 +825,11 @@ ul.rules p:last-child {
 	line-height : 1.5;
 }
 
+.rules ol ul,
+.rules ul ol {
+	padding-left : 2.5rem;
+}
+
 ol.rules ul.list-padding-left,
 ul.rules ul.list-padding-left,
 ol.rules ol.list-padding-left,
@@ -856,10 +866,6 @@ ul.rules ol.list-padding-left {
 
 .pages ul {
 	margin : 1rem 0;
-}
-
-.pages ul ul {
-	margin : 0.5rem 0 1rem;
 }
 
 .pages ul {
@@ -1070,11 +1076,6 @@ footer .social-icons li a:active {
 		width : 100%;
 	}
 
-	.wp-block-group__inner-container .row {
-		margin-left  : 0;
-		margin-right : 0;
-	}
-
 	.offset-4 {
 		margin-left : 0;
 	}
@@ -1156,6 +1157,11 @@ footer .social-icons li a:active {
 	/*.rules-item > .wp-block-group__inner-container {*/
 	/*	padding : 10px 35px;*/
 	/*}*/
+
+	.rules-item > .wp-block-group__inner-container {
+		padding : 0;
+	}
+
 	.rules-item > .wp-block-group__inner-container::before {
 		top  : 23px;
 		left : 7px;
@@ -1165,10 +1171,10 @@ footer .social-icons li a:active {
 		margin-left : 0;
 	}
 
-	.rules-panel ol,
-	.rules-panel ul {
-		padding : 22px 0 3px 35px;
-	}
+	/*.rules-panel ol,*/
+	/*.rules-panel ul {*/
+	/*	padding : 22px 0 3px 35px;*/
+	/*}*/
 
 	.logo-slider .blogdescription {
 		font-size : 1.1rem !important;
@@ -1456,17 +1462,17 @@ footer .social-icons li a:active {
 		height : 596px;
 	}
 
-	.rules-panel,
-	.rules p,
-	.pages p,
-	.pages span,
-	.pages li,
-	.rules-panel p,
-	.rules-panel span,
-	.rules-panel li,
-	.rules-list {
-		line-height : 1.5;
-	}
+	/*.rules-panel,*/
+	/*.rules p,*/
+	/*.pages p,*/
+	/*.pages span,*/
+	/*.pages li,*/
+	/*.rules-panel p,*/
+	/*.rules-panel span,*/
+	/*.rules-panel li,*/
+	/*.rules-list {*/
+	/*	line-height : 1.5;*/
+	/*}*/
 
 	.pages a,
 	.rules a {

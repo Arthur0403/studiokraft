@@ -11,7 +11,7 @@ get_header();
     <section class="py-0 pb-0 container">
         <div class="row">
             <div class="page-content col-lg-12 py-4 px-5 mx-auto pages">
-                <h1><?php the_title(); ?></h1>
+                <h1 class="ta-center"><?php the_title(); ?></h1>
             </div>
         </div>
     </section>
