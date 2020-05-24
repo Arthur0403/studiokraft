@@ -8,50 +8,38 @@ Template Name: Правила
 get_header();
 ?>
 
-<!--    <div class="container-fluid p-0">-->
-<!--        <div class="container-title">-->
-<!--        --><?php //if ( have_posts() ) : while ( have_posts() ) :
-//            the_post(); ?>
-<!--            <div class="container-title wrapper">-->
-<!--            </div>-->
-<!--            --><?php //echo get_the_post_thumbnail($post->ID, 'full'); ?>
-<!--        --><?php //endwhile; endif ?>
-<!--        </div>-->
-<!--    </div>-->
-    <section class="rules py-lg-5 py-md-5 py-3">
-        <div class="container container--rules">
-            <h1><?php the_title(); ?></h1>
-        </div>
-        <div class="attention-wrapper">
-            <div class="container">
-                <div class="attention">
-                    <span class="attention-title">Внимание!</span>
-                    <p class="attention-text"><?php the_field( 'attention' ); ?></p>
-                </div>
+    <section class="py-0 pb-0 container">
+        <div class="row">
+            <div class="page-content col-lg-12 py-4 px-5 mx-auto pages">
+                <h1><?php the_title(); ?></h1>
             </div>
         </div>
-        <div class="container container--rules">
-
-            <?php if ( have_posts() ) : while ( have_posts() ) :
-                the_post(); ?>
-
-                <?php the_content(); ?>
-
-            <?php endwhile; ?>
-                <!-- post navigation -->
-            <?php else : ?>
-                404
-            <?php endif ?>
-
+    </section>
+    <div class="attention-wrapper">
+        <div class="container">
+            <div class="attention">
+                <span class="attention-title">Внимание!</span>
+                <p class="attention-text"><?php the_field( 'attention' ); ?></p>
+            </div>
         </div>
-<!--        <div class="attention-wrapper">-->
-<!--            <div class="container">-->
-<!--                <div class="attention">-->
-<!--                    <span class="attention-title">Внимание!</span>-->
-<!--                    <p class="attention-text">--><?php //the_field( 'attention' ); ?><!--</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+    </div>
+    <section class="py-0 pb-0 container">
+        <div class="row">
+            <div class="page-content col-lg-12 py-4 px-5 mx-auto container--rules">
+
+                <?php if ( have_posts() ) : while ( have_posts() ) :
+                    the_post(); ?>
+
+                    <?php the_content(); ?>
+
+                <?php endwhile; ?>
+                    <!-- post navigation -->
+                <?php else : ?>
+                    404
+                <?php endif ?>
+
+            </div>
+        </div>
     </section>
 
 <?php

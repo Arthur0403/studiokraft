@@ -12,16 +12,6 @@
 }());
 $(function () {
 	$(window).scroll(function () {
-		display = $(this).scrollTop() >= 50;
-		if (display) {
-			$(".header_top").addClass("mmove");
-		} else {
-			$(".header_top").removeClass("mmove");
-		}
-	});
-});
-$(function () {
-	$(window).scroll(function () {
 		display = $(this).scrollTop() >= 150;
 		if (display) {
 			$(".navbar").addClass("margin_add");
