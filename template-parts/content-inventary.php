@@ -12,7 +12,7 @@ $args = ['category' => $cat_id, 'posts_per_page' => '20'];
 <section class="mb-4 inventary">
     <div class="container">
         <h3 class="my-4 mx-auto inventary-title">Инвентарь</h3>
-        <div class="row">
+        <div class="row inventary-wrapper">
             <?php
             $inventary = get_posts($args);
             foreach ($inventary as $item) : ?>
@@ -23,6 +23,9 @@ $args = ['category' => $cat_id, 'posts_per_page' => '20'];
                     </a>
                 </div>
             <?php endforeach; ?>
+        </div>
+        <div class="mx-auto col-lg-3 col-md-6 col-sm-12">
+            <button class="btn btn-light custom-btn custom-btn-white more" style="font-size: 1rem">Показать все</button>
         </div>
     </div>
 </section>
