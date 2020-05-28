@@ -20,3 +20,16 @@ $(function () {
 		}
 	});
 });
+
+(function(){
+	let btn = document.querySelector('.more');
+
+	btn.addEventListener('click', function () {
+		let content = document.querySelector('.inventary-wrapper');
+		if (window.getComputedStyle(content, '').maxHeight !== '300px') {
+			content.style.maxHeight = '300px';
+		} else {
+			content.style.maxHeight = `${content.scrollHeight}px`;
+		}
+	});
+}());

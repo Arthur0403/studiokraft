@@ -825,3 +825,13 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .table-price td {
     border: 1px solid #dedede;
 }
+
+.inventary-wrapper {
+    overflow: hidden;
+    max-height: 300px;
+    transition: max-height 1s ease-out;
+}
+
+.more {
+    margin-top: 1rem;
+}
