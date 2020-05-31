@@ -160,6 +160,38 @@ function studiokraft_customize_register( $wp_customize )
             )
         )
     );
+    $wp_customize->add_setting( 'studiokraft_reservation_background_color', array(
+        'default'           => '#121213',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_reservation_background_color',
+            array(
+                'label'   => __( 'Цвет кнопки бронирования', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_reservation_background_color',
+            )
+        )
+    );
+    $wp_customize->add_setting( 'studiokraft_reservation_color', array(
+        'default'           => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'studiokraft_reservation_color',
+            array(
+                'label'   => __( 'Цвет текста кнопки бронирования', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'studiokraft_reservation_color',
+            )
+        )
+    );
 
     if ( isset( $wp_customize->selective_refresh ) ) {
         $wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -453,6 +485,8 @@ function studiokraft_customize_css()
         footer span, footer p, footer a,p.copy-right{color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         .social-icons{border-left-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;border-right-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         ul.social-icons li a{border-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
+        .call-us{background-color:<?php echo get_theme_mod( 'studiokraft_reservation_background_color' );?>;}
+        .call-text{color:<?php echo get_theme_mod( 'studiokraft_reservation_color' );?>;}
 }
     </style>
     <?php

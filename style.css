@@ -926,8 +926,37 @@ footer .social-icons li a:active {
 	border : 1px solid #dddddd;
 }
 
+.list-counter {
+	list-style    : none;
+	counter-reset : li;
+}
+
+.list-counter li:before {
+	counter-increment : li;
+	content           : counters(li, ".") ". ";
+	font-weight       : bold;
+}
+
 .list-style-none {
 	list-style : none;
+}
+
+.list-style-none.list-counter > li:before {
+	color     : transparent;
+	font-size : 0;
+}
+
+.list-counter li:before {
+	counter-increment : li;
+	content           : counters(li, ".") ".  ";
+}
+
+.content-list.list-counter {
+	padding-left : 1rem;
+}
+
+.list-counter .list-counter {
+	padding-left : 3rem;
 }
 
 @media (min-width : 576px) and (max-width : 767px) {
@@ -1072,10 +1101,9 @@ footer .social-icons li a:active {
 		padding-right : 20px;
 	}
 
-	.wp-block-image.col-md-4:last-of-type,
 	.wp-block-image.col-md-4:nth-of-type(3n) {
 		padding-left  : 20px;
-		padding-right : 0px;
+		padding-right : 0;
 	}
 
 	.container--rules h3 {

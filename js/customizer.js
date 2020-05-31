@@ -94,6 +94,16 @@
 			$('ul.social-icons li a').css('border-color', newval);
 		});
 	});
+	wp.customize('studiokraft_reservation_background_color', function (value) {
+		value.bind(function (newval) {
+			$('.call-us').css('background-color', newval);
+		});
+	});
+	wp.customize('studiokraft_reservation_color', function (value) {
+		value.bind(function (newval) {
+			$('.call-text').css('color', newval);
+		});
+	});
 
 	// Address
 
