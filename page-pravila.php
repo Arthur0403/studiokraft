@@ -10,7 +10,7 @@ get_header();
 
     <section class="py-0 pb-0 container">
         <div class="row">
-            <div class="page-content col-lg-12 py-4 px-5 mx-auto pages">
+            <div class="page-content col-lg-12 px-5 mx-auto pages">
                 <h1><?php the_title(); ?></h1>
             </div>
         </div>
@@ -25,7 +25,7 @@ get_header();
     </div>
     <section class="py-0 pb-0 container">
         <div class="row">
-            <div class="page-content col-lg-12 py-4 px-5 mx-auto container--rules">
+            <div class="page-content col-lg-12 px-5 mx-auto container--rules">
 
                 <?php if ( have_posts() ) : while ( have_posts() ) :
                     the_post(); ?>

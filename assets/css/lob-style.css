@@ -248,11 +248,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-.features, .halls, .gallery {
+.features, .halls, .gallery, .hall-section, .inventary, .page-content {
     padding: 3.3rem 0;
 }
 
-.features, .gallery {
+.features, .gallery, .hall-section {
     background-color: white;
 }
 
@@ -267,21 +267,18 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     max-width: 220px;
 }
 
-.halls {
+.halls, .inventary{
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
+}
+
+.inventary {
+    background-color: #ffc10788;
 }
 
 /*Hall page*/
 .page-banner {
   margin: 0 auto;
-}
-
-.page-content {
-    /*position: absolute;*/
-    /*background-color: #fff;*/
-    /*margin-top: -5rem;*/
-    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
 }
 
 .page-content__title {
@@ -315,8 +312,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .inventary-title {
+    margin-bottom: 2rem;
     text-align: center;
-    /*color: #1572BB;*/
     font-weight: 900;
     font-size: 3rem;
 }
@@ -578,9 +575,15 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-size: 1.2rem;
     }
 
+    .content-list > li {
+        margin-bottom: .5rem;
+    }
+
     .content-main-title {
         text-align: center;
         margin-bottom: 1rem;
+        font-weight: 900;
+        font-size: 3rem;
     }
 }
 
