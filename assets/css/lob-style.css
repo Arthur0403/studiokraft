@@ -108,10 +108,11 @@ span {
 }
 
 .halls-title {
-    -webkit-transform: translateY(-2rem);
-    -ms-transform: translateY(-2rem);
-    transform: translateY(-2rem);
-    background-color: white;
+    /*-webkit-transform: translateY(-2rem);*/
+    /*-ms-transform: translateY(-2rem);*/
+    /*transform: translateY(-2rem);*/
+    /*background-color: white;*/
+    margin-bottom: 2rem;
     max-width: 300px;
 }
 
@@ -126,7 +127,8 @@ span {
 .black-border {
     width: 137px;
     height: 10px;
-    background: #aeafaf;
+    background: #dedede;
+    margin-bottom: 2rem;
 }
 
 .not-found .search-submit:hover,
@@ -246,32 +248,19 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-/*.features-item {*/
-/*    position: relative;*/
-/*    padding-left: 2rem;*/
-/*    padding-right: 4rem;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
+.features, .halls, .gallery {
+    padding: 3.3rem 0;
+}
+
+.features, .gallery {
+    background-color: white;
+}
 
 .features-item > span {
     text-align: center;
     line-height: 1;
     margin-top: 1rem;
 }
-/* .features-item::before{
-    content: "\f005";
-    position: absolute;
-    left: -1rem;
-    color: #1572BB;
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-size: 2rem;
-} */
-
-/*.features-img {*/
-/*    height: 5rem;*/
-/*}*/
 
 .gallery-title-wrap {
     margin: 0 auto;
@@ -279,7 +268,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .halls {
-    border-top: 1.5px solid #C4C4C4;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
 }
 
 /*Hall page*/
@@ -485,6 +475,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         margin-bottom: 3rem;
     }
 
+    .halls-block:last-child {
+        margin-bottom: 0;
+    }
+
     .hall-img {
         position: relative;
         -webkit-box-ordinal-group: 1;
@@ -662,6 +656,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         /*right: 30%;*/
         left: 3%;
         box-shadow: 0 10px 10px rgba(0,0,0,0.22), 0 14px 28px rgba(0,0,0,0.25);
+    }
+
+    .halls-block:last-child {
+        margin-bottom: 3rem;
     }
 
     .hall-img {

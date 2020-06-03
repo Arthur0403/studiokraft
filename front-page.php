@@ -27,22 +27,7 @@ get_header();
             </a>
         </div>
     </div>
-<!--    <section class="about-us">-->
-<!--        <div class="container">-->
-<!--            <div class="row py-5">-->
-<!--                <div class="col-lg-6 aos-init aos-animate about-right" data-aos="flip-left">-->
-<!--                    <h3 class="tittle text-uppercase">--><?php //the_field('about-us-title'); ?><!--</h3>-->
-<!--                    <div class="black-border"></div>-->
-<!--                    <p class="my-4">--><?php //the_field('about-us'); ?><!--</p>-->
-<!--                    <a href="http://ellaboranto.ru/bronirovanie/" type="button" class="btn btn-light custom-btn custom-btn-white">Забронировать</a>-->
-<!--                </div>-->
-<!--                <div class="col-lg-6 aos-init aos-animate p-lg-0" data-aos="flip-right">-->
-<!--                    <img class="img-fluid" src="--><?php //the_field('image-about-us') ?><!--" alt="">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-    <section class="features py-5">
+    <section class="features">
 <!--        <h3 style="text-align: center">--><?php //the_field('features_title'); ?><!--</h3>-->
         <div class="container">
             <div class="row">
@@ -56,8 +41,8 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="halls mb-5">
-        <h3 class="halls-title mb-3 mx-auto"><?php the_field( 'halls-title' ); ?></h3>
+    <section class="halls">
+        <h3 class="halls-title mx-auto"><?php the_field( 'halls-title' ); ?></h3>
         <div class="container">
             <?php $halls = get_field( 'halls_card' );
             foreach ( $halls as $innerHall ): ?>
@@ -79,7 +64,7 @@ get_header();
         <div class="container">
             <div class="gallery-title-wrap">
                 <h3 class="tittle gallery-title"><?php the_field( 'gallery_title' ); ?></h3>
-                <div class="black-border mb-4"></div>
+                <div class="black-border"></div>
             </div>
             <div class="row m-0">
 
