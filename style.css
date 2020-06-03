@@ -595,7 +595,8 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .map {
-	margin-top : 30px;
+	/*margin-top : 30px;*/
+	margin-top : 1px;
 	height     : 60vh;
 }
 
@@ -604,8 +605,9 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .navigation .tittle {
-	margin-top    : 42px;
-	margin-bottom : 24px;
+	/*margin-top    : 42px;*/
+	/*margin-bottom : 24px;*/
+	margin-bottom : 2rem;
 }
 
 .navigation video {

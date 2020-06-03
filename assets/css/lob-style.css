@@ -248,11 +248,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-.features, .halls, .gallery, .hall-section, .inventary, .page-content {
+.features, .halls, .gallery, .hall-section, .inventary, .page-content, .contacts-social, .contacts-title, .how-to-step, .callback-form {
     padding: 3.3rem 0;
 }
 
-.features, .gallery, .hall-section {
+.features, .gallery, .hall-section, .contacts-social, .callback-form {
     background-color: white;
 }
 
@@ -267,7 +267,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     max-width: 220px;
 }
 
-.halls, .inventary{
+.halls, .inventary, .how-to-step{
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
 }
@@ -398,7 +398,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #e71b24;
     text-decoration: none;
     border-radius: 50%;
     color: white;
