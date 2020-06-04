@@ -9,9 +9,9 @@ $cat_id = get_cat_ID($page_to_category_name);
 $args = ['category' => $cat_id, 'posts_per_page' => '20'];
 ?>
 
-<section class="mb-4 inventary">
+<section class="inventary">
     <div class="container">
-        <h3 class="my-4 mx-auto inventary-title">Инвентарь</h3>
+        <h3 class="mx-auto inventary-title">Инвентарь</h3>
         <div class="row inventary-wrapper">
             <?php
             $inventary = get_posts($args);

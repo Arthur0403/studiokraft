@@ -108,10 +108,11 @@ span {
 }
 
 .halls-title {
-    -webkit-transform: translateY(-2rem);
-    -ms-transform: translateY(-2rem);
-    transform: translateY(-2rem);
-    background-color: white;
+    /*-webkit-transform: translateY(-2rem);*/
+    /*-ms-transform: translateY(-2rem);*/
+    /*transform: translateY(-2rem);*/
+    /*background-color: white;*/
+    margin-bottom: 2rem;
     max-width: 300px;
 }
 
@@ -126,7 +127,8 @@ span {
 .black-border {
     width: 137px;
     height: 10px;
-    background: #aeafaf;
+    background: #dedede;
+    margin-bottom: 2rem;
 }
 
 .not-found .search-submit:hover,
@@ -246,52 +248,37 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-/*.features-item {*/
-/*    position: relative;*/
-/*    padding-left: 2rem;*/
-/*    padding-right: 4rem;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
+.features, .halls, .gallery, .hall-section, .inventary, .page-content, .contacts-social, .contacts-title, .how-to-step, .callback-form {
+    padding: 3.3rem 0;
+}
+
+.features, .gallery, .hall-section, .contacts-social, .callback-form {
+    background-color: white;
+}
 
 .features-item > span {
     text-align: center;
     line-height: 1;
     margin-top: 1rem;
 }
-/* .features-item::before{
-    content: "\f005";
-    position: absolute;
-    left: -1rem;
-    color: #1572BB;
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-size: 2rem;
-} */
-
-/*.features-img {*/
-/*    height: 5rem;*/
-/*}*/
 
 .gallery-title-wrap {
     margin: 0 auto;
     max-width: 220px;
 }
 
-.halls {
-    border-top: 1.5px solid #C4C4C4;
+.halls, .inventary, .how-to-step{
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+.inventary {
+    background-color: #ffc10788;
 }
 
 /*Hall page*/
 .page-banner {
   margin: 0 auto;
-}
-
-.page-content {
-    /*position: absolute;*/
-    /*background-color: #fff;*/
-    /*margin-top: -5rem;*/
-    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
 }
 
 .page-content__title {
@@ -325,8 +312,8 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .inventary-title {
+    margin-bottom: 2rem;
     text-align: center;
-    /*color: #1572BB;*/
     font-weight: 900;
     font-size: 3rem;
 }
@@ -411,7 +398,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #e71b24;
     text-decoration: none;
     border-radius: 50%;
     color: white;
@@ -483,6 +470,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .halls-block {
         margin-bottom: 3rem;
+    }
+
+    .halls-block:last-child {
+        margin-bottom: 0;
     }
 
     .hall-img {
@@ -584,9 +575,15 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-size: 1.2rem;
     }
 
+    .content-list > li {
+        margin-bottom: .5rem;
+    }
+
     .content-main-title {
         text-align: center;
         margin-bottom: 1rem;
+        font-weight: 900;
+        font-size: 3rem;
     }
 }
 
@@ -662,6 +659,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         /*right: 30%;*/
         left: 3%;
         box-shadow: 0 10px 10px rgba(0,0,0,0.22), 0 14px 28px rgba(0,0,0,0.25);
+    }
+
+    .halls-block:last-child {
+        margin-bottom: 3rem;
     }
 
     .hall-img {
