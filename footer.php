@@ -61,7 +61,7 @@
                 </p>
             </div>
             <div class="footer-links footer-item">
-                <p><a href="">Политика конфиденциальности</a></p>
+                <p><a href="/privacy-policy">Политика конфиденциальности</a></p>
                 <p><a href="/polzovatelskoe-soglashenie">Пользовательское соглашение</a></p>
                 <p><a href="">Бронирование</a></p>
             </div>
