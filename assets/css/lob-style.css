@@ -605,6 +605,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-weight: 900;
         font-size: 3rem;
     }
+
+    .menu-item a[href="#"] {
+        display: none !important;
+    }
 }
 
 /*// Малые девайсы («ландшафтные телефоны», >= 576px)*/
@@ -800,6 +804,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
         font-size: 1.2rem;
         display: inline;
         margin-top: 0rem;
+    }
+
+    .menu-item a[href="#"] {
+        display: block !important;
     }
 }
 
