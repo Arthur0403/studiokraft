@@ -785,19 +785,19 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .inner-halls .custom-btn {
         width: auto;
-        padding: 15px 24px;
+        padding: 4px 13px;
     }
 
     .inner-halls p {
         display: block;
     }
 
-    .inner-halls .custom-btn-white::before {
-        content: 'Подробнее'
-    }
+    /*.inner-halls .custom-btn-white::before {*/
+    /*    content: 'Подробнее'*/
+    /*}*/
 
     .arrow-rigth {
-        display: none;
+        transform: none;
     }
 
     .hall-price {
