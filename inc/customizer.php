@@ -457,6 +457,24 @@ function studiokraft_customize_register( $wp_customize )
         'default'   => '21',
         'transport' => 'refresh',
     ));
+
+    $wp_customize->add_setting( 'section_block_background_color', array(
+        'default'           => '#121213',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'section_block_background_color',
+            array(
+                'label'   => __( 'Цвет основных блоков', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'section_block_background_color',
+            )
+        )
+    );
 }
 
 add_action( 'customize_register', 'studiokraft_customize_register' );
@@ -487,6 +505,11 @@ function studiokraft_customize_css()
         ul.social-icons li a{border-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         .call-us{background-color:<?php echo get_theme_mod( 'studiokraft_reservation_background_color' );?>;}
         .call-text{color:<?php echo get_theme_mod( 'studiokraft_reservation_color' );?>;}
+        .features {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .gallery {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .hall-section {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .contacts-social {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .callback-form {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
 }
     </style>
     <?php

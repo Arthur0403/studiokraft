@@ -268,9 +268,9 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     padding: 3.3rem 0;
 }
 
-.features, .gallery, .hall-section, .contacts-social, .callback-form {
-    background-color: white;
-}
+/*.features, .gallery, .hall-section, .contacts-social, .callback-form {*/
+/*    background-color: white;*/
+/*}*/
 
 .features-item > span {
     text-align: center;
