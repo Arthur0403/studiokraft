@@ -767,7 +767,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .sub-menu .menu-item>a {
         text-transform: inherit !important;
-        color: #979797 !important;
+        color: #979797;
         -webkit-transition: .5s;
         -o-transition: .5s;
         transition: .5s;
@@ -775,7 +775,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .sub-menu .menu-item>a:hover {
-        color: #1572BB !important;
+        /*color: #1572BB !important;*/
         text-decoration: underline;
     }
 

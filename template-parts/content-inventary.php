@@ -11,7 +11,7 @@ $args = ['category' => $cat_id, 'posts_per_page' => '20'];
 
 <section class="inventary">
     <div class="container">
-        <h3 class="mx-auto inventary-title">Инвентарь</h3>
+        <h3 class="mx-auto inventary-title">Мебель и реквизит</h3>
         <div class="row inventary-wrapper">
             <?php
             $inventary = get_posts($args);
