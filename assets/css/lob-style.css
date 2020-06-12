@@ -44,6 +44,22 @@ span {
     font-family: 'Roboto';
     color: white;
     font-size: 0.9rem;
+    transition: .5s;
+}
+
+.container_top .studiokraft-address,
+.container_top .phone .studiokraft-phone,
+.container_top .mail .studiokraft-mail {
+    font-family: 'Roboto';
+    color: white;
+    font-size: 0.9rem;
+    transition: .5s;
+}
+
+.container_top .studiokraft-address:hover,
+.container_top .phone .studiokraft-phone:hover,
+.container_top .mail .studiokraft-mail:hover {
+    color: #ffc107;
 }
 
 .navbar-brand .blogdescription {
