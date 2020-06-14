@@ -423,10 +423,10 @@ a.navbar-brand:hover .blogname {
 .contacts h1 {
 	/*margin-top    : 35px;*/
 	/*margin-bottom : 45px;*/
-	text-align    : center;
-	font-size: 3rem;
-	font-weight: 900;
-	line-height: 4.5rem;
+	text-align  : center;
+	font-size   : 3rem;
+	font-weight : 900;
+	line-height : 4.5rem;
 }
 
 .gallery_effect {
@@ -679,6 +679,7 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 
 .has-light-green-cyan-background-color.row {
 	margin : 1rem 0 0;
+	width  : 100%;
 }
 
 .rules .content-paragraph {
@@ -756,6 +757,13 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 
 .table-price td:first-child {
 	width : 20%;
+}
+
+.wp-block-image .aligncenter > figcaption {
+	text-align  : center;
+	font-family : 'Forum', serif;
+	font-size   : 1.2rem;
+	line-height : 1.5;
 }
 
 .pages .footnote {
@@ -1069,9 +1077,6 @@ footer .social-icons li a:active {
 		margin-right : auto !important;
 	}
 
-	/*.rules-item .rules-panel {*/
-	/*	padding : 0 1rem;*/
-	/*}*/
 	.rules-item .content-title {
 		padding       : 10px 35px;
 		margin-bottom : 0;
@@ -1095,6 +1100,11 @@ footer .social-icons li a:active {
 	.wp-block-image.col-md-4:nth-of-type(3n+1) {
 		padding-left  : 0;
 		padding-right : 20px;
+	}
+
+	.wp-block-image.offset-md-4.col-md-4:first-of-type {
+		padding-left  : 10px;
+		padding-right : 10px;
 	}
 
 	.wp-block-image.col-md-4:nth-of-type(3n) {
@@ -1412,6 +1422,11 @@ footer .social-icons li a:active {
 	.wp-block-image.col-lg-3:nth-of-type(4n+1) {
 		padding-left  : 0;
 		padding-right : 20px;
+	}
+
+	.wp-block-image.offset-lg-5.col-md-3:first-of-type {
+		padding-left  : 10px;
+		padding-right : 10px;
 	}
 
 	.wp-block-image.col-lg-3:nth-of-type(4n) {
