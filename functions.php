@@ -245,8 +245,8 @@ function studiokraft_scripts()
 
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery-2.2.3.min.js' );
-    wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/main.start.js' );
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'studiokraft-script-main-start', get_template_directory_uri() . '/assets/js/main.start.js', array( 'jquery' ) );
 
     wp_add_inline_script( 'jquery', 'addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }', 'before' );
 

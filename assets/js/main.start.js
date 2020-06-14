@@ -1,9 +1,9 @@
 $(function () {
 	$(window).scroll(function () {
-		display = $(this).scrollTop() >= 50;
-		if (display) {
+		if ($(this).scrollTop() > 50) {
 			$(".header_top").addClass("mmove");
-		} else {
+		}
+		if ($(this).scrollTop() < 50) {
 			$(".header_top").removeClass("mmove");
 		}
 	});

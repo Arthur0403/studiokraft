@@ -645,11 +645,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	margin-left  : 0;
 }
 
-/*.wp-block-image.col-sm-12 {*/
-/*	padding-left  : 0;*/
-/*	padding-right : 0;*/
-/*}*/
-
 .container--pages .has-background,
 .container--rules .has-background {
 	background : transparent;
@@ -736,10 +731,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	display        : none;
 	padding-bottom : 15px;
 }
-
-/*.rules-item .rules-panel {*/
-/*	padding : 0 1rem;*/
-/*}*/
 
 .rules a {
 	font-family : 'Forum', serif;
