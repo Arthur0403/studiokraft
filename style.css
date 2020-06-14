@@ -1337,7 +1337,17 @@ footer .social-icons li a:active {
 	.container-title,
 	.wpsisac-image-slide,
 	.wpsisac-slide-wrap {
-		height : 650px;
+		height   : 650px;
+		position : relative;
+	}
+
+	.wpsisac-image-fit .wpsisac-image-slide-wrap img,
+	.wpsisac-image-fit .wpsisac-slide-wrap img {
+		height     : auto;
+		max-height : none;
+		position   : absolute;
+		left       : 0;
+		bottom     : -20%;
 	}
 
 	.container-title h1 {
