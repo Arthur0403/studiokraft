@@ -457,6 +457,24 @@ function studiokraft_customize_register( $wp_customize )
         'default'   => '21',
         'transport' => 'refresh',
     ));
+
+    $wp_customize->add_setting( 'section_block_background_color', array(
+        'default'           => '#121213',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'transport'         => 'postMessage',
+    ) );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'section_block_background_color',
+            array(
+                'label'   => __( 'Цвет основных блоков', 'studiokraft' ),
+                'section' => 'colors',
+                'setting' => 'section_block_background_color',
+            )
+        )
+    );
 }
 
 add_action( 'customize_register', 'studiokraft_customize_register' );
@@ -481,12 +499,18 @@ function studiokraft_customize_css()
         .navbar-light .navbar-nav .show>a,.navbar-light .navbar-nav .current-menu-item>a,.navbar-light .navbar-nav .menu-item>a:hover,.navbar-light .navbar-nav .menu-item>a:focus,.header_top a:hover span,.header_top a:focus span,.info .phone a:hover .studiokraft-phone,.info .phone a:focus .studiokraft-phone,.info .mail a:hover .studiokraft-mail,.info .mail a:focus .studiokraft-mail,.navbar-light .navbar-nav .current-menu-item>a:hover,.navbar-light .navbar-nav .current-menu-item>a:focus{color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;}
         .navbar-light .navbar-nav .menu-item>a:hover::before,.navbar-light .navbar-nav .menu-item>a:focus::before,.navbar-light .navbar-nav .current-menu-item>a::before,.navbar-light .navbar-nav .current-menu-item>a:hover::before,.navbar-light .navbar-nav .current-menu-item>a:focus::before{background-color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>;}
         .attention-wrapper{background-color:<?php echo get_theme_mod( 'studiokraft_accent2_color' );?>88;}
+        .sub-menu .menu-item>a:hover{color: <?php echo get_theme_mod( 'studiokraft_accent2_color' );?>}
         footer{background-color:<?php echo get_theme_mod( 'studiokraft_footer_background_color' );?>;}
         footer span, footer p, footer a,p.copy-right{color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         .social-icons{border-left-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;border-right-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         ul.social-icons li a{border-color:<?php echo get_theme_mod( 'studiokraft_footer_color' );?>;}
         .call-us{background-color:<?php echo get_theme_mod( 'studiokraft_reservation_background_color' );?>;}
         .call-text{color:<?php echo get_theme_mod( 'studiokraft_reservation_color' );?>;}
+        .features {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .gallery {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .hall-section {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .contacts-social {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
+        .callback-form {background-color: <?php echo get_theme_mod('section_block_background_color') ?>}
 }
     </style>
     <?php

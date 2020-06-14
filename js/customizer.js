@@ -148,4 +148,15 @@
 			true === newval ? $('.container_top .mail').addClass('show') : $('.mail').removeClass('show');
 		});
 	});
+
+	//Section colorfor classes: .features, .gallery, .hall-section, .contacts-social, .callback-form
+	wp.customize('section_block_background_color', function (value) {
+		value.bind(function (newval) {
+			$('.features').css('background-color', newval);
+			$('.gallery').css('background-color', newval);
+			$('.hall-section').css('background-color', newval);
+			$('.contacts-social').css('background-color', newval);
+			$('.callback-form').css('background-color', newval);
+		});
+	});
 })(jQuery);
