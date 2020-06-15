@@ -12,10 +12,10 @@
 }());
 $(function () {
 	$(window).scroll(function () {
-		display = $(this).scrollTop() >= 150;
-		if (display) {
+		if ($(this).scrollTop() > 150) {
 			$(".navbar").addClass("margin_add");
-		} else {
+		}
+		if ($(this).scrollTop() < 150) {
 			$(".navbar").removeClass("margin_add");
 		}
 	});

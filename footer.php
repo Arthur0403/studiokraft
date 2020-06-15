@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="social_media text-center">
-            <p class="copy-right my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="/wp-content/uploads/2020/03/lobster.svg" alt="LobSteR Studio" width="30"> LobSteR Studio</a></p>
+            <p class="copy-right my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="<?php echo get_template_directory_uri() . '/assets/images/lobster-2.svg' ?>" alt="Logotype LobSteR Studio" width="50">  <img src="<?php echo get_template_directory_uri() . '/assets/images/lobster-1.svg' ?>" alt="LobSteR Studio" width="110"></a></p>
         </div>
     </footer>
 <a href="/bronirovanie/" class="call-us flip-vertical-right">
