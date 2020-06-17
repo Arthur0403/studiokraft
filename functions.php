@@ -333,13 +333,23 @@ remove_filter('pre_term_description', 'wp_filter_kses');
 //}
 
 function getPageId($id){
-    if($id === 88) {
-        return 'Magic';
-    } elseif ($id === 84) {
-        return 'Loft';
-    } elseif ($id === 90) {
-        return 'Grey';
-    } elseif ($id === 553 || $id === 556) {
-        return 'Grim';
-    }
+
+    $pageIds = 
+    [
+        88 => ['magic-furniture', 'magic-equipment', 'magic-add-equipment'],
+        84 => ['loft-furniture', 'loft-equipment', 'loft-add-equipment'],
+        90 => ['grey-furniture', 'grey-equipment', 'grey-add-equipment'],
+        553 => ['grim-furniture', 'grim-equipment', 'grim-add-equipment'],
+        556 => ['grim-furniture', 'grim-equipment', 'grim-add-equipmente']
+        
+    ];
+        
+    return $pageIds[$id];
 }
+
+/* 
+    Magic
+    Loft
+    Grey
+    Grim
+ */
