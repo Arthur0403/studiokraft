@@ -71,6 +71,27 @@ span {
     background-color: white;
 }
 
+.card {
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    border-radius: unset;
+    border: 2px solid black;
+}
+
+.card-header button {
+    color: black;
+}
+
+.card-header button:hover {
+    color: #828282;
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+}
 /*.page-about-banner {*/
 /*    padding: 100px 40px;*/
 /*    vertical-align: middle;*/
@@ -268,6 +289,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     padding: 3.3rem 0;
 }
 
+.hall-section {
+    padding-bottom: 1rem;
+}
+
 /*.features, .gallery, .hall-section, .contacts-social, .callback-form {*/
 /*    background-color: white;*/
 /*}*/
@@ -283,13 +308,14 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     max-width: 220px;
 }
 
-.halls, .inventary, .how-to-step{
+.halls, .how-to-step{
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
 }
 
 .inventary {
-    background-color: #ffc10788;
+    background-color: #FFFFFF;
+    padding-top: 0;
 }
 
 /*Hall page*/
