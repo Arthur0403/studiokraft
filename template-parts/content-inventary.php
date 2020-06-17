@@ -40,7 +40,11 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
                 </div>
                 </div>
             </div>
-            <div class="card">
+            <?php if($page_id === 553 || $page_id === 556){ ?>
+            
+            <?php } else { ?>
+
+                <div class="card">
                 <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -86,6 +90,8 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
                 </div>
                 </div>
             </div>
+
+            <?php } ?>
         </div>
     </div>
 </section>
