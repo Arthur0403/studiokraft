@@ -15,7 +15,7 @@ $(function () {
 		if ($(this).scrollTop() > 150) {
 			$(".navbar").addClass("margin_add");
 		}
-		if ($(this).scrollTop() < 150) {
+		if ($(this).scrollTop() < 100) {
 			$(".navbar").removeClass("margin_add");
 		}
 	});
