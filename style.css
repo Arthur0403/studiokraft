@@ -664,10 +664,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	margin-left : 20px;
 }
 
-.container--rules .wp-block-group__inner-container .wp-block-group__inner-container .rules-panel {
-	display : none;
-}
-
 .pages .rules {
 	margin-bottom : 35px;
 }
@@ -691,18 +687,21 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	border-bottom : none;
 }
 
-.rules-item > .wp-block-group__inner-container {
+.rules-item {
 	padding  : 3px 0;
-	cursor   : pointer;
+}
+
+.rules-item .content-title {
+	cursor: pointer;
 	position : relative;
 }
 
-.rules-item > .wp-block-group__inner-container::before {
+.rules-item .content-title::before {
 	position       : absolute;
 	content        : '';
 	display        : inline-block;
-	top            : 15px;
-	left           : -1px;
+	top            : 13px;
+	left           : -22px;
 	height         : 8px;
 	width          : 8px;
 	margin-right   : 1rem;
@@ -714,7 +713,7 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	transition     : transform .2s ease-out;
 }
 
-.rules-item > .is-active::before {
+.rules-item  .content-title.active::before {
 	transform : rotate(45deg);
 }
 
@@ -1103,7 +1102,7 @@ footer .social-icons li a:active {
 		padding : 0;
 	}
 
-	.rules-item > .wp-block-group__inner-container::before {
+	.rules-item .content-title::before {
 		top  : 22px;
 		left : 7px;
 	}
@@ -1429,6 +1428,11 @@ footer .social-icons li a:active {
 	.table-price table {
 		width       : 80%;
 		line-height : 1.5;
+	}
+
+	.rules-item .content-title::before {
+		top      : 22px;
+		left     : 5px;
 	}
 
 	.wp-block-image.col-lg-3.col-md-4:nth-of-type(3n),
