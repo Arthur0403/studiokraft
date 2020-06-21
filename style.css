@@ -52,11 +52,6 @@ header.content-main {
 	box-shadow : 0 0 0 #000000;
 }
 
-.mmove {
-	box-shadow : 0 2px 15px 0 #000000;
-	transition : .5s;
-}
-
 .container_top {
 	display         : flex;
 	flex-direction  : column;
@@ -964,6 +959,11 @@ footer .social-icons li a:active {
 	padding-left : 3rem;
 }
 
+.mmove {
+	box-shadow : 0 2px 15px 0 #000000;
+	transition : .5s;
+}
+
 @media (min-width : 576px) and (max-width : 767px) {
 
 	.snap-img:nth-child(odd) .gallery_effect {
@@ -976,17 +976,28 @@ footer .social-icons li a:active {
 }
 
 @media (max-width : 767px) {
+	.mmove {
+		padding : 10px 20px 5px;
+	}
+
+	.mmove .container_top a,
+	.mmove .container_top p {
+		margin-bottom : 0;
+	}
+
 	.mmove .container_top p {
 		text-align : left;
 	}
 
 	.mmove .mail {
-		display : none;
+		height     : 0;
+		transition : .3s;
+		overflow   : hidden;
 	}
 
 	.mmove .navbar-toggler {
 		position   : absolute;
-		top        : -50px;
+		top        : -43px;
 		right      : 0;
 		transition : .5s;
 	}
@@ -1014,6 +1025,12 @@ footer .social-icons li a:active {
 }
 
 @media (min-width : 768px) {
+	.mmove .social-icons,
+	.mmove .address {
+		height     : 0;
+		transition : .3s;
+		overflow   : hidden;
+	}
 
 	.social-icons.mobile {
 		display : none !important;
@@ -1141,11 +1158,6 @@ footer .social-icons li a:active {
 }
 
 @media (min-width : 768px) and (max-width : 991px) {
-	.mmove .margin_add {
-		margin-top    : -45px;
-		transition    : .2s;
-	}
-
 	.navbar-nav {
 		padding-bottom : 10px;
 	}
@@ -1168,6 +1180,20 @@ footer .social-icons li a:active {
 	.info-item:last-of-type {
 		width       : 65%;
 		margin-left : auto;
+	}
+
+	.mmove {
+		padding : 17px 20px 0;
+	}
+
+	.mmove .container_top a,
+	.mmove .container_top p {
+		margin-bottom : 0px;
+	}
+
+	.mmove .margin_add {
+		margin-top : -34px;
+		transition : .2s;
 	}
 }
 
@@ -1507,6 +1533,16 @@ footer .social-icons li a:active {
 	.logo-slider .blogdescription {
 		font-size : 1.8rem !important;
 		width     : 40%;
+	}
+
+	.mmove .container_top {
+		height     : 0;
+		transition : .3s;
+		overflow   : hidden;
+	}
+
+	.mmove {
+		padding : 10px 20px 0;
 	}
 }
 
