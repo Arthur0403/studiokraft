@@ -9,14 +9,14 @@ get_header();
 ?>
 
 <div class="container-fluid p-0">
-    <?php if( is_page( 'gray' ) ) {
-            echo do_shortcode('[slick-slider category="16" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
+    <?php if( is_page( 'grey' ) ) {
+            echo do_shortcode('[slick-slider category="5" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
           }
           if( is_page( 'loft' ) ) {
             echo do_shortcode('[slick-slider category="17" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
           }
           if( is_page( 'magic' ) ) {
-            echo do_shortcode('[slick-slider category="5" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
+            echo do_shortcode('[slick-slider category="16" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
           }
           if( is_page( 'grimernaya-1' ) ) {
             echo do_shortcode('[slick-slider category="14" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false"]');
