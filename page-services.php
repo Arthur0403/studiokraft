@@ -40,6 +40,7 @@ get_header();
                                 <div class="row">
                                 <?php $query = new WP_Query( array(
                                     'category_name'  => $innerPrice[ 'category' ],
+                                    'posts_per_page' => '1000',
                                     'order' => 'ASC',
                                     ) );
                                     if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -59,10 +60,11 @@ get_header();
                             <?php if ( $innerPrice[ 'category' ] ) : ?>
                             <?php $query = new WP_Query( array(
                                 'category_name'  => $innerPrice[ 'category' ],
+                                'posts_per_page' => '1000',
                                 'order' => 'ASC',
                                 ) );
                                 if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
-                                <?php echo $innerPrice[ 'text_' . $i ]; ?>
+                                <?php echo $innerPrice[ 'text_' . $i++ ]; ?>
                                 <div class="row">
                                     <a  class="offset-md-4 offset-lg-5 col-lg-3 col-md-4 col-sm-12 mb-4" href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
                                          <figure><?php echo get_the_post_thumbnail( $post->ID, 'square', array('class' => 'lazyloaded') ); ?></figure>
