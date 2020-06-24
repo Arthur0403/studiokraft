@@ -668,9 +668,13 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	margin-bottom : 35px;
 }
 
-.has-light-green-cyan-background-color.row {
+.rules-panel .row {
 	margin : 1rem 0 0;
-	width  : 100%;
+}
+
+.rules-panel .col-sm-12 img {
+	width: 100%;
+	height : auto;
 }
 
 .rules .content-paragraph {
@@ -687,9 +691,9 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 	border-bottom : none;
 }
 
-.rules-item {
-	padding  : 3px 0;
-}
+/*.rules-item {*/
+/*	padding  : 3px 0;*/
+/*}*/
 
 .rules-item .content-title {
 	cursor: pointer;

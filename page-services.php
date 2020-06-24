@@ -28,6 +28,60 @@ get_header();
                         404
                     <?php endif ?>
 <!--                </section>-->
+                <div class="rules">
+                <?php $price = get_field( 'group-services' );
+                    foreach ( $price as $innerPrice ): ?>
+                    <div class="rules-item">
+                        <h3 class="content-title"><?php echo $innerPrice[ 'title' ]; ?></h3>
+                        <?php if ( $innerPrice[ 'title' ] !== 'Дополнительное оборудование') : ?>
+                            <div class="rules-panel">
+                            <?php echo $innerPrice[ 'text' ]; ?>
+                            <?php if ( $innerPrice[ 'category' ] ) : ?>
+                                <div class="row">
+                                <?php $query = new WP_Query( array(
+                                    'category_name'  => $innerPrice[ 'category' ],
+                                    'order' => 'ASC',
+                                    ) );
+                                    if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
+                                        <a  class="col-lg-3 col-md-4 col-sm-12 mb-4" href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
+                                             <figure><?php echo get_the_post_thumbnail( $post->ID, 'square', array('class' => 'lazyloaded') ); ?></figure>
+                                        </a>
+                                    <?php endwhile; ?>
+                                <?php else : ?>
+                                    404
+                                <?php endif;
+                                wp_reset_postdata(); ?>
+                                </div>
+                            <?php endif; ?>
+                            </div>
+                        <?php else : ?>
+                            <div class="rules-panel">
+                            <?php if ( $innerPrice[ 'category' ] ) : ?>
+                            <?php $query = new WP_Query( array(
+                                'category_name'  => $innerPrice[ 'category' ],
+                                'order' => 'ASC',
+                                ) );
+                                if ( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
+                                <?php echo $innerPrice[ 'text_' . $i ]; ?>
+                                <div class="row">
+                                    <a  class="offset-md-4 offset-lg-5 col-lg-3 col-md-4 col-sm-12 mb-4" href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
+                                         <figure><?php echo get_the_post_thumbnail( $post->ID, 'square', array('class' => 'lazyloaded') ); ?></figure>
+                                    </a>
+                                </div>
+                                    <?php endwhile; ?>
+                                <?php else : ?>
+                                    404
+                                <?php endif;
+                                wp_reset_postdata(); ?>
+                            <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+                </div>
+                <div>
+                    <?php the_field( 'final-text' ); ?>
+                </div>
             </div>
     </section>
 
