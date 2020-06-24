@@ -1,15 +1,21 @@
-(function () {
-	// $(".vertical").css("height", $(".horizontal").height()*2 + 9.5).css("margin-bottom", "10px");
-	$(".rules-item.is-active .wp-block-group__inner-container").children(".rules-panel").slideDown();
-	$(".rules-item .wp-block-group__inner-container").click(function () {
-		$(this).siblings(".rules-item .wp-block-group__inner-container").removeClass("is-active").children(".rules-panel").slideUp();
-		$(this).toggleClass("is-active").children(".rules-panel").slideToggle("ease-out");
+var accordion = function () {
+	var data = $(".rules").attr("data-accordion");
+	$(".content-title").on("click", function () {
+		if (data === "close") {
+			$(".rules-panel").slideUp();
+			if ($(this).hasClass("active")) {
+				$(this).toggleClass("active");
+			} else {
+				$(".content-title").removeClass("active");
+				$(this).toggleClass("active");
+			}
+		} else {
+			$(this).toggleClass("active");
+		}
+		$(this).next(".rules-panel").not(":animated").slideToggle();
 	});
-	// $("#menu-item-102").click(function (event) {
-	//     event.preventDefault();
-	//     $(".sub-menu").toggle()
-	// })
-}());
+}
+accordion();
 $(function () {
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 150) {
@@ -21,15 +27,15 @@ $(function () {
 	});
 });
 
-(function(){
-	let btn = document.querySelector('.more');
-
-	btn.addEventListener('click', function () {
-		let content = document.querySelector('.inventary-wrapper');
-		if (window.getComputedStyle(content, '').maxHeight !== '300px') {
-			content.style.maxHeight = '300px';
-		} else {
-			content.style.maxHeight = `${content.scrollHeight}px`;
-		}
-	});
-}());
+// (function(){
+// 	let btn = document.querySelector('.more');
+//
+// 	btn.addEventListener('click', function () {
+// 		let content = document.querySelector('.inventary-wrapper');
+// 		if (window.getComputedStyle(content, '').maxHeight !== '300px') {
+// 			content.style.maxHeight = '300px';
+// 		} else {
+// 			content.style.maxHeight = `${content.scrollHeight}px`;
+// 		}
+// 	});
+// }());
