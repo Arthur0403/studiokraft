@@ -468,6 +468,11 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     text-decoration: underline;
 }
 
+.rules-item .content-title {
+    font-family: 'Forum', serif;
+    font-size: 1.75rem;
+}
+
 @keyframes pulsate {
     0% {
         box-shadow: 0 0 0 0 rgba(0,0,0, 0.4);

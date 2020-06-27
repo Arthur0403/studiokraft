@@ -15,83 +15,56 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
 ?>
 
 <section class="inventary">
-    <div class="container">        
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Мебель и реквизит
-                    </button>
-                </h5>
-                </div>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <?php
-                        $furniture_posts = get_posts($args_for_furniture);
-                        foreach ($furniture_posts as $item) : ?>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                                <a href="<?= $item -> guid; ?>" class="inventary-link">
-                                    <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                                    <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
-                                </a>
-                            </div>
-                    <?php endforeach; ?>
-                </div>
-                </div>
-            </div>
-            <?php if($page_id === 553 || $page_id === 556){ ?>
-            
-            <?php } else { ?>
+    <div class="container">
 
-                <div class="card">
-                <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Оборудование в зале
-                    </button>
-                </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <?php
-                        $equipment_posts = get_posts($args_for_equipment);
-                        foreach ($equipment_posts as $item) : ?>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                                <a href="<?= $item -> guid; ?>" class="inventary-link">
-                                    <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                                    <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
-                                </a>
-                            </div>
-                    <?php endforeach; ?>
-                </div>
-                </div>
+        <div class="rules-item">
+            <h3 class="content-title">Мебель и реквизит</h3>
+            <div class="rules-panel card-body" style="display: none;">
+                <?php
+                $furniture_posts = get_posts($args_for_furniture);
+                foreach ($furniture_posts as $item) : ?>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <a href="<?= $item -> guid; ?>" class="inventary-link">
+                            <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
+                            <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Дополнительное оборудование
-                    </button>
-                </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <?php
-                        $add_equipment_posts = get_posts($args_for_add_equipment);
-                        foreach ($add_equipment_posts as $item) : ?>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                                <a href="<?= $item -> guid; ?>" class="inventary-link">
-                                    <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                                    <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
-                                </a>
-                            </div>
-                    <?php endforeach; ?>
-                </div>
-                </div>
-            </div>
-
-            <?php } ?>
         </div>
+        <?php if($page_id === 553 || $page_id === 556){ ?>
+
+        <?php } else { ?>
+            <div class="rules-item">
+                <h3 class="content-title">Оборудование в зале</h3>
+                <div class="rules-panel card-body" style="display: none;">
+                    <?php
+                    $equipment_posts = get_posts($args_for_equipment);
+                    foreach ($equipment_posts as $item) : ?>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <a href="<?= $item -> guid; ?>" class="inventary-link">
+                                <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
+                                <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="rules-item">
+                <h3 class="content-title">Дополнительное оборудование</h3>
+                <div class="rules-panel card-body" style="display: none;">
+                    <?php
+                    $add_equipment_posts = get_posts($args_for_add_equipment);
+                    foreach ($add_equipment_posts as $item) : ?>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <a href="<?= $item -> guid; ?>" class="inventary-link">
+                                <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
+                                <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php } ?>
     </div>
 </section>
