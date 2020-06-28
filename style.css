@@ -3,9 +3,9 @@ Theme Name: Studio Kraft
 Theme URI: http://studiokraft.ru/
 Author: Lobanov & Stepanov
 Author URI: http://lobster-stodio.ru/
-Description: Description
+Description: This is the first work LobSteR Studio. The theme is specially designed for studio siteStudioKraft.
 Version: 1.0.0
-License: GNU General Public License v2 or later
+License:
 License URI: LICENSE
 Text Domain: Studio Kraft
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -75,7 +75,6 @@ header ul.social-icons a {
 	height      : 30px;
 	line-height : 30px;
 	border      : 0;
-	/*text-shadow : 0px 0px 5px #000000;*/
 }
 
 header ul.social-icons a:hover,
@@ -416,8 +415,6 @@ a.navbar-brand:hover .blogname {
 
 .pages h1,
 .contacts h1 {
-	/*margin-top    : 35px;*/
-	/*margin-bottom : 45px;*/
 	text-align  : center;
 	font-size   : 3rem;
 	font-weight : 900;
@@ -590,7 +587,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .map {
-	/*margin-top : 30px;*/
 	margin-top : 1px;
 	height     : 60vh;
 }
@@ -600,8 +596,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 }
 
 .navigation .tittle {
-	/*margin-top    : 42px;*/
-	/*margin-bottom : 24px;*/
 	margin-bottom : 2rem;
 }
 
@@ -690,10 +684,6 @@ div.wpforms-container-full .wpforms-form button.btn-warning[type="submit"]:not(:
 .rules-item:not(:last-child) {
 	border-bottom : none;
 }
-
-/*.rules-item {*/
-/*	padding  : 3px 0;*/
-/*}*/
 
 .rules-item .content-title {
 	cursor: pointer;

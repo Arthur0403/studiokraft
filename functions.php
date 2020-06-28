@@ -151,7 +151,7 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         ) );
 
         add_image_size( 'gallery-thumb', 545, 482, TRUE );
-        add_image_size( 'gallery-thumb-vertical', 545, 986, TRUE );
+        add_image_size( 'gallery-thumb-vertical', 545, 993, TRUE );
         add_image_size( 'square', 800, 800, true );
 
         add_filter('image_size_names_choose', 'true_new_image_sizes');
