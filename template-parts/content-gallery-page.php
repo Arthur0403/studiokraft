@@ -4,9 +4,9 @@
             <div class="gallery_effect">
                 <a href="<? echo get_the_post_thumbnail_url(); ?>" data-lightbox="example-set" data-title-wthree="<?php the_title(); ?>">
                     <?php if ( $i === 5 || $i === 9 || $i === 15 || $i === 20 ) : ?>
-                        <figure><?php echo get_the_post_thumbnail($post->ID, 'gallery-thumb-vertical'); ?></figure>
+                        <figure><?php echo get_the_post_thumbnail( $post->ID, 'gallery-thumb-vertical' ); ?></figure>
                     <?php else : ?>
-                        <figure><?php echo get_the_post_thumbnail($post->ID, 'gallery-thumb'); ?></figure>
+                        <figure><?php echo get_the_post_thumbnail( $post->ID, 'gallery-thumb' ); ?></figure>
                     <?php endif; ?>
                 </a>
             </div>
@@ -38,6 +38,4 @@ if ( $i > 10 && $i < 15 ) : if ( $i < 15 ) : ?></div><?php endif; ?>
 if ( $i > 14 && $i < 18 ) : if ( $i < 18 ) : ?></div><?php endif; ?>
     <div class="col-md-2 col-sm-6 p-0 snap-img"></div>
 <?php endif;
-if ( $i > 17 && $i < 20 ) : ?>
-    </div>
-<?php endif; ?>
+if ( $i > 17 && $i < 21 ) : ?></div><?php endif; ?>

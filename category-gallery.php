@@ -15,6 +15,7 @@
 get_header();
 
 ?>
+
     <section class="gallery">
         <div class="container">
             <div class="gallery-title-wrap">
@@ -22,17 +23,15 @@ get_header();
                 <div class="black-border mb-4"></div>
             </div>
             <div class="row m-0">
-
                 <?php get_template_part( 'template-parts/content', 'gallery-page' ); ?>
-
-            <?php the_posts_pagination( array(
+                <?php the_posts_pagination( array(
                     'end_size' => 1,
                     'mid_size' => 1,
                     'type'     => 'list',
                 ) ); ?>
-
             </div>
         </div>
     </section>
+
 <?php
 get_footer();
