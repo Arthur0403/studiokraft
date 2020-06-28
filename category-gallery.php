@@ -19,7 +19,7 @@ get_header();
     <section class="gallery">
         <div class="container">
             <div class="gallery-title-wrap">
-                <h3 class="tittle gallery-title">Галлерея</h3>
+                <h3 class="tittle gallery-title">Галерея</h3>
                 <div class="black-border mb-4"></div>
             </div>
             <div class="row m-0">
