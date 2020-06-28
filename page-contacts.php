@@ -5,18 +5,8 @@
 get_header();
 
 ?>
-<!--    <div class="container-fluid p-0">-->
-<!--        <div class="container-title">-->
-<!--        --><?php //if ( have_posts() ) : while ( have_posts() ) :
-//            the_post(); ?>
-<!--            <div class="container-title wrapper">-->
-<!--                -->
-<!--            </div>-->
-<!--            --><?php //echo get_the_post_thumbnail($post->ID, 'full'); ?>
-<!--        --><?php //endwhile; endif ?>
-<!--        </div>-->
-<!--    </div>-->
-    <section class="contacts"><!-- py-lg-5 py-md-5 py-3-->
+
+    <section class="contacts">
         <h1 class="contacts-title"><?php the_title(); ?></h1>
         <section class="contacts-social">
             <div class="container">
@@ -78,7 +68,6 @@ get_header();
             <div class="container">
                 <h3 class="tittle tittle-center">Напишите нам</h3>
                 <div class="contact-form">
-                    <!--                --><?php //echo do_shortcode( '[wpforms id="326" title="false" description="false"]' ); ?>
                     <?php echo do_shortcode( '[wpforms id="487" title="false" description="false"]' ); ?>
                 </div>
             </div>

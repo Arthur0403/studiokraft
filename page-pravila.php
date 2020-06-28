@@ -26,18 +26,13 @@ get_header();
     <section class="py-0 pb-0 container">
         <div class="row">
             <div class="page-content col-lg-12 px-5 mx-auto container--rules">
-
                 <?php if ( have_posts() ) : while ( have_posts() ) :
                     the_post(); ?>
-
                     <?php the_content(); ?>
-
                 <?php endwhile; ?>
-                    <!-- post navigation -->
                 <?php else : ?>
                     404
                 <?php endif ?>
-
             </div>
         </div>
     </section>
