@@ -12,9 +12,9 @@ get_header();
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-            <div class="container container--pages ">
+            <div class="container container--pages pages">
                 <div class="not-found">
-                    <h1><?php esc_html_e( 'Ох!.. Кажется ваш запрос не в фокусе, давайте лучше сфокусируемся.', 'studiokraft' ); ?></h1>
+                    <h1 class="title"><?php esc_html_e( 'Ох!.. Кажется ваш запрос не в фокусе, давайте лучше сфокусируемся.', 'studiokraft' ); ?></h1>
                     <div class="image-wrapper">
                         <img class="image-404" src="<?php echo get_template_directory_uri() . '/assets/images/404.jpg'; ?>" alt="">
                     </div>

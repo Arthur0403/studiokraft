@@ -7,7 +7,7 @@ get_header();
 ?>
 
     <section class="contacts">
-        <h1 class="contacts-title"><?php the_title(); ?></h1>
+        <h1 class="title"><?php the_title(); ?></h1>
         <section class="contacts-social">
             <div class="container">
                 <div class="info-wrapper">

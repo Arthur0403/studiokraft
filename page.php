@@ -15,12 +15,12 @@
 get_header();
 ?>
 
-	<section class="pages py-lg-5 py-md-5 py-3">
+	<section class="pages">
         <div class="container container--pages">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="title"><?php the_title(); ?></h1>
         </div>
 
-        <div class="container container--pages">
+        <div class="container container--pages pb-md-3 pb-lg-5">
 
             <?php if ( have_posts() ) : while ( have_posts() ) :
                 the_post(); ?>
