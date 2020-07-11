@@ -24,9 +24,28 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
                 $furniture_posts = get_posts($args_for_furniture);
                 foreach ($furniture_posts as $item) : ?>
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="<?= $item -> guid; ?>" class="inventary-link">
-                            <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                            <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+<!--                        <a href="--><?//= $item -> guid; ?><!--" class="inventary-link">-->
+<!--                            <img src="--><?//= get_the_post_thumbnail_url($item -> ID); ?><!--" alt="" class="inventary-img">-->
+<!--                            <span class="inventary-subscribe">--><?php //echo $item -> post_title; ?><!--</span>-->
+<!--                        </a>-->
+                        <a class="inventary-link"
+                           href="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                           data-lightbox="example-set" data-title-wthree="<?php echo $item -> post_title; ?>" data-title="<?php echo $item -> post_title; ?>">
+                            <figure>
+                                <noscript><IMG width="480" height="480"
+                                               src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                               class="lazyloaded wp-post-image inventary-img" alt=""
+                                               srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                               sizes="(max-width: 480px) 100vw, 480px"></noscript>
+                                <img width="480" height="480"
+                                     src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                     class="lazyloaded wp-post-image inventary-img" alt=""
+                                     srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                     sizes="(max-width: 480px) 100vw, 480px"
+                                     data-srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                     data-src="<?= get_the_post_thumbnail_url($item -> ID); ?>">
+                                     <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                            </figure>
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -42,9 +61,28 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
                     $equipment_posts = get_posts($args_for_equipment);
                     foreach ($equipment_posts as $item) : ?>
                         <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                            <a href="<?= $item -> guid; ?>" class="inventary-link">
-                                <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                                <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+<!--                            <a href="--><?//= $item -> guid; ?><!--" class="inventary-link">-->
+<!--                                <img src="--><?//= get_the_post_thumbnail_url($item -> ID); ?><!--" alt="" class="inventary-img">-->
+<!--                                <span class="inventary-subscribe">--><?php //echo $item -> post_title; ?><!--</span>-->
+<!--                            </a>-->
+                            <a class="inventary-link"
+                               href="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                               data-lightbox="example-set" data-title-wthree="<?php echo $item -> post_title; ?>">
+                                <figure>
+                                    <noscript><IMG width="480" height="480"
+                                                   src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                                   class="lazyloaded wp-post-image inventary-img" alt=""
+                                                   srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                                   sizes="(max-width: 480px) 100vw, 480px"></noscript>
+                                    <img width="480" height="480"
+                                         src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                         class="lazyloaded wp-post-image inventary-img" alt=""
+                                         srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                         sizes="(max-width: 480px) 100vw, 480px"
+                                         data-srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                         data-src="<?= get_the_post_thumbnail_url($item -> ID); ?>">
+                                    <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                                </figure>
                             </a>
                         </div>
                     <?php endforeach; ?>
@@ -57,9 +95,28 @@ $args_for_add_equipment = ['category' => $cat_id_add_equipment, 'posts_per_page'
                     $add_equipment_posts = get_posts($args_for_add_equipment);
                     foreach ($add_equipment_posts as $item) : ?>
                         <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                            <a href="<?= $item -> guid; ?>" class="inventary-link">
-                                <img src="<?= get_the_post_thumbnail_url($item -> ID); ?>" alt="" class="inventary-img">
-                                <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+<!--                            <a href="--><?//= $item -> guid; ?><!--" class="inventary-link">-->
+<!--                                <img src="--><?//= get_the_post_thumbnail_url($item -> ID); ?><!--" alt="" class="inventary-img">-->
+<!--                                <span class="inventary-subscribe">--><?php //echo $item -> post_title; ?><!--</span>-->
+<!--                            </a>-->
+                            <a class="inventary-link"
+                               href="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                               data-lightbox="example-set" data-title-wthree="<?php echo $item -> post_title; ?>">
+                                <figure>
+                                    <noscript><IMG width="480" height="480"
+                                                   src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                                   class="lazyloaded wp-post-image inventary-img" alt=""
+                                                   srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                                   sizes="(max-width: 480px) 100vw, 480px"></noscript>
+                                    <img width="480" height="480"
+                                         src="<?= get_the_post_thumbnail_url($item -> ID); ?>"
+                                         class="lazyloaded wp-post-image inventary-img" alt=""
+                                         srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                         sizes="(max-width: 480px) 100vw, 480px"
+                                         data-srcset="<?= get_the_post_thumbnail_url($item -> ID); ?> 480w, <?= get_the_post_thumbnail_url($item -> ID); ?> 300w, <?= get_the_post_thumbnail_url($item -> ID); ?> 150w"
+                                         data-src="<?= get_the_post_thumbnail_url($item -> ID); ?>">
+                                    <span class="inventary-subscribe"><?php echo $item -> post_title; ?></span>
+                                </figure>
                             </a>
                         </div>
                     <?php endforeach; ?>

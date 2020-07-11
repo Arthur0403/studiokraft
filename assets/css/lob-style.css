@@ -366,6 +366,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     align-items: center;
 }
 
+.inventary-link figure{
+    background-color: inherit;
+}
+
 .inventary-img {
     width: 100%;
 }
