@@ -231,15 +231,15 @@ function my_navigation_template( $template, $class )
  */
 function studiokraft_scripts()
 {
-    wp_enqueue_style( 'studiokraft-style-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
-    wp_enqueue_style( 'studiokraft-style-lightbox', get_template_directory_uri() . '/assets/css/lightbox.css' );
-    wp_enqueue_style( 'studiokraft-style-banner-style', get_template_directory_uri() . '/assets/css/banner-style.css' );
-    wp_enqueue_style( 'studiokraft-style-aos', get_template_directory_uri() . '/assets/css/aos.css' );
-    wp_enqueue_style( 'studiokraft-style-theme', get_template_directory_uri() . '/assets/css/style.css' );
+    wp_enqueue_style( 'studiokraft-style-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'studiokraft-style-lightbox', get_template_directory_uri() . '/assets/css/lightbox.min.css' );
+    wp_enqueue_style( 'studiokraft-style-banner-style', get_template_directory_uri() . '/assets/css/banner-style.min.css' );
+    wp_enqueue_style( 'studiokraft-style-aos', get_template_directory_uri() . '/assets/css/aos.min.css' );
+    wp_enqueue_style( 'studiokraft-style-theme', get_template_directory_uri() . '/assets/css/style.min.css' );
     wp_enqueue_style( 'studiokraft-style-fontawesome-all', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css' );
     wp_enqueue_style( 'studiokraft-style-dosis', 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700' );
     wp_enqueue_style( 'studiokraft-style-fonts', 'https://fonts.googleapis.com/css?family=Forum|Roboto&display=swap' );
-    wp_enqueue_style( 'studiokraft-style-lob', get_template_directory_uri() . '/assets/css/lob-style.css' );
+    wp_enqueue_style( 'studiokraft-style-lob', get_template_directory_uri() . '/assets/css/lob-style.min.css' );
 
     wp_enqueue_style( 'studiokraft-style', get_stylesheet_uri() );
 
