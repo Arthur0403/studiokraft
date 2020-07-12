@@ -483,6 +483,11 @@ a.page-numbers:active {
 	padding-bottom : 0 !important;
 }
 
+.contacts .title,
+.pages .title {
+	padding : 3.3rem 0;
+}
+
 .info-item {
 	display        : flex;
 	flex-direction : column;
