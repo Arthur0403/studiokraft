@@ -17,7 +17,7 @@ get_header();
 //debug(get_theme_mods());
 ?>
     <div class="container-fluid p-0 container-slider">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" arrows="false" dots="false"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="300000" image_size="original" design="design-2" lazyload="ondemand" arrows="false" dots="false" image_fit="true"]' ); ?>
         <div class="logo-slider">
             <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <?php if ( has_custom_logo() ) : ?><?php the_custom_logo(); ?><?php else : ?>
