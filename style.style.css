@@ -41,6 +41,10 @@ body {
 	padding : 0;
 }
 
+header {
+
+}
+
 header.content-main {
 	position : sticky;
 	top      : -10px;

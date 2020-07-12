@@ -353,3 +353,16 @@ function getPageId($id){
     Grey
     Grim
  */
+
+add_filter('the_generator', '__return_empty_string');
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+function wpcourses_disable_feed() {wp_redirect(get_option('siteurl'));}
+add_action('do_feed', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rdf', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rss', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rss2', 'wpcourses_disable_feed', 1);
+add_action('do_feed_atom', 'wpcourses_disable_feed', 1);
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );

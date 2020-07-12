@@ -61,16 +61,16 @@
                 </p>
             </div>
             <div class="footer-links footer-item">
-                <p><a href="/privacy-policy">Политика конфиденциальности</a></p>
-                <p><a href="/polzovatelskoe-soglashenie">Пользовательское соглашение</a></p>
-                <p><a href="">Бронирование</a></p>
+                <p><a href="/politika-konfidenczialnosti/">Политика конфиденциальности</a></p>
+                <p><a href="/polzovatelskoe-soglashenie/">Пользовательское соглашение</a></p>
+                <p><a href="/bronirovanie/">Бронирование</a></p>
             </div>
         </div>
         <div class="social_media text-center">
             <p class="copy-right my-3">© 2020 - <?php echo date('Y'); ?> <a href="http://lobster.loc"><img src="<?php echo get_template_directory_uri() . '/assets/images/lobster-2.svg' ?>" alt="Logotype LobSteR Studio" width="50">  <img src="<?php echo get_template_directory_uri() . '/assets/images/lobster-1.svg' ?>" alt="LobSteR Studio" width="110"></a></p>
         </div>
     </footer>
-<a href="/bronirovanie/" class="call-us flip-vertical-right">
+    <a href="/bronirovanie/" class="call-us flip-vertical-right">
   <span class="call-text">
     Бронь<br>онлайн
   </span>
