@@ -21,10 +21,11 @@ body a {
 
 p,
 span {
-    font-family: 'Forum';
+    font-family: 'Roboto';
     color: #272727;
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 1.35;
+    letter-spacing: inherit;
 }
 
 .navbar-brand>span {
@@ -143,9 +144,9 @@ span {
 
 .tittle,
 .halls-title {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
     font-weight: 900;
-    line-height: 4.5rem;
+    line-height: 2.5rem;
 }
 
 .halls-title {
@@ -154,7 +155,7 @@ span {
     /*transform: translateY(-2rem);*/
     /*background-color: white;*/
     margin-bottom: 2rem;
-    max-width: 300px;
+    /*max-width: 300px;*/
 }
 
 .halls-title-common {
@@ -293,6 +294,10 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     padding: 3.3rem 0;
 }
 
+.hall-section {
+    padding-top: 1rem;
+}
+
 .inventary {
     padding-top: 3.3rem;
     padding-bottom: 3.3rem;
@@ -308,7 +313,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
 .features-item > span {
     text-align: center;
-    line-height: 1;
+    /*line-height: 1;*/
     margin-top: 1rem;
 }
 
@@ -355,7 +360,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .link-rules {
     color: #1572BB;
     text-decoration: underline;
-    font-family: 'Forum';
+    font-family: 'Roboto';
 }
 
 .link-rules:visited {
@@ -477,12 +482,12 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 }
 
 .content-paragraph a{
-    font-family: "Forum";
+    font-family: "Roboto";
     text-decoration: underline;
 }
 
 .rules-item .content-title {
-    font-family: 'Forum', serif;
+    font-family: 'Roboto', serif;
     font-size: 1.75rem;
 }
 
@@ -641,7 +646,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .content-list {
         padding-left: 2rem;
-        font-family: "Forum";
+        font-family: "Roboto";
         padding-left: 2rem;
         font-size: 1.2rem;
     }
@@ -651,7 +656,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .content-list > li a{
-        font-family: "Forum";
+        font-family: "Roboto";
     }
 
     .content-main-title {
@@ -690,7 +695,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     }
 
     .features-item span {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .content-item {
