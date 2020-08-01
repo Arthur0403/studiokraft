@@ -71,7 +71,7 @@ get_header();
                 <?php get_template_part( 'template-parts/content', 'gallery' ); ?>
 
                 <div class="button-center">
-                    <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/page/2/">Вся галерея</a>
+                    <a class="btn btn-light custom-btn custom-btn-white" href="/category/gallery/">Вся галерея</a>
                 </div>
             </div>
         </div>
