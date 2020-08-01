@@ -16,9 +16,9 @@ get_header();
 ?>
 
 	<section class="pages">
-        <div class="container container--pages">
+        <?php /* <div class="container container--pages">
             <h1 class="title"><?php the_title(); ?></h1>
-        </div>
+        </div> */ ?>
 
         <div class="container container--pages pb-md-3 pb-lg-5">
 

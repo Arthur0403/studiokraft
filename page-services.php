@@ -9,7 +9,7 @@ get_header();
 ?>
 
     <section class="py-0 pb-0 container pages">
-        <h1 class="title"><?php the_title(); ?></h1>
+        <?php /* <h1 class="title"><?php the_title(); ?></h1> */ ?>
         <div class="row pb-md-3 pb-lg-5">
             <div class="page-content col-lg-12 py-4 px-5 mx-auto container--rules">
                     <?php if ( have_posts() ) : while ( have_posts() ) :

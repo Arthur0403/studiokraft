@@ -7,7 +7,7 @@ get_header();
 ?>
 
     <section class="contacts">
-        <h1 class="title"><?php the_title(); ?></h1>
+        <?php /* <h1 class="title"><?php the_title(); ?></h1> */ ?>
         <section class="contacts-social">
             <div class="container">
                 <div class="info-wrapper">
@@ -72,7 +72,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <div class="attention-wrapper">
+        <?php /* <div class="attention-wrapper">
             <div class="container">
                 <div class="attention">
                     <span class="attention-title">Внимание!</span>
@@ -80,7 +80,7 @@ get_header();
                 </div>
             </div>
         </div>
-    </section>
+    </section> */ ?>
 <?php
 
 get_footer();
