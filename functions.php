@@ -151,7 +151,7 @@ if ( !function_exists( 'studiokraft_setup' ) ) :
         ) );
 
         add_image_size( 'gallery-thumb', 545, 482, TRUE );
-        add_image_size( 'gallery-thumb-vertical', 545, 993, TRUE );
+        add_image_size( 'gallery-thumb-vertical', 545, 986, TRUE );
         add_image_size( 'square', 800, 800, true );
 
         add_filter('image_size_names_choose', 'true_new_image_sizes');
@@ -334,15 +334,15 @@ remove_filter('pre_term_description', 'wp_filter_kses');
 
 function getPageId($id){
 
-    $pageIds = 
-    [
-        88 => ['magic-furniture', 'magic-equipment', 'magic-add-equipment'],
-        84 => ['loft-furniture', 'loft-equipment', 'loft-add-equipment'],
-        90 => ['grey-furniture', 'grey-equipment', 'grey-add-equipment'],
-        553 => ['grim-furniture', 'grim-equipment', 'grim-add-equipment'],
-        556 => ['grim-furniture', 'grim-equipment', 'grim-add-equipmente']
-        
-    ];
+    $pageIds =
+        [
+            88 => ['magic-furniture', 'magic-equipment', 'magic-add-equipment', 'magic-equipment-admin'],
+            84 => ['loft-furniture', 'loft-equipment', 'loft-add-equipment', 'loft-equipment-admin'],
+            90 => ['grey-furniture', 'grey-equipment', 'grey-add-equipment', 'grey-equipment-admin'],
+            553 => ['grim-furniture', 'grim-equipment', 'grim-add-equipment'],
+            556 => ['grim-furniture', 'grim-equipment', 'grim-add-equipment']
+
+        ];
         
     return $pageIds[$id];
 }

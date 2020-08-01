@@ -12,19 +12,19 @@ get_header();
 <h1 class="content-main-title"><?php the_field( 'page_title' ); ?></h1>
   <div class="container container-halls">
     <?php if( is_page( 'grey' ) ) {
-            echo do_shortcode('[slick-slider category="5" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false" image_fit="true" dots="false"]');
+            echo do_shortcode('[slick-carousel-slider design="design-6" centermode="true" slidestoshow="1" category="5" image_fit="false" image_size="large" dots="false" arrow="false" lazyload="ondemand" autoplay_interval="5000"]');
           }
           if( is_page( 'loft' ) ) {
-            echo do_shortcode('[slick-slider category="17" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false" image_fit="true" dots="false"]');
+            echo do_shortcode('[slick-carousel-slider design="design-6" centermode="true" slidestoshow="1" category="17" image_fit="false" image_size="large" dots="false" arrow="false" lazyload="ondemand" autoplay_interval="5000"]');
           }
           if( is_page( 'magic' ) ) {
-            echo do_shortcode('[slick-slider category="16" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false" image_fit="true" dots="false"]');
+            echo do_shortcode('[slick-carousel-slider design="design-6" centermode="true" slidestoshow="1" category="16" image_fit="false" image_size="large" dots="false" arrow="false" lazyload="ondemand" autoplay_interval="5000"]');
           }
           if( is_page( 'grimernaya-1' ) ) {
-            echo do_shortcode('[slick-slider category="14" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false" image_fit="true" dots="false"]');
+            echo do_shortcode('[slick-carousel-slider design="design-6" centermode="true" slidestoshow="1" category="14" image_fit="false" image_size="large" dots="false" arrow="false" lazyload="ondemand" autoplay_interval="5000"]');
           }
           if( is_page( 'grimernaya-2' ) ) {
-            echo do_shortcode('[slick-slider category="14" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" arrow="false" image_fit="true" dots="false"]');
+            echo do_shortcode('[slick-carousel-slider design="design-6" centermode="true" slidestoshow="1" category="14" image_fit="false" image_size="large" dots="false" arrow="false" lazyload="ondemand" autoplay_interval="5000"]');
           }
      ?>
     </div>
