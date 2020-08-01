@@ -8,7 +8,7 @@ Template Name: Общая страница залов
 get_header();
 ?>
     <div class="container-fluid p-0">
-        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand"]' ); ?>
+        <?php echo do_shortcode( '[slick-slider category="halls" fade="true" autoplay_interval="5000" image_size="original" design="design-2" lazyload="ondemand" dots="false"]' ); ?>
     </div>
     <section class="halls mb-5">
         <h3 class="halls-title halls-title-common mb-3 mx-auto"><?php the_field( 'halls-title' ); ?></h3>

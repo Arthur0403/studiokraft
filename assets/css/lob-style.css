@@ -289,8 +289,13 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     margin-bottom: 0 !important;
 }
 
-.features, .halls, .gallery, .hall-section, .inventary, .page-content, .contacts-social, .contacts .title, .pages .title, .how-to-step, .callback-form {
+.features, .halls, .gallery, .hall-section, .page-content, .contacts-social, .contacts .title, .pages .title, .how-to-step, .callback-form {
     padding: 3.3rem 0;
+}
+
+.inventary {
+    padding-top: 3.3rem;
+    padding-bottom: 3.3rem;
 }
 
 .hall-section {
@@ -652,6 +657,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     .content-main-title {
         text-align: center;
         margin-bottom: 1rem;
+        padding-top: 1rem;
         font-weight: 900;
         font-size: 3rem;
     }
@@ -707,6 +713,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     .content-main-title {
         text-align: center;
         margin-bottom: 2rem;
+        padding-top: 2rem;
     }
 
     .how-to-step__video {
