@@ -231,15 +231,15 @@ function my_navigation_template( $template, $class )
  */
 function studiokraft_scripts()
 {
-    wp_enqueue_style( 'studiokraft-style-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
-    wp_enqueue_style( 'studiokraft-style-lightbox', get_template_directory_uri() . '/assets/css/lightbox.css' );
-    wp_enqueue_style( 'studiokraft-style-banner-style', get_template_directory_uri() . '/assets/css/banner-style.css' );
-    wp_enqueue_style( 'studiokraft-style-aos', get_template_directory_uri() . '/assets/css/aos.css' );
-    wp_enqueue_style( 'studiokraft-style-theme', get_template_directory_uri() . '/assets/css/style.css' );
+    wp_enqueue_style( 'studiokraft-style-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'studiokraft-style-lightbox', get_template_directory_uri() . '/assets/css/lightbox.min.css' );
+    wp_enqueue_style( 'studiokraft-style-banner-style', get_template_directory_uri() . '/assets/css/banner-style.min.css' );
+    wp_enqueue_style( 'studiokraft-style-aos', get_template_directory_uri() . '/assets/css/aos.min.css' );
+    wp_enqueue_style( 'studiokraft-style-theme', get_template_directory_uri() . '/assets/css/style.min.css' );
     wp_enqueue_style( 'studiokraft-style-fontawesome-all', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css' );
     wp_enqueue_style( 'studiokraft-style-dosis', 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700' );
     wp_enqueue_style( 'studiokraft-style-fonts', 'https://fonts.googleapis.com/css?family=Forum|Roboto&display=swap' );
-    wp_enqueue_style( 'studiokraft-style-lob', get_template_directory_uri() . '/assets/css/lob-style.css' );
+    wp_enqueue_style( 'studiokraft-style-lob', get_template_directory_uri() . '/assets/css/lob-style.min.css' );
 
     wp_enqueue_style( 'studiokraft-style', get_stylesheet_uri() );
 
@@ -353,3 +353,16 @@ function getPageId($id){
     Grey
     Grim
  */
+
+add_filter('the_generator', '__return_empty_string');
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+function wpcourses_disable_feed() {wp_redirect(get_option('siteurl'));}
+add_action('do_feed', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rdf', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rss', 'wpcourses_disable_feed', 1);
+add_action('do_feed_rss2', 'wpcourses_disable_feed', 1);
+add_action('do_feed_atom', 'wpcourses_disable_feed', 1);
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );

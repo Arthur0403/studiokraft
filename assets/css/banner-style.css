@@ -55,24 +55,24 @@ figure:hover+span {
     width: 100%;
 }
 /* Gray Scale */
-.hover08 figure img {	
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-ms-transition:.3s ease-in-out;
-	-moz-transition:.3s ease-in-out;
-   -webkit-transition:.3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover08 figure:hover img {
-	-webkit-filter: grayscale(0);
-	-moz-filter: grayscale(0);
-	-o-filter: grayscale(0);
-	-ms-filter: grayscale(0);
-	filter: grayscale(0);
-}
+/*.hover08 figure img {	*/
+	/*-webkit-filter: grayscale(100%);*/
+	/*-moz-filter: grayscale(100%);*/
+	/*-ms-filter: grayscale(100%);*/
+	/*-o-filter: grayscale(100%);*/
+	/*filter: grayscale(100%);*/
+	/*-ms-transition:.3s ease-in-out;*/
+	/*-moz-transition:.3s ease-in-out;*/
+	/*-webkit-transition:.3s ease-in-out;*/
+	/*transition: .3s ease-in-out;*/
+/*}*/
+/*.hover08 figure:hover img {*/
+/*	-webkit-filter: grayscale(0);*/
+/*	-moz-filter: grayscale(0);*/
+/*	-o-filter: grayscale(0);*/
+/*	-ms-filter: grayscale(0);*/
+/*	filter: grayscale(0);*/
+/*}*/
 .gallery_effect {
     padding: 10px;
     background: #fff;
