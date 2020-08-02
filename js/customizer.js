@@ -42,7 +42,8 @@
 
 	wp.customize('studiokraft_header_background_color', function (value) {
 		value.bind(function (newval) {
-			$('header').css('background-color', newval);
+			$('.header_top').css('background-color', newval);
+			$('.header_top.mmove').css('background-color' + 'ee', newval);
 		});
 	});
 	wp.customize('studiokraft_header_color', function (value) {
