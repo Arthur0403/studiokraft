@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * Studio Kraft Theme Customizer

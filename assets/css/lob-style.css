@@ -328,7 +328,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
     max-width: 220px;
 }
 
-.halls, .how-to-step{
+.halls {
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
 }
@@ -397,12 +397,6 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 .inventary-subscribe {
     align-self: start;
     margin-top: .5rem;
-}
-
-.slick-arrow,
-.slick-prev,
-.slick-next {
-    display: none !important;
 }
 
 .dressing-room_title {
@@ -904,6 +898,7 @@ div.wpforms-container-full .wpforms-form button.custom-btn[type="submit"],
 
     .navigation-text {
         width: 56%;
+        float: left;
     }
 
     .booking-title {
