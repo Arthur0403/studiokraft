@@ -22,7 +22,8 @@ body a {
 p,
 span {
     font-family: 'Roboto';
-    color: #272727;
+    /*color: #272727;*/
+    color: #565a5c;
     font-size: 1.2rem;
     line-height: 1.35;
     letter-spacing: inherit;

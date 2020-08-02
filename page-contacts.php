@@ -54,6 +54,7 @@ get_header();
                         <h3 class="tittle tittle-center">Как пройти?</h3>
                         <p class="navigation-text"><?php the_field( 'navigation' ); ?></p>
                         <iframe class="how-to-step__video" src="https://www.youtube.com/embed/danOJMesd-U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="clearfix"></div>
                     </div>
 
 <!--                    <video src="--><?php //$iframe = get_field( 'video' );
